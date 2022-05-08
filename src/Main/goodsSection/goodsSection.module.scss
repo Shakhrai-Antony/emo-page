@@ -1,0 +1,26 @@
+.goodsList {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 100%;
+  max-width: 1200px;
+  flex-wrap: wrap;
+  text-align: center;
+  div {
+
+    img{
+      width: 590px;
+      height: 590px;
+    }
+    p {
+      margin-bottom: 0;
+      font-size: 20px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    p:last-child {
+      margin: 0 0 40px 0;
+    }
+  }
+}
