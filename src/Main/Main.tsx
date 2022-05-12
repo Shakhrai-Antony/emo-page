@@ -5,6 +5,7 @@ import s from './main.module.scss'
 import {Goods} from "./goodsSection/GoodsSections";
 import {SimpleSlider} from "./goodsSection/SimpleSlider";
 import {EmoVideo} from "./feltemoindaclub";
+import {GoodsSectionForLadies} from "./goodsSection/SectionForLadies/goodsSectionForLadies";
 
 export const Main = () => {
     return (
@@ -18,6 +19,9 @@ export const Main = () => {
             <SimpleSlider/>
             <section className={s.emovideo}>
                 <EmoVideo/>
+            </section>
+            <section className={s.girlsGoodsSection}>
+                <GoodsSectionForLadies/>
             </section>
         </div>
     )
