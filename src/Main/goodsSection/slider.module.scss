@@ -1,0 +1,20 @@
+.carouselSection {
+  margin-top: 40px;
+}
+.carouselSection_content {
+  img {
+    width: 339px;
+    height: 339px;
+  }
+  p {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 0;
+  }
+  p:last-child {
+    margin-top: 5px;
+  }
+}

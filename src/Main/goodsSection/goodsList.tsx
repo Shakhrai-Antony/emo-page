@@ -5,7 +5,7 @@ import React from "react";
 export const GoodsList = (props: any) => {
     return (
         <div className={s.goodsLinks}>
-            <NavLink to={props.name}>{props.value}</NavLink>
+            <NavLink to={props.path}>{props.value}</NavLink>
             <p>
                 {props.description}
             </p>
