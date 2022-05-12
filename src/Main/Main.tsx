@@ -4,7 +4,7 @@ import newDrop from './../imges/new_drop.png';
 import s from './main.module.scss'
 import {CoffeeSection, GoodsSection} from "./goodsSection/GoodsSection";
 import {SimpleSliderSection} from "./goodsSection/SimpleSlider";
-import {EmoVideo, SecondEmoVideo} from "./feltemoindaclub";
+import {EmoVideo, SecondEmoVideo, ThirdEmoVideo} from "./feltemoindaclub";
 import {GoodsSectionForLadies} from "./goodsSection/SectionForLadies/goodsSectionForLadies";
 import {FemaleSimpleSliderSection} from "./goodsSection/SectionForLadies/FemaleSlider";
 
@@ -30,6 +30,9 @@ export const Main = () => {
             </section>
             <section>
                 <CoffeeSection/>
+            </section>
+            <section>
+                <ThirdEmoVideo/>
             </section>
         </div>
     )
