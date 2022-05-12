@@ -4,6 +4,7 @@ import newDrop from './../imges/new_drop.png';
 import s from './main.module.scss'
 import {Goods} from "./goodsSection/GoodsSections";
 import {SimpleSlider} from "./goodsSection/SimpleSlider";
+import {EmoVideo} from "./feltemoindaclub";
 
 export const Main = () => {
     return (
@@ -15,6 +16,9 @@ export const Main = () => {
                 <Goods/>
             </section>
             <SimpleSlider/>
+            <section className={s.emovideo}>
+                <EmoVideo/>
+            </section>
         </div>
     )
 }
