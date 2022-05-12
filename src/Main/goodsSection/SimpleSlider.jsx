@@ -12,7 +12,7 @@ import './swiperSlider.scss'
 import {NavLink} from "react-router-dom";
 
 
-export const SimpleSlider = () => {
+export const SimpleSliderSection = () => {
 
 
     const goodsForCarousel = useSelector(getGoodsForCarousel)

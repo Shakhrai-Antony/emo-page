@@ -40,36 +40,28 @@
       cursor: pointer;
     }
 }
-.carousel {
-  width: 100%;
-  max-width: 100%;
+.coffeeList {
   display: flex;
-  background-color: #000000;
-  gap: 2rem;
-
+  justify-content: center;
+  margin: auto;
+  max-width: 1200px;
+  width: 100%;
+  flex-wrap: wrap;
+  text-align: center;
   div {
-    margin-top: 20px;
-    img {
-      width: 332.86px;
-      height: 332.86px;
+    img{
+      width: 590px;
+      height: 590px;
     }
     p {
-      text-align: center;
-      color: #ffffff;
+      text-transform: uppercase;
       font-size: 20px;
       font-weight: bold;
-      text-transform: uppercase;
+      letter-spacing: 1px;
       margin-bottom: 0;
     }
-    p:last-child {
-      margin: 0 0 40px 0;
+    p:last-child{
+      margin-top: 0;
     }
   }
-  div:first-child {
-    margin-left: 25px;
-  }
-  div:last-child {
-    margin-right: 25px;
-  }
-
 }

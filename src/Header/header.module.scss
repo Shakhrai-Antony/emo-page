@@ -18,9 +18,9 @@
 .headerNavigation {
   display: flex;
   margin: 20px auto;
-  position: fixed;
   width: 100%;
   background-color: #ffffff;
+  position: absolute;
   div {
     margin-left: 250px;
   }
@@ -54,12 +54,6 @@
       width: 28px;
       height: 28px;
       background-repeat: no-repeat;
-    }
-    .merchlinks {
-      display: none;
-    }
-    a:hover .merchlinks {
-      display: block;
     }
   }
 }

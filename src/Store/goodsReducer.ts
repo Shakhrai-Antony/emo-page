@@ -21,6 +21,18 @@ import nodeadteegirlblack from './../imges/emogoods/emogoodsladies/not_dead_girl
 import teegirlblack from './../imges/emogoods/emogoodsladies/tee_girl_black.png'
 import teegirlblue from './../imges/emogoods/emogoodsladies/tee_girl_blue.png'
 import teegirlpink from './../imges/emogoods/emogoodsladies/tee_girl_pink.png'
+import capend from './../imges/emogoods/emogoodsladies/cap_end.png'
+import dadhat from './../imges/emogoods/emogoodsladies/dad_hat.png'
+import dadhatlove from './../imges/emogoods/emogoodsladies/dad_hat_love.png'
+import end_dad_cap from './../imges/emogoods/emogoodsladies/end_dad_cap.png'
+import leatherwalletlove from './../imges/emogoods/emogoodsladies/leather_wallet_love.png'
+import leatherwalletend from './../imges/emogoods/emogoodsladies/leather_wallet_end.png'
+import makermug from './../imges/emogoods/emogoodsladies/maker_mug.png'
+import notdeadmug from './../imges/emogoods/emogoodsladies/not_dead_mug.png'
+import blackheartcoffee from './../imges/emogoods/black_heart_coffee.png'
+import scremocoffee from './../imges/emogoods/scremo_coffee.png'
+
+
 
 const initialState = {
     goods: [
@@ -32,6 +44,15 @@ const initialState = {
         {value: notdeadpinkhoodie, to: '/products/stacked-repeat-hoodie-pink', description: 'stacked & repeat hoodie - pink', id: 6, price: `$64.95`},
         {value: whitesocks, to: '/products/e-n-d-socks-white', description: 'e.n.d. socks - white', id: 7, price: `$14.95`},
         {value: blackhandcup, to: '/products/live-forever-coffee-mug', description: 'live forever coffee mug', id: 8, price: `$19.95`}
+    ],
+    goodsForLadies: [
+        {value: hoodigirlpink, to: '/products/sweet-script-crop-hoodie-cotton-candy', description: 'sweet script crop hoodie - cotton candy', price: `$44.95`, id: 1},
+        {value: hoodiegirlblack, to: '/products/ladies-e-n-d-crop-hoodie-black', description: 'e.n.d. crop hoodie black', price: `$44.95`, id: 2},
+        {value: nodeadteegirlblack, to: '/products/ladies_sweet_script_tee_charcoal', description: 'ladies sweet script tee - charcoal', price: `$34.95`, id: 3},
+        {value: teegirlblack, to: '/products/crystal-dye-crop-tee-black', description: 'crystal dye crop tee - black', price: `$29.95`, id: 4},
+        {value: teegirlpink, to: '/products/crystal-dye-crop-tee-lavender', description: 'crystal dye crop tee - lavender', price: `$29.95`, id: 5},
+        {value: teegirlblue, to: '/products/crystal-dye-crop-tee-blue', description: 'crystal dye crop tee - blue', price: `$29.95`, id: 6},
+
     ],
     goodsForCarousel: [
         {
@@ -67,14 +88,67 @@ const initialState = {
             to: '/collections/essential-end-merch/products/black-white-zip-up-hoodie'
         }
     ],
-    goodsForLadies: [
-        {value: nodeadteegirlblack, to: '/products/sweet-script-crop-hoodie-cotton-candy', description: 'sweet script crop hoodie - cotton candy', price: `$44.95`, id: 1},
-        {value: hoodiegirlblack, to: '/products/ladies-e-n-d-crop-hoodie-black', description: 'e.n.d. crop hoodie black', price: `$44.95`, id: 2},
-        {value: teegirlblack, to: '/products/ladies_sweet_script_tee_charcoal', description: 'ladies sweet script tee - charcoal', price: `$34.95`, id: 3},
-        {value: teegirlblack, to: '/products/crystal-dye-crop-tee-black', description: 'crystal dye crop tee - black', price: `$29.95`, id: 4},
-        {value: teegirlpink, to: '/products/crystal-dye-crop-tee-lavender', description: 'crystal dye crop tee - lavender', price: `$29.95`, id: 5},
-        {value: teegirlblue, to: '/products/crystal-dye-crop-tee-blue', description: 'crystal dye crop tee - blue', price: `$29.95`, id: 6},
-
+    femaleGoodsForCarousel: [
+        {
+            value: leatherwalletend, id: 1, description: 'e.n.d. classic skillet wallet + keychain', price: `$39.95`,
+            to: '/collections/headwear-accessories/products/e-n-d-classic-skinny-wallet-keychain-bundle'
+        },
+        {
+            value: leatherwalletlove, id: 2, description: 'e.n.d. heart skinny wallet + keychain', price: `$39.95`,
+            to: '/collections/headwear-accessories/products/e-n-d-heart-skinny-wallet-keychain-bundle'
+        },
+        {
+            value: dadhatlove, id: 3, description: 'e.n.d. heart strapback - black', price: `$34.95`,
+            to: '/collections/headwear-accessories/products/e-n-d-dad-hat-black'
+        },
+        {
+            value: end_dad_cap, id: 4, description: 'e.n.d. strapback - black', price: `$34.95`,
+            to: '/collections/headwear-accessories/products/e-n-d-strapback-black'
+        },
+        {
+            value: notdeadcap, id: 5, description: 'emo\'s not dead snapback - black', price: `$39.95`,
+            to: '/collections/headwear-accessories/products/emos-not-dead-snapback-black'
+        },
+        {
+            value: alivecap, id: 6, description: 'very much alive snapback - black', price: `$39.95`,
+            to: '/collections/headwear-accessories/products/v-m-a-snapback-black'
+        },
+        {
+            value: capend, id: 7, description: 'e.n.d. snapback - black', price: `$39.95`,
+            to: '/collections/headwear-accessories/products/e-n-d-snapback'
+        },
+        {
+            value: whitesocks, id: 8, description: 'e.n.d. socks - white', price: `$14.95`,
+            to: '/collections/headwear-accessories/products/e-n-d-socks-white'
+        },
+        {
+            value: notdeadmug, id: 9, description: 'emo\'s not dead coffee mug', price: `$15.95`,
+            to: '/collections/headwear-accessories/products/emos-not-dead-coffee-mug'
+        },
+        {
+            value: makermug, id: 10, description: 'e.n.d. heart coffee mug', price: `$15.95`,
+            to: '/collections/headwear-accessories/products/e-n-d-heart-coffee-mug'
+        },
+        {
+            value: blackhandcup, id: 11, description: 'live forever coffee mug', price: `$19.95`,
+            to: '/collections/headwear-accessories/products/live-forever-coffee-mug'
+        },
+        {
+            value: greyrosecup, id: 12, description: 'weeping rose coffee mug', price: `$19.95`,
+            to: '/collections/headwear-accessories/products/weeping-rose-coffee-mug'
+        },
+        {
+            value: dadhat, id: 13, description: 'broken heart beanie', price: `$24.95`,
+            to: '/collections/headwear-accessories/products/broken-heart-beanie'
+        }
+    ],
+    coffeeGoods: [
+        {value: coffee, to: '/products/triste-mexicana-blend-coffee', description: 'triste mexicana blend coffee', id: 1, price: `$16.95`},
+        {value: scremocoffee, to: '/products/screamo-blend-coffee', description: 'scremo blend coffee', id: 2, price: `$16.95`},
+        {value: blackheartcoffee, to: '/products/black-heart-blend-coffee', description: 'black heart blend coffee', id: 3, price: `$16.95`},
+        {value: makermug, to: '/products/e-n-d-heart-coffee-mug', description: 'e.n.d. heart coffee mug', id: 4, price: `$15.95`},
+        {value: blackhandcup, to: '/products/live-forever-coffee-mug', description: 'live forever coffee mug', id: 5, price: `$19.95`},
+        {value: greyrosecup, to: '/products/weeping-rose-coffee-mug', description: 'weeping rose coffee mug', id: 6, price: `$19.95`}
     ]
 }
 

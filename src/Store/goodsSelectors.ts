@@ -9,3 +9,9 @@ export const getGoodsForCarousel = (state: AppStateType) => {
 export const getGirlsGoods = (state: AppStateType) => {
     return state.goodsPage.goodsForLadies
 }
+export const getFemaleGoodsForCarousel = (state: AppStateType) => {
+    return state.goodsPage.femaleGoodsForCarousel
+}
+export const getCoffeeGoods = (state: AppStateType) => {
+    return state.goodsPage.coffeeGoods
+}

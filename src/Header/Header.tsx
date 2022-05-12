@@ -35,7 +35,6 @@ export const Header = () => {
                             <NavLink to={item.to}>{item.value}</NavLink>
                     )}
                 </nav>
-
             </div>
         </header>
     )
