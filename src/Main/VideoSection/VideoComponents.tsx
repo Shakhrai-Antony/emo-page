@@ -1,8 +1,12 @@
 import React from 'react'
 import s from './emovideo.module.scss'
-import girlsCollectionBanner from './../imges/web_banner_girls_collection.png'
-import free_socks_banner from './../imges/emogoods/emogoodsladies/free_socks_banner.png'
+import girlsCollectionBanner from '../../imges/web_banner_girls_collection.png'
+import free_socks_banner from '../../imges/emogoods/emogoodsladies/free_socks_banner.png'
 import {NavLink} from "react-router-dom";
+import ReactPlayer from "react-player";
+
+
+
 
 export const EmoVideo = () => {
     return (
@@ -60,5 +64,20 @@ export const ThirdEmoVideo = () => {
             </div>
         </div>
 
+    )
+}
+export const StreamVideo = () => {
+    return (
+        <div className={s.player_wrapper}>
+            <div>
+                <ReactPlayer className={s.video__container}
+                             playing={true}
+                             muted={true}
+                             url="https://www.youtube.com/embed/GEQFwln-aqc"
+                >
+                </ReactPlayer>
+            </div>
+
+        </div>
     )
 }

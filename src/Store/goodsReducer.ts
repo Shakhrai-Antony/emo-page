@@ -31,6 +31,12 @@ import makermug from './../imges/emogoods/emogoodsladies/maker_mug.png'
 import notdeadmug from './../imges/emogoods/emogoodsladies/not_dead_mug.png'
 import blackheartcoffee from './../imges/emogoods/black_heart_coffee.png'
 import scremocoffee from './../imges/emogoods/scremo_coffee.png'
+import indaclub from './../imges/videoimages/in_da_club.png'
+import coffeeroster from './../imges/videoimages/coffee_roster.png'
+import kid from './../imges/videoimages/kid.png'
+import cruise from './../imges/videoimages/cruise.png'
+import leaveme from './../imges/videoimages/leave_me.png'
+import tommys from './../imges/videoimages/tommys.png'
 
 
 
@@ -149,6 +155,15 @@ const initialState = {
         {value: makermug, to: '/products/e-n-d-heart-coffee-mug', description: 'e.n.d. heart coffee mug', id: 4, price: `$15.95`},
         {value: blackhandcup, to: '/products/live-forever-coffee-mug', description: 'live forever coffee mug', id: 5, price: `$19.95`},
         {value: greyrosecup, to: '/products/weeping-rose-coffee-mug', description: 'weeping rose coffee mug', id: 6, price: `$19.95`}
+    ],
+    videosSection: [
+        {value: indaclub, to: '/blogs/felt-emo-might-delete/felt-emo-in-da-club', id: 1, description: 'felt emo in da club', date: 'apr 06, 2022'},
+        {value: coffeeroster, to: '/blogs/felt-emo-might-delete/felt-emo-might-brew-coffee', id: 2, description: 'felt emo might brew coffee', date: 'feb 28, 2022'},
+        {value: kid, to: '/blogs/felt-emo-might-delete/felt-emo-might-delete-4', id: 3, description: 'felt emo again might delete', date: 'feb 08, 2022'},
+        {value: cruise, to: '/blogs/felt-emo-might-delete/felt-emo-might-cruise', id: 4, description: 'felt emo might cruise', date: 'jan 27, 2022'},
+        {value: leaveme, to: '/blogs/felt-emo-might-delete/felt-emo-might-delete-3', id: 5, description: 'felt emo might delete', date: 'oct 18, 2021'},
+        {value: tommys, to: '/blogs/felt-emo-might-delete/your-broken-hero-tommys-face-ft-spencer-chamberlain', id: 6,
+            description: 'your broken hero - tommy\'s face ft. spencer chamberlain of underoath', date: 'apr 17, 2021'}
     ]
 }
 

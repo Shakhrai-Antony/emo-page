@@ -6,10 +6,10 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import {Swiper, SwiperSlide} from "swiper/react";
 import {useSelector} from "react-redux";
-import s from './../slider.module.scss'
-import './../swiperSlider.scss'
+import s from './slider.module.scss'
+import './swiperSlider.scss'
 import {NavLink} from "react-router-dom";
-import {getFemaleGoodsForCarousel} from "../../../Store/goodsSelectors";
+import {getFemaleGoodsForCarousel} from "../../Store/goodsSelectors";
 
 export const FemaleSimpleSliderSection = () => {
 

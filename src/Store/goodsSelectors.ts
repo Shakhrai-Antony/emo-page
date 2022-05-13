@@ -15,3 +15,6 @@ export const getFemaleGoodsForCarousel = (state: AppStateType) => {
 export const getCoffeeGoods = (state: AppStateType) => {
     return state.goodsPage.coffeeGoods
 }
+export const getVideos = (state: AppStateType) => {
+    return state.goodsPage.videosSection
+}
