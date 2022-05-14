@@ -1,4 +1,4 @@
-import {createReducer} from "@reduxjs/toolkit";
+import {createAction, createReducer} from "@reduxjs/toolkit";
 import notdeadcap from './../imges/emogoods/not_dead_cap.png'
 import alivecap from './../imges/emogoods/alive_cap.png'
 import coffee from './../imges/emogoods/coffee.png'
@@ -37,27 +37,111 @@ import kid from './../imges/videoimages/kid.png'
 import cruise from './../imges/videoimages/cruise.png'
 import leaveme from './../imges/videoimages/leave_me.png'
 import tommys from './../imges/videoimages/tommys.png'
-
+import {InferActionsTypes} from "./Store";
 
 
 const initialState = {
     goods: [
-        {value: notdeadcap, to: '/products/emos-not-dead-snapback-black', description: 'emo\'s not dead snapback - black', id: 1, price: `$33.95`},
-        {value: alivecap, to: '/products/v-m-a-snapback-black', description: 'very much alive snapback - black', id: 2, price: `$33.95`},
-        {value: coffee, to: '/products/triste-mexicana-blend-coffee', description: 'triste mexicana black coffee', id: 3, price: `$16.95`},
-        {value: greyrosecup, to: '/products/weeping-rose-coffee-mug', description: 'weeping rose coffee mug', id: 4, price: `$19.95`},
-        {value: notdeadbluehoodie, to: '/products/stacked-repeat-hoodie-mint', description: 'stacked & repeat hoodie - blue', id: 5, price: `$64.95`},
-        {value: notdeadpinkhoodie, to: '/products/stacked-repeat-hoodie-pink', description: 'stacked & repeat hoodie - pink', id: 6, price: `$64.95`},
-        {value: whitesocks, to: '/products/e-n-d-socks-white', description: 'e.n.d. socks - white', id: 7, price: `$14.95`},
-        {value: blackhandcup, to: '/products/live-forever-coffee-mug', description: 'live forever coffee mug', id: 8, price: `$19.95`}
+        {
+            value: notdeadcap,
+            to: '/products/emos-not-dead-snapback-black',
+            description: 'emo\'s not dead snapback - black',
+            id: 1,
+            price: `$33.95`
+        },
+        {
+            value: alivecap,
+            to: '/products/v-m-a-snapback-black',
+            description: 'very much alive snapback - black',
+            id: 2,
+            price: `$33.95`
+        },
+        {
+            value: coffee,
+            to: '/products/triste-mexicana-blend-coffee',
+            description: 'triste mexicana black coffee',
+            id: 3,
+            price: `$16.95`
+        },
+        {
+            value: greyrosecup,
+            to: '/products/weeping-rose-coffee-mug',
+            description: 'weeping rose coffee mug',
+            id: 4,
+            price: `$19.95`
+        },
+        {
+            value: notdeadbluehoodie,
+            to: '/products/stacked-repeat-hoodie-mint',
+            description: 'stacked & repeat hoodie - blue',
+            id: 5,
+            price: `$64.95`
+        },
+        {
+            value: notdeadpinkhoodie,
+            to: '/products/stacked-repeat-hoodie-pink',
+            description: 'stacked & repeat hoodie - pink',
+            id: 6,
+            price: `$64.95`
+        },
+        {
+            value: whitesocks,
+            to: '/products/e-n-d-socks-white',
+            description: 'e.n.d. socks - white',
+            id: 7,
+            price: `$14.95`
+        },
+        {
+            value: blackhandcup,
+            to: '/products/live-forever-coffee-mug',
+            description: 'live forever coffee mug',
+            id: 8,
+            price: `$19.95`
+        }
     ],
     goodsForLadies: [
-        {value: hoodigirlpink, to: '/products/sweet-script-crop-hoodie-cotton-candy', description: 'sweet script crop hoodie - cotton candy', price: `$44.95`, id: 1},
-        {value: hoodiegirlblack, to: '/products/ladies-e-n-d-crop-hoodie-black', description: 'e.n.d. crop hoodie black', price: `$44.95`, id: 2},
-        {value: nodeadteegirlblack, to: '/products/ladies_sweet_script_tee_charcoal', description: 'ladies sweet script tee - charcoal', price: `$34.95`, id: 3},
-        {value: teegirlblack, to: '/products/crystal-dye-crop-tee-black', description: 'crystal dye crop tee - black', price: `$29.95`, id: 4},
-        {value: teegirlpink, to: '/products/crystal-dye-crop-tee-lavender', description: 'crystal dye crop tee - lavender', price: `$29.95`, id: 5},
-        {value: teegirlblue, to: '/products/crystal-dye-crop-tee-blue', description: 'crystal dye crop tee - blue', price: `$29.95`, id: 6},
+        {
+            value: hoodigirlpink,
+            to: '/products/sweet-script-crop-hoodie-cotton-candy',
+            description: 'sweet script crop hoodie - cotton candy',
+            price: `$44.95`,
+            id: 1
+        },
+        {
+            value: hoodiegirlblack,
+            to: '/products/ladies-e-n-d-crop-hoodie-black',
+            description: 'e.n.d. crop hoodie black',
+            price: `$44.95`,
+            id: 2
+        },
+        {
+            value: nodeadteegirlblack,
+            to: '/products/ladies_sweet_script_tee_charcoal',
+            description: 'ladies sweet script tee - charcoal',
+            price: `$34.95`,
+            id: 3
+        },
+        {
+            value: teegirlblack,
+            to: '/products/crystal-dye-crop-tee-black',
+            description: 'crystal dye crop tee - black',
+            price: `$29.95`,
+            id: 4
+        },
+        {
+            value: teegirlpink,
+            to: '/products/crystal-dye-crop-tee-lavender',
+            description: 'crystal dye crop tee - lavender',
+            price: `$29.95`,
+            id: 5
+        },
+        {
+            value: teegirlblue,
+            to: '/products/crystal-dye-crop-tee-blue',
+            description: 'crystal dye crop tee - blue',
+            price: `$29.95`,
+            id: 6
+        },
 
     ],
     goodsForCarousel: [
@@ -149,28 +233,115 @@ const initialState = {
         }
     ],
     coffeeGoods: [
-        {value: coffee, to: '/products/triste-mexicana-blend-coffee', description: 'triste mexicana blend coffee', id: 1, price: `$16.95`},
-        {value: scremocoffee, to: '/products/screamo-blend-coffee', description: 'scremo blend coffee', id: 2, price: `$16.95`},
-        {value: blackheartcoffee, to: '/products/black-heart-blend-coffee', description: 'black heart blend coffee', id: 3, price: `$16.95`},
-        {value: makermug, to: '/products/e-n-d-heart-coffee-mug', description: 'e.n.d. heart coffee mug', id: 4, price: `$15.95`},
-        {value: blackhandcup, to: '/products/live-forever-coffee-mug', description: 'live forever coffee mug', id: 5, price: `$19.95`},
-        {value: greyrosecup, to: '/products/weeping-rose-coffee-mug', description: 'weeping rose coffee mug', id: 6, price: `$19.95`}
+        {
+            value: coffee,
+            to: '/products/triste-mexicana-blend-coffee',
+            description: 'triste mexicana blend coffee',
+            id: 1,
+            price: `$16.95`
+        },
+        {
+            value: scremocoffee,
+            to: '/products/screamo-blend-coffee',
+            description: 'scremo blend coffee',
+            id: 2,
+            price: `$16.95`
+        },
+        {
+            value: blackheartcoffee,
+            to: '/products/black-heart-blend-coffee',
+            description: 'black heart blend coffee',
+            id: 3,
+            price: `$16.95`
+        },
+        {
+            value: makermug,
+            to: '/products/e-n-d-heart-coffee-mug',
+            description: 'e.n.d. heart coffee mug',
+            id: 4,
+            price: `$15.95`
+        },
+        {
+            value: blackhandcup,
+            to: '/products/live-forever-coffee-mug',
+            description: 'live forever coffee mug',
+            id: 5,
+            price: `$19.95`
+        },
+        {
+            value: greyrosecup,
+            to: '/products/weeping-rose-coffee-mug',
+            description: 'weeping rose coffee mug',
+            id: 6,
+            price: `$19.95`
+        }
     ],
     videosSection: [
-        {value: indaclub, to: '/blogs/felt-emo-might-delete/felt-emo-in-da-club', id: 1, description: 'felt emo in da club', date: 'apr 06, 2022'},
-        {value: coffeeroster, to: '/blogs/felt-emo-might-delete/felt-emo-might-brew-coffee', id: 2, description: 'felt emo might brew coffee', date: 'feb 28, 2022'},
-        {value: kid, to: '/blogs/felt-emo-might-delete/felt-emo-might-delete-4', id: 3, description: 'felt emo again might delete', date: 'feb 08, 2022'},
-        {value: cruise, to: '/blogs/felt-emo-might-delete/felt-emo-might-cruise', id: 4, description: 'felt emo might cruise', date: 'jan 27, 2022'},
-        {value: leaveme, to: '/blogs/felt-emo-might-delete/felt-emo-might-delete-3', id: 5, description: 'felt emo might delete', date: 'oct 18, 2021'},
-        {value: tommys, to: '/blogs/felt-emo-might-delete/your-broken-hero-tommys-face-ft-spencer-chamberlain', id: 6,
-            description: 'your broken hero - tommy\'s face ft. spencer chamberlain of underoath', date: 'apr 17, 2021'}
-    ]
+        {
+            value: indaclub,
+            to: '/blogs/felt-emo-might-delete/felt-emo-in-da-club',
+            id: 1,
+            description: 'felt emo in da club',
+            date: 'apr 06, 2022'
+        },
+        {
+            value: coffeeroster,
+            to: '/blogs/felt-emo-might-delete/felt-emo-might-brew-coffee',
+            id: 2,
+            description: 'felt emo might brew coffee',
+            date: 'feb 28, 2022'
+        },
+        {
+            value: kid,
+            to: '/blogs/felt-emo-might-delete/felt-emo-might-delete-4',
+            id: 3,
+            description: 'felt emo again might delete',
+            date: 'feb 08, 2022'
+        },
+        {
+            value: cruise,
+            to: '/blogs/felt-emo-might-delete/felt-emo-might-cruise',
+            id: 4,
+            description: 'felt emo might cruise',
+            date: 'jan 27, 2022'
+        },
+        {
+            value: leaveme,
+            to: '/blogs/felt-emo-might-delete/felt-emo-might-delete-3',
+            id: 5,
+            description: 'felt emo might delete',
+            date: 'oct 18, 2021'
+        },
+        {
+            value: tommys,
+            to: '/blogs/felt-emo-might-delete/your-broken-hero-tommys-face-ft-spencer-chamberlain',
+            id: 6,
+            description: 'your broken hero - tommy\'s face ft. spencer chamberlain of underoath',
+            date: 'apr 17, 2021'
+        }
+    ],
+    email: '' as string
 }
 
-const goodsReducer = createReducer(initialState, (builder) => {
 
-    return initialState
+const goodsReducer = (state = initialState, action: GoodsReducerType) => {
+    switch (action.type) {
+        case 'SET_EMAIL':
+            return {
+                ...state,
+                email: action.email
+            }
+        default:
+            return state;
+    }
+}
 
-})
+type GoodsReducerType = InferActionsTypes<typeof actions>
+
+export const actions = {
+    setUserEmail: (email: string): any => {
+        return ({type: 'SET_EMAIL', email} as const)
+    }
+}
 
 export default goodsReducer

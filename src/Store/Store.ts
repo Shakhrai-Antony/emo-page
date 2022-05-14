@@ -1,27 +1,16 @@
-import {configureStore} from '@reduxjs/toolkit';
-import storage from 'redux-persist/lib/storage'
-import {combineReducers} from "redux";
-import { persistReducer } from 'redux-persist'
+
+import {applyMiddleware, combineReducers, createStore} from "redux";
 import thunk from 'redux-thunk'
 import goodsReducer from "./goodsReducer";
 
-const reducers = combineReducers({
+const rootReducer = combineReducers({
     goodsPage: goodsReducer
 });
 
-const persistConfig = {
-    key: 'root',
-    storage
-};
+let store = createStore(rootReducer, applyMiddleware(thunk))
+type rootReducerType = typeof rootReducer
+export type AppStateType = ReturnType<rootReducerType>
+type PropertiesType<T> = T extends {[key: string] : infer U} ? U : never
+export type InferActionsTypes <T extends {[key: string]: (...args: any[]) => any}> = ReturnType<PropertiesType<T>>
 
-const persistedReducer = persistReducer(persistConfig, reducers);
-
-const store = configureStore({
-    reducer: persistedReducer,
-    devTools: process.env.NODE_ENV !== 'production',
-    middleware: [thunk]
-});
-
-type reducersType = typeof reducers
-export type AppStateType = ReturnType<reducersType>
 export default store;
