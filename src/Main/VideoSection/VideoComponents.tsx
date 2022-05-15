@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect, useRef, useState} from 'react'
 import s from './emovideo.module.scss'
 import girlsCollectionBanner from '../../imges/web_banner_girls_collection.png'
 import free_socks_banner from '../../imges/emogoods/emogoodsladies/free_socks_banner.png'
@@ -67,13 +67,24 @@ export const ThirdEmoVideo = () => {
     )
 }
 export const StreamVideo = () => {
+    const [videoVisibility, setVideoVisibility] = useState<boolean>()
+    const myRef = React.useRef() as React.MutableRefObject<HTMLInputElement>
+    console.log(videoVisibility)
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            const entry = entries[0]
+            setVideoVisibility(entry.isIntersecting)
+        })
+        observer.observe(myRef.current)
+    }, [setVideoVisibility])
     return (
-        <div className={s.player_wrapper}>
+        <div ref={myRef} className={s.player_wrapper}>
             <div>
                 <ReactPlayer className={s.video__container}
-                             playing={true}
+                             playing={videoVisibility}
                              muted={true}
                              url="https://www.youtube.com/embed/GEQFwln-aqc"
+
                 >
                 </ReactPlayer>
             </div>

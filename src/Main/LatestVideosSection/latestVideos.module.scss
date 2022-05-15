@@ -6,7 +6,6 @@
   margin: auto;
   flex-wrap: wrap;
   gap: 1rem;
-  align-items: center;
 
   div {
     width: 373px;
@@ -35,6 +34,7 @@
   div {
     display: flex;
     justify-content: center;
+    align-items: center;
 
     p:after{
       content: '';

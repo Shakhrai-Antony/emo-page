@@ -13,9 +13,11 @@ import {EmailSection} from "./EmailSection/EmailSection";
 export const Main = () => {
     return (
         <div className={s.main}>
-            <NavLink to='collections/all-products'>
-                <img className={s.newDrop} src={newDrop} alt="newDrop"/>
-            </NavLink>
+            <section className={s.newDrop_section}>
+                <NavLink to='collections/all-products'>
+                    <img className={s.newDrop} src={newDrop} alt="newDrop"/>
+                </NavLink>
+            </section>
             <section className={s.goodsSection}>
                 <GoodsSection/>
             </section>

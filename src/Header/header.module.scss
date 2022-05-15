@@ -1,4 +1,6 @@
-
+header {
+  position: relative;
+}
 .freeShipping {
   background-color: #000000;
   width: 100%;
@@ -17,43 +19,58 @@
 }
 .headerNavigation {
   display: flex;
-  margin: 20px auto;
-  width: 100%;
-  background-color: #ffffff;
-  position: absolute;
-  div {
-    margin-left: 250px;
+  justify-content: space-between;
+  margin-top: 30px;
+
+  .home_img {
+    padding-left:150px;
   }
-  nav {
-    margin: auto;
+  .nav_section {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     width: 100%;
-    a {
-      text-decoration: none;
-      color: #000000;
-      text-transform: uppercase;
-      font-weight: bold;
-      font-size: 20px;
-      padding: 0 15px;
-      align-items: center;
-    }
-    a:after {
-      content: '';
-      width: 0;
-      height: 2px;
-      display: block;
-      background: #000000;
-      transition-duration: 300ms;
-    }
-    a:nth-child(-n+6):hover:after {
+    .nav_items {
+      margin: 0;
+      padding: 0;
       width: 100%;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      flex-wrap: wrap;
+      .nav_items_li {
+        align-items: center;
+        padding-right: 25px;
+        height: 10vh;
+        display: flex;
+      }
+      .nav_items_links {
+          text-decoration: none;
+          color: #000000;
+          text-transform: uppercase;
+          font-weight: bold;
+          font-size: 22px;
+          padding: 0;
+          align-items: center;
+      }
+      .nav_items_links:after {
+        content: '';
+        width: 0;
+        height: 2px;
+        display: block;
+        background: #000000;
+        transition-duration: 300ms;
+      }
+      .nav_items_links:nth-child(-n+6):hover:after {
+        width: 100%;
+      }
+      img {
+        width: 28px;
+        height: 28px;
+        background-repeat: no-repeat;
+      }
     }
-    img {
-      width: 28px;
-      height: 28px;
-      background-repeat: no-repeat;
+    li {
+      list-style: none;
     }
   }
 }
