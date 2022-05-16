@@ -52,7 +52,7 @@ header {
           padding: 0;
           align-items: center;
       }
-      .nav_items_links:after {
+      .nav_items_li:nth-child(-n+6) .nav_items_links:after {
         content: '';
         width: 0;
         height: 2px;
@@ -60,7 +60,7 @@ header {
         background: #000000;
         transition-duration: 300ms;
       }
-      .nav_items_links:nth-child(-n+6):hover:after {
+      .nav_items_li:nth-child(-n+6) .nav_items_links:hover:after {
         width: 100%;
       }
       img {

@@ -70,8 +70,9 @@
       background-image: url('../../imges/email.png');
       background-size: 100%;
       outline: none;
-      background-color: #1d1d1d;
-
+      background-color: transparent;
+      background-position: center;
+      filter: invert(99%) sepia(1%) saturate(44%) hue-rotate(336deg) brightness(113%) contrast(100%)
     }
   }
 }

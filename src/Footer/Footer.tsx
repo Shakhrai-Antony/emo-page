@@ -7,8 +7,8 @@ import s from './footer.module.scss'
 import {NavLink} from "react-router-dom";
 
 export const Footer = () => {
-    const icons = [{value: instagram, to: '/instagram.com/emosnotdead777'}, {value: facebook, to: '/facebook.com/emosnotdead777'},
-        {value: twitter, to: 'twitter.com/emosnotdead'}, {value: youtube, to: '/youtube.com/c/emosnotdead'}]
+    const icons = [{value: instagram, to: 'https://instagram.com/emosnotdead777'}, {value: facebook, to: 'https://facebook.com/emosnotdead777'},
+        {value: twitter, to: 'https://twitter.com/emosnotdead'}, {value: youtube, to: 'https://youtube.com/c/emosnotdead'}]
     const footerNavigation = [
         {value: 'FAQS', to: '/emosnotdead.com/pages/faqs'}, {value: 'Contact Us', to: '/emosnotdead.com/pages/contact-us'},
         {value: 'Shipping Info', to: '/emosnotdead.com/pages/shipping-policy'}, {value: 'Return & Exchanges', to: '/emosnotdead.com/pages/returns-exchanges'},
@@ -16,9 +16,10 @@ export const Footer = () => {
         {value: 'Terms of Service', to: '/emosnotdead.com/pages/terms-of-service'}]
 
     const iconsSection = icons.map((item, index) =>
-        <NavLink to={item.to}>
+        <a href={item.to}>
             <img src={item.value} alt={item.to} key={index}/>
-        </NavLink>)
+        </a>)
+
     const navigationSection = footerNavigation.map((item, index) =>
         <NavLink to={item.to} key={index}>
             <p>{item.value}</p>

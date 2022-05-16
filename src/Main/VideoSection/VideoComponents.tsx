@@ -76,7 +76,7 @@ export const StreamVideo = () => {
             setVideoVisibility(entry.isIntersecting)
         })
         observer.observe(myRef.current)
-    }, [setVideoVisibility])
+    }, [])
     return (
         <div ref={myRef} className={s.player_wrapper}>
             <div>
