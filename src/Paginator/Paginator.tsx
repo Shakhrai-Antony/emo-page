@@ -20,7 +20,11 @@ export const Paginator = () => {
         pages.push(i)
     }
     useEffect(() => {
-        window.scrollTo({top: 0})
+        window.scrollTo({
+            top: 100,
+            left: 100,
+            behavior: 'smooth'
+        });
     }, [currentPage])
 
 
