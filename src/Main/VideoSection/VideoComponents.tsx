@@ -69,7 +69,6 @@ export const ThirdEmoVideo = () => {
 export const StreamVideo = () => {
     const [videoVisibility, setVideoVisibility] = useState<boolean>()
     const myRef = React.useRef() as React.MutableRefObject<HTMLInputElement>
-    console.log(videoVisibility)
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
             const entry = entries[0]

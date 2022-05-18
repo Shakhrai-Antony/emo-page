@@ -1,5 +1,5 @@
 import React from 'react'
-import {NavLink} from "react-router-dom";
+import {NavLink, Route} from "react-router-dom";
 import newDrop from './../imges/new_drop.png';
 import s from './main.module.scss'
 import {CoffeeSection, GoodsSection} from "./goodsSection/GoodsSection";
@@ -8,7 +8,7 @@ import {EmoVideo, SecondEmoVideo, StreamVideo, ThirdEmoVideo} from "./VideoSecti
 import {GoodsSectionForLadies} from "./goodsSection/SectionForLadies/goodsSectionForLadies";
 import {FemaleSimpleSliderSection} from "./SwiperSection/FemaleSlider";
 import {LatestVideosSection} from "./LatestVideosSection/latestVideos";
-import {EmailSection} from "./EmailSection/EmailSection";
+import {EmailSection} from "../Footer/EmailSection/EmailSection";
 
 export const Main = () => {
     return (
@@ -43,9 +43,6 @@ export const Main = () => {
             </section>
             <section>
                 <LatestVideosSection/>
-            </section>
-            <section>
-                <EmailSection/>
             </section>
         </div>
     )

@@ -1,0 +1,33 @@
+.selectedPage {
+  color: gray;
+  font-weight: bold;
+  font-size: 20px;
+}
+.pages {
+  cursor: pointer;
+  color: #000000;
+  font-weight: bold;
+  font-size: 20px;
+}
+.paginator_button_left {
+  background-image: url("../imges/left-arrow.png");
+  background-size: 40px;
+  width: 43px;
+  height: 43px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.paginator_button_right {
+  background-image: url("../imges/right-arrow.png");
+  width: 43px;
+  height: 43px;
+  background-size: 40px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}

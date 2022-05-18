@@ -17,4 +17,14 @@ export const getCoffeeGoods = (state: AppStateType) => {
 }
 export const getVideos = (state: AppStateType) => {
     return state.goodsPage.videosSection
+
+}
+export const getTotalItemsForMerchSection = (state: AppStateType) => {
+    return state.goodsPage.merchSection
+}
+export const getTotalItemsForMerchSectionLength = (state: AppStateType) => {
+    return state.goodsPage.totalItemsCount
+}
+export const getCurrentPage = (state:AppStateType) => {
+    return state.goodsPage.currentPage
 }

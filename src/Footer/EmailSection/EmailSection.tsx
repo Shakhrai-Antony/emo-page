@@ -3,7 +3,6 @@ import {useFormik} from "formik";
 import {useDispatch} from "react-redux";
 import {actions} from "../../Store/goodsReducer";
 import s from './email.module.scss'
-import email from './../../imges/email.png'
 
 export const EmailSection = () => {
     const dispatch = useDispatch()
@@ -36,7 +35,7 @@ export const EmailSection = () => {
                     <input placeholder='Enter your email' name='email' onChange={handleChange}
                            value={values.email} />
                            <button onClick={ () => onSubmit}>
-                              {/* <img src={email} alt="subscribe"/>*/}
+
                            </button>
                 </form>
             </div>

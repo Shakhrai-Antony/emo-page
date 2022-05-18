@@ -8,7 +8,7 @@ import cart from './../imges/cart.png'
 import {DropDownCollections, DropDownMerch} from "./dropDownMenu";
 
 export const Header = () => {
-    const items = [{value: 'Home', to: '/home'}, {value: 'Merch', to: '/merch'}, {
+    const items = [{value: 'Home', to: '/'}, {value: 'Merch', to: '/merch'}, {
         value: 'Collections',
         to: '/collections'
     },
@@ -31,7 +31,7 @@ export const Header = () => {
                 </div>
                 <div className={s.headerNavigation}>
                     <div className={s.home_img}>
-                        <NavLink to='/home'> <img src={logo} alt="logo"/>
+                        <NavLink to='/'> <img src={logo} alt="logo"/>
                         </NavLink>
                     </div>
                     <div className={s.nav_section}>

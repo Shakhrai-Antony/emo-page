@@ -1,4 +1,3 @@
-import {createAction, createReducer} from "@reduxjs/toolkit";
 import notdeadcap from './../imges/emogoods/not_dead_cap.png'
 import alivecap from './../imges/emogoods/alive_cap.png'
 import coffee from './../imges/emogoods/coffee.png'
@@ -37,8 +36,35 @@ import kid from './../imges/videoimages/kid.png'
 import cruise from './../imges/videoimages/cruise.png'
 import leaveme from './../imges/videoimages/leave_me.png'
 import tommys from './../imges/videoimages/tommys.png'
+import notdeadteee from './../imges/emogoods/notdeadtee.png'
+import verymuchalivehoodie from './../imges/emogoods/verymuchalivehoodie.png'
+import ElectricHorseTee from './../imges/emogoods/ElectricHorseTee.png'
+import endblackdyehoodie from './../imges/emogoods/endblackdyehoodie.png'
+import endblackdyetee from './../imges/emogoods/endblackdyetee.png'
+import endpinktee from './../imges/emogoods/emogoodsladies/endpinktee.png'
+import endpinkhoodie from './../imges/emogoods/emogoodsladies/endpinkhoodie.png'
+import endlavendertee from './../imges/emogoods/emogoodsladies/endlavendertee.png'
+import endlavenderhoodie from './../imges/emogoods/emogoodsladies/endlavenderhoodie.png'
+import trucktee from './../imges/emogoods/trucktee.png'
+import undeadhoodie from './../imges/emogoods/undeadhoodie.png'
+import bitesleeve from './../imges/emogoods/bitesleeve.png'
+import endforkstee from './../imges/emogoods/endforkstee.png'
+import roseswhite from './../imges/emogoods/roseswhite.png'
+import rosesblack from './../imges/emogoods/rosesblack.png'
+import rivivalwhitetee from './../imges/emogoods/rivivalteewhite.png'
+import rivivalblacktee from './../imges/emogoods/rivivalteeblack.png'
+import rivivaltourblack from './../imges/emogoods/rivivaltourblack.png'
+import notdeadsleeveblack from './../imges/emogoods/notdeadsleeveblack.png'
+import notdeadsleevewhite from './../imges/emogoods/notdeadsleevewhite.png'
+import endlongsleeveblack from './../imges/emogoods/endlongsleeveblack.png'
+import endyouthtee from './../imges/emogoods/emogoodskids/endyouthtee.png'
+import endyouthhoodie from './../imges/emogoods/emogoodskids/endyouthhoodie.png'
+import youthemokidtee from './../imges/emogoods/emogoodskids/youthemokidtee.png'
+import emokidhoodie from './../imges/emogoods/emogoodskids/emokidhoodie.png'
+import notdead3tee from './../imges/emogoods/emogoodskids/3-6notdeadtee.png'
+import notdead3hoodie from './../imges/emogoods/emogoodskids/3-6notdeadhoodie.png'
+import giftcard from './../imges/emogoods/giftcard.png'
 import {InferActionsTypes} from "./Store";
-
 
 const initialState = {
     goods: [
@@ -320,8 +346,132 @@ const initialState = {
             date: 'apr 17, 2021'
         }
     ],
-    email: '' as string
+    merchSection: [
+        {value: notdeadbluehoodie, description: 'stacked & repeat hoodie - mint',
+        path: '/collections/all-products/products/stacked-repeat-hoodie-mint', id: 1, price: `$64.95`},
+        {value: notdeadpinkhoodie, description: 'stacked & repeat hoodie - pink',
+        path: '/collections/all-products/products/stacked-repeat-hoodie-pink', id: 2, price: `$64.95`},
+        {value: coffee, description: 'triste mexicana blend coffee',
+        path: '/collections/all-products/products/triste-mexicana-blend-coffee', id: 3, price: `$16.95`},
+        {value: whitesocks, description: 'e.n.d. socks - white',
+        path: '/collections/all-products/products/e-n-d-socks-white', id: 4, price: `$14.95`},
+        {value: blackhandcup, description: 'live forever coffee mug',
+            path: '/collections/all-products/products/live-forever-coffee-mug', id: 5, price: `$19.95`},
+        {value: greyrosecup, description: 'weeping rose coffee mug',
+            path: '/collections/all-products/products/weeping-rose-coffee-mug', id: 6, price: `$19.95`},
+        {value: notdeadcap, description: 'emo\'s not dead snapback - black',
+            path: '/collections/all-products/products/emos-not-dead-snapback-black', id: 7, price: `$39.95`},
+        {value: alivecap, description: 'very much alive snapback - black',
+            path: '/collections/all-products/products/v-m-a-snapback-black', id: 8, price: `$39.95`},
+        {value: end_dad_cap, description: 'e.n.d. snapback - black',
+            path: '/collections/all-products/products/e-n-d-snapback', id: 9, price: `$39.95`},
+        {value: dadhat, description: 'broken heart beanie',
+            path: '/collections/all-products/products/broken-heart-beanie', id: 10, price: `$24.95`},
+        {value: notdeadteee, description: 'emo\'s not dead tee - black',
+            path: '/collections/all-products/products/emos-not-dead-tee-black', id: 11, price: `$29.95`},
+        {value: emohoodieblack, description: 'emo\'s not dead hoodie - black',
+            path: '/collections/all-products/products/emos-not-dead-hoodie-black', id: 12, price: `$54.95`},
+        {value: teegray, description: 'e.n.d. vintage tee',
+            path: '/collections/all-products/products/e-n-d-vintage-tee', id: 13, price: `$29.95`},
+        {value: emohoodiegray, description: 'e.n.d. vintage hoodie',
+            path: '/collections/all-products/products/e-n-d-vintage-hoodie', id: 14, price: `$64.95`},
+        {value: muchalivetee, description: 'very much alive tee - black',
+            path: '/collections/all-products/products/very-much-alive-tee-black', id: 15, price: `$29.95`},
+        {value: verymuchalivehoodie, description: 'very much alive hoodie - black',
+            path: '/collections/all-products/products/very-much-alive-hoodie-black', id: 16, price: `$59.95`},
+        {value: muchalivewhitetee, description: 'very much alive tee - white',
+            path: '/collections/all-products/products/very-much-alive-white', id: 17, price: `$29.95`},
+        {value: ElectricHorseTee, description: 'electric horse tee - black',
+            path: '/collections/all-products/products/electric-horse-tee-black', id: 18, price: `$34.95`},
+        {value: zipblackwhitehoodie, description: 'e.n.d. zip hoodie - black/white',
+            path: '/collections/all-products/products/e-n-d-zip-hoodie-black-white', id: 19, price: `$54.95`},
+        {value: zipblackhoodie, description: 'e.n.d. zip hoodie - black/red',
+            path: '/collections/all-products/products/black-red-zip-up-hoodie', id: 20, price: `$54.95`},
+        {value: scremocoffee, description: 'screamo blend coffee',
+            path: '/collections/all-products/products/screamo-blend-coffee', id: 21, price: `$16.95`},
+        {value: blackheartcoffee, description: 'black heart blend coffee',
+            path: '/collections/all-products/products/black-heart-blend-coffee', id: 22, price: `$16.95`},
+        {value: notdeadmug, description: 'emo\'s not dead coffee mug',
+            path: '/collections/all-products/products/emos-not-dead-coffee-mug', id: 23, price: `$15.95`},
+        {value: makermug, description: 'e.n.d. heart coffee mug',
+            path: '/collections/all-products/products/e-n-d-heart-coffee-mug', id: 24, price: `$15.95`},
+        {value: endblackdyetee, description: 'crystal dye tee - black',
+            path: '/collections/all-products/products/crystal-dye-tee-black', id: 25, price: `$34.95`},
+        {value: endblackdyehoodie, description: 'crystal dye hoodie - black',
+            path: '/collections/all-products/products/crystal-dye-hoodie-black', id: 26, price: `$64.95`},
+        {value: nodeadteegirlblack, description: 'ladies sweet script tee - charcoal',
+            path: '/collections/all-products/products/ladies-sweet-script-tee-charcoal', id: 27, price: `$34.95`},
+        {value: hoodigirlpink, description: 'sweet script crop hoodie - cotton candy',
+            path: '/collections/all-products/products/sweet-script-crop-hoodie-cotton-candy', id: 28, price: `$44.95`},
+        {value: hoodiegirlblack, description: 'e.n.d. crop hoodie - black',
+            path: '/collections/all-products/products/ladies-e-n-d-crop-hoodie-black', id: 29, price: `$44.95`},
+        {value: teegirlblack, description: 'crystal dye crop tee - black',
+            path: '/collections/all-products/products/crystal-dye-crop-tee-black', id: 30, price: `$29.95`},
+        {value: teegirlpink, description: 'crystal dye crop tee - lavender',
+            path: '/collections/all-products/products/crystal-dye-crop-tee-lavender', id: 31, price: `$29.95`},
+        {value: teegirlblue, description: 'crystal dye crop tee - blue',
+            path: '/collections/all-products/products/crystal-dye-crop-tee-blue', id: 32, price: `$29.95`},
+        {value: endpinktee, description: 'crystal dye tee - lavender',
+            path: '/collections/all-products/products/crystal-dye-tee-lavender', id: 33, price: `$34.95`},
+        {value: endpinkhoodie, description: 'crystal dye hoodie - lavender',
+            path: '/collections/all-products/products/crystal-dye-hoodie-lavender', id: 34, price: `$64.95`},
+        {value: endlavendertee, description: 'crystal dye hoodie - lavender',
+            path: '/collections/all-products/products/crystal-dye-tee-blue', id: 35, price: `$34.95`},
+        {value: endlavenderhoodie, description: 'crystal dye hoodie - blue',
+            path: '/collections/all-products/products/crystal-dye-hoodie-blue', id: 36, price: `$64.95`},
+        {value: trucktee, description: 'hoopty truck tee - black',
+            path: '/collections/all-products/products/hoopty-truck-tee-black', id: 37, price: `$34.95`},
+        {value: undeadhoodie, description: 'emo\'s undead hoodie - black',
+            path: '/collections/all-products/products/emos-undead-hoodie-black', id: 38, price: `$59.95`},
+        {value: bitesleeve, description: 'bite long sleeve - black/white',
+            path: '/collections/all-products/products/bite-long-sleeve-black-white', id: 39, price: `$39.95`},
+        {value: endforkstee, description: 'forks baseball tee - navy/white',
+            path: '/collections/all-products/products/forks-baseball-tee-navy-white', id: 40, price: `$39.95`},
+        {value: rosesblack, description: '19-80 whatever tee - black',
+            path: '/collections/all-products/products/19-90-whatever-tee-black', id: 41, price: `$34.95`},
+        {value: roseswhite, description: '19-80 whatever tee - white',
+            path: '/collections/all-products/products/19-90-whatever-tee-white', id: 42, price: `$34.95`},
+        {value: rivivalblacktee, description: 'from the grave tee - black',
+            path: '/collections/all-products/products/from-the-grave-tee-black', id: 43, price: `$34.95`},
+        {value: rivivalwhitetee, description: 'from the grave long sleeve - white',
+            path: '/collections/all-products/products/from-the-grave-long-sleeve-white', id: 44, price: `$39.95`},
+        {value: notdeadsleeveblack, description: 'fringed long sleeve - charcoal',
+            path: '/collections/all-products/products/fringed-long-sleeve-charcoal', id: 45, price: `$39.95`},
+        {value: notdeadsleevewhite, description: 'fringed long sleeve - white',
+            path: '/collections/all-products/products/fringed-long-sleeve-white', id: 46, price: `$39.95`},
+        {value: rivivaltourblack, description: 'parade tee - black',
+            path: '/collections/all-products/products/parade-tee-black', id: 47, price: `$34.95`},
+        {value: endlongsleeveblack, description: 'fill or burst long sleeve - black',
+            path: '/collections/all-products/products/fill-or-burst-long-sleeve-black', id: 48, price: `$39.95`},
+        {value: dadhatlove, description: 'e.n.d. heart strapback - black',
+            path: '/collections/all-products/products/e-n-d-dad-hat-black', id: 49, price: `$34.95`},
+        {value: end_dad_cap, description: 'e.n.d. strapback - black',
+            path: '/collections/all-products/products/e-n-d-strapback-black', id: 50, price: `$34.95`},
+        {value: leatherwalletend, description: 'e.n.d. classic skinny wallet + keychain',
+            path: '/collections/all-products/products/e-n-d-classic-skinny-wallet-keychain-bundle', id: 51, price: `$39.95`},
+        {value: leatherwalletlove, description: 'e.n.d. heart skinny wallet + keychain',
+            path: '/collections/all-products/products/e-n-d-heart-skinny-wallet-keychain-bundle', id: 52, price: `$39.95`},
+        {value: endyouthtee, description: 'youth e.n.d. tee - black',
+            path: '/collections/all-products/products/youth-e-n-d-tee-black', id: 53, price: `$21.95`},
+        {value: endyouthhoodie, description: 'youth e.n.d. hoodie - black',
+            path: '/collections/all-products/products/youth-e-n-d-hoodie-black', id: 54, price: `$39.95`},
+        {value: youthemokidtee, description: 'youth emo kid tee - black',
+            path: '/collections/all-products/products/youth-emo-kid-tee-black', id: 55, price: `$21.95`},
+        {value: emokidhoodie, description: 'youth emo kid hoodie - black',
+            path: '/collections/all-products/products/youth-emo-kid-hoodie-black', id: 56, price: `$39.95`},
+        {value: notdead3tee, description: 'e.n.d toddler tee - black',
+            path: '/collections/all-products/products/e-n-d-toddler-tee-black', id: 57, price: `$19.95`},
+        {value: notdead3hoodie, description: 'e.n.d toddler hoodie - black',
+            path: '/collections/all-products/products/e-n-d-toddler-hoodie-black', id: 58, price: `$29.95`},
+        {value: giftcard, description: 'digital gift card',
+            path: '/collections/all-products/products/emos-not-dead-digital-gift-card', id: 59, price: `from $25.00`}
+    ],
+    email: '' as string,
+    itemsOnPage: 24,
+    currentPage: 1,
+    totalItemsCount: 0
 }
+initialState.totalItemsCount = initialState.merchSection.length
 
 
 const goodsReducer = (state = initialState, action: GoodsReducerType) => {
@@ -331,6 +481,12 @@ const goodsReducer = (state = initialState, action: GoodsReducerType) => {
                 ...state,
                 email: action.email
             }
+
+        case 'SET_CURRENT_PAGE':
+            return {
+                ...state,
+                currentPage: action.page
+            }
         default:
             return state;
     }
@@ -339,8 +495,11 @@ const goodsReducer = (state = initialState, action: GoodsReducerType) => {
 type GoodsReducerType = InferActionsTypes<typeof actions>
 
 export const actions = {
-    setUserEmail: (email: string): any => {
+    setUserEmail: (email: string) => {
         return ({type: 'SET_EMAIL', email} as const)
+    },
+    setNewPage: (page: number) => {
+        return ({type: 'SET_CURRENT_PAGE', page} as const)
     }
 }
 
