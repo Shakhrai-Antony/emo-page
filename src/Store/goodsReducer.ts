@@ -64,6 +64,42 @@ import emokidhoodie from './../imges/emogoods/emogoodskids/emokidhoodie.png'
 import notdead3tee from './../imges/emogoods/emogoodskids/3-6notdeadtee.png'
 import notdead3hoodie from './../imges/emogoods/emogoodskids/3-6notdeadhoodie.png'
 import giftcard from './../imges/emogoods/giftcard.png'
+import bed from './../imges/watchimages/bed.png'
+import blackparade from './../imges/watchimages/blackparade.png'
+import blondehair from './../imges/watchimages/blondehair.png'
+import bluenails from './../imges/watchimages/blue_nails.png'
+import brewcoffee from './../imges/watchimages/brewcoffee.png'
+import brokenhero from './../imges/watchimages/brokenhero.png'
+import carafraid from './../imges/watchimages/carafraid.png'
+import carroof from './../imges/watchimages/carroof.png'
+import church from './../imges/watchimages/church.png'
+import coffeemorning from './../imges/watchimages/coffeemorning.png'
+import dancebattle from './../imges/watchimages/dancebattle.png'
+import dateemoguys from './../imges/watchimages/dateemoguys.png'
+import delailo from './../imges/watchimages/delailo.png'
+import desert from './../imges/watchimages/desert.png'
+import feltemoindaclub from './../imges/watchimages/feltemoindaclub.png'
+import feltemomightdelete from './../imges/watchimages/feltemomightdelete.png'
+import guitar from './../imges/watchimages/guitar.png'
+import horse from './../imges/watchimages/horse.png'
+import houseroof from './../imges/watchimages/houseroof.png'
+import lionking from './../imges/watchimages/lionking.png'
+import makeitbymyown from './../imges/watchimages/makeitbymyown.png'
+import microfone from './../imges/watchimages/microfone.png'
+import might_cruise from './../imges/watchimages/might_cruise.png'
+import oceanavenue from './../imges/watchimages/oceanavenue.png'
+import pants from './../imges/watchimages/pants.png'
+import remotecontroller from './../imges/watchimages/remotecontroller.png'
+import straightlook from './../imges/watchimages/straightlook.png'
+import tommysface from './../imges/watchimages/tommysface.png'
+import umbrella from './../imges/watchimages/umbrella.png'
+import bettercalluber from './../imges/watchimages/bettercalluber.png'
+import emoguyhoodie from './../imges/watchimages/emo_guy_hoodie.png'
+import crystaldyegirl from './../imges/watchimages/crystal_dye_girl.png'
+import tourmerch from './../imges/watchimages/tour_merch.png'
+import emosundead from './../imges/watchimages/emos_undead.png'
+
+
 import {InferActionsTypes} from "./Store";
 
 const initialState = {
@@ -469,7 +505,48 @@ const initialState = {
     email: '' as string,
     itemsOnPage: 24,
     currentPage: 1,
-    totalItemsCount: 0
+    totalItemsCount: 0,
+    watchSection: [
+        {value: feltemomightdelete, description: 'felt emo might delete', id: 1, path: '/blogs/felt-emo-might-delete/felt-emo-might-delete-5'},
+        {value: feltemoindaclub, description: 'felt emo in da club', id: 2, path: '/blogs/felt-emo-might-delete/felt-emo-in-da-club'},
+        {value: brewcoffee, description: 'felt emo might brew coffee', id: 3, path: '/blogs/felt-emo-might-delete/felt-emo-might-brew-coffee'},
+        {value: remotecontroller, description: 'felt emo might delete', id: 4, path: '/blogs/felt-emo-might-delete/felt-emo-might-delete-4'},
+        {value: might_cruise, description: 'felt emo might cruise', id: 5, path: '/blogs/felt-emo-might-delete/felt-emo-might-cruise'},
+        {value: bluenails, description: 'felt emo might delete', id: 6, path: '/blogs/felt-emo-might-delete/felt-emo-might-delete-3'},
+        {value: tommysface, description: 'your broken hero - tommy\'s face ft. spencer chamberlain of underoath',
+            id: 7, path: '/blogs/felt-emo-might-delete/your-broken-hero-tommys-face-ft-spencer-chamberlain'},
+        {value: horse, description: 'felt emo might delete', id: 8, path: '/blogs/felt-emo-might-delete/felt-emo-again-might-delete-18'},
+        {value: dateemoguys, description: 'her: "i only date emo guys" us...', id: 9, path: '/blogs/felt-emo-might-delete/her-i-only-date-emo-guys-us'},
+        {value: straightlook, description: 'felt emo might delete', id: 10, path: '/blogs/felt-emo-might-delete/felt-emo-again-might-delete-17'},
+        {value: pants, description: 'felt emo might delete', id: 11, path: '/blogs/felt-emo-might-delete/felt-emo-again-might-delete-16'},
+        {value: dancebattle, description: 'felt emo might delete', id: 12, path: '/blogs/felt-emo-might-delete/felt-emo-again-might-delete-15'},
+        {value: blondehair, description: 'felt emo might delete', id: 13, path: '/blogs/felt-emo-might-delete/felt-emo-again-might-delete-14'},
+        {value: brokenhero, description: 'your broken hero - a letter to ashley', id: 14, path: '/blogs/felt-emo-might-delete/your-broken-hero-a-letter-to-ashley'},
+        {value: church, description: 'felt emo might delete', id: 15, path: '/blogs/felt-emo-might-delete/felt-emo-again-might-delete-13'},
+        {value: carroof, description: 'felt emo might delete', id: 16, path: '/blogs/felt-emo-might-delete/felt-emo-again-might-delete-12'},
+        {value: coffeemorning, description: 'felt emo might delete', id: 17, path: '/blogs/felt-emo-might-delete/felt-emo-again-might-delete-11'},
+        {value: bed, description: 'felt emo might delete', id: 18, path: '/blogs/felt-emo-might-delete/felt-emo-again-might-delete-10'},
+        {value: dancebattle, description: 'felt emo might delete', id: 19, path: '/blogs/felt-emo-might-delete/felt-emo-again-might-delete-9'},
+        {value: houseroof, description: 'felt emo might delete', id: 20, path: '/blogs/felt-emo-might-delete/felt-emo-again-might-delete-8'},
+        {value: delailo, description: 'felt emo might delete', id: 21, path: '/blogs/felt-emo-might-delete/felt-emo-again-might-delete-7'},
+        {value: makeitbymyown, description: 'felt emo might delete', id: 22, path: '/blogs/felt-emo-might-delete/felt-emo-again-might-delete-6'},
+        {value: lionking, description: 'felt emo might delete', id: 23, path: '/blogs/felt-emo-might-delete/felt-emo-again-might-delete-5'},
+        {value: guitar, description: 'felt emo might delete', id: 24, path: '/blogs/felt-emo-might-delete/felt-emo-again-might-delete-4'},
+        {value: oceanavenue, description: 'felt emo might delete', id: 25, path: '/blogs/felt-emo-might-delete/felt-emo-again-might-delete-3'},
+        {value: carafraid, description: 'felt emo might delete', id: 26, path: '/blogs/felt-emo-might-delete/felt-emo-again-might-delete-2'},
+        {value: desert, description: 'felt emo might delete', id: 27, path: '/blogs/felt-emo-might-delete/felt-emo-again-might-delete-1'},
+        {value: blackparade, description: 'felt emo might delete', id: 28, path: '/blogs/felt-emo-might-delete/felt-emo-again-might-delete'},
+        {value: umbrella, description: 'felt emo might delete', id: 29, path: '/blogs/felt-emo-might-delete/felt-emo-might-delete'},
+        {value: microfone, description: 'felt emo might delete', id: 30, path: '/blogs/felt-emo-might-delete/felt-emo-might-delete-2'},
+        {value: bettercalluber, description: 'felt emo might delete', id: 31, path: '/blogs/felt-emo-might-delete/felt-emo-might-delete-1'}
+
+    ],
+    collectionForWatchSection: [
+        {value: emoguyhoodie, description: 'classic e.n.d. merch', id: 1, path: '/collections/essential-end-merch'},
+        {value: crystaldyegirl, description: 'crystal dye', id: 2, path: '/collections/tiedye21'},
+        {value: tourmerch, description: 'revival tour merch', id: 3, path: '/collections/revival-tour-collection'},
+        {value: emosundead, description: 'emo\s undead', id: 4, path: '/collections/emos-undead'}
+    ]
 }
 initialState.totalItemsCount = initialState.merchSection.length
 

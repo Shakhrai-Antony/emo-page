@@ -1,8 +1,8 @@
-import React, {useEffect, useRef} from 'react'
+import React from 'react'
 import {Paginator} from "../Paginator/Paginator";
 import {useSelector} from "react-redux";
 import {getCurrentPage, getTotalItemsForMerchSection} from "../Store/goodsSelectors";
-import {GoodsListMerchSection} from "../Paginator/GoodsListMerchSection";
+import {GoodsListMerchSection} from "./GoodsListMerchSection";
 import s from './merchgoods.module.scss'
 
 export const MerchComponent = () => {

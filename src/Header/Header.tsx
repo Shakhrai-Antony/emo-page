@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import s from './header.module.scss'
-import {NavLink} from "react-router-dom";
+import {NavLink, useHref} from "react-router-dom";
 import logo from './../imges/notdead.png'
 import search from './../imges/search.png'
 import user from './../imges/user.png'
@@ -12,7 +12,7 @@ export const Header = () => {
         value: 'Collections',
         to: '/collections'
     },
-        {value: 'Watch', to: '/watch'}, {value: 'Playlist', to: '/playlist'}, {value: 'Cruise', to: '/cruise'},
+        {value: 'Watch', to: '/watch'}, {value: 'Playlist', to: '/playlist'}, {value: 'Cruise', to: 'https://www.emosnotdeadcruise.com/'  },
         {value: <img src={user} alt='user'/>, to: '/login'}, {
             value: <img src={search} alt='user'/>,
             to: '/search'
@@ -57,10 +57,18 @@ export const Header = () => {
                                             </li>
                                         )
                                     }
+                                    if (item.value === 'Cruise') {
+                                        return (
+                                            <li className={s.nav_items_li} key={index}>
+                                                <a className={s.nav_items_links} href="https://www.emosnotdeadcruise.com/">{item.value}</a>
+                                            </li>
+                                        )
+                                    }
                                 return (
                                     <li className={s.nav_items_li} key={index}>
                                         <NavLink className={s.nav_items_links} to={item.to}>{item.value}</NavLink>
                                     </li>
+
                                 )
                                 }
                             )}

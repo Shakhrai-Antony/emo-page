@@ -17,7 +17,6 @@ export const getCoffeeGoods = (state: AppStateType) => {
 }
 export const getVideos = (state: AppStateType) => {
     return state.goodsPage.videosSection
-
 }
 export const getTotalItemsForMerchSection = (state: AppStateType) => {
     return state.goodsPage.merchSection
@@ -27,4 +26,10 @@ export const getTotalItemsForMerchSectionLength = (state: AppStateType) => {
 }
 export const getCurrentPage = (state:AppStateType) => {
     return state.goodsPage.currentPage
+}
+export const getWatchList = (state:AppStateType) => {
+    return state.goodsPage.watchSection
+}
+export const getCollectionForWatchSection = (state: AppStateType) => {
+    return state.goodsPage.collectionForWatchSection
 }
