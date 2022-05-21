@@ -11,10 +11,10 @@ export const Footer = () => {
     const icons = [{value: instagram, to: 'https://instagram.com/emosnotdead777'}, {value: facebook, to: 'https://facebook.com/emosnotdead777'},
         {value: twitter, to: 'https://twitter.com/emosnotdead'}, {value: youtube, to: 'https://youtube.com/c/emosnotdead'}]
     const footerNavigation = [
-        {value: 'FAQS', to: '/emosnotdead.com/pages/faqs'}, {value: 'Contact Us', to: '/emosnotdead.com/pages/contact-us'},
-        {value: 'Shipping Info', to: '/emosnotdead.com/pages/shipping-policy'}, {value: 'Return & Exchanges', to: '/emosnotdead.com/pages/returns-exchanges'},
-        {value: 'Refund Policy', to: '/emosnotdead.com/pages/refund-policy'}, {value: 'Privacy Policy', to: '/emosnotdead.com/pages/privacy-policy'},
-        {value: 'Terms of Service', to: '/emosnotdead.com/pages/terms-of-service'}]
+        {value: 'FAQS', to: '/pages/faqs'}, {value: 'Contact Us', to: '/pages/contact-us'},
+        {value: 'Shipping Info', to: '/pages/shipping-policy'}, {value: 'Return & Exchanges', to: '/pages/returns-exchanges'},
+        {value: 'Refund Policy', to: '/pages/refund-policy'}, {value: 'Privacy Policy', to: '/pages/privacy-policy'},
+        {value: 'Terms of Service', to: '/terms-of-service'}]
 
     const iconsSection = icons.map((item, index) =>
         <a href={item.to} key={index}>

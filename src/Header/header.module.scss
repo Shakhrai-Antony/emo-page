@@ -63,6 +63,12 @@ header {
       .nav_items_li:nth-child(-n+6) .nav_items_links:hover:after {
         width: 100%;
       }
+      .nav_items_li:nth-child(-n+6) .nav_items_links.active:after {
+        width: 100%;
+      }
+      .active {
+        text-decoration: #000000;
+      }
       img {
         width: 28px;
         height: 28px;

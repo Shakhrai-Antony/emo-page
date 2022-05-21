@@ -25,7 +25,7 @@ export const Header = () => {
         <header>
             <nav>
                 <div className={s.freeShipping}>
-                    <NavLink to='/home'>
+                    <NavLink to='/pages/shipping-policy'>
                         <p>:'( free us shipping on orders $100 or more )':</p>
                     </NavLink>
                 </div>
@@ -42,7 +42,8 @@ export const Header = () => {
                                             <li className={s.nav_items_li} key={index}
                                                 onMouseEnter={() => setDropDownMenuMerch(true) }
                                                 onMouseLeave={() => setDropDownMenuMerch(false)}>
-                                                <NavLink className={s.nav_items_links} to={item.to}>{item.value}</NavLink>
+                                                <NavLink className={({ isActive }) => `${isActive ? s.active : ''} ${s.nav_items_links}`}
+                                                         to={item.to}>{item.value}</NavLink>
                                                 {dropDownMenuMerch && <DropDownMerch/>}
                                             </li>
                                         )
@@ -52,7 +53,8 @@ export const Header = () => {
                                             <li className={s.nav_items_li} key={index}
                                                 onMouseEnter={() => setDropDownMenuCollections(true) }
                                                 onMouseLeave={() => setDropDownMenuCollections(false)}>
-                                                <NavLink className={s.nav_items_links} to={item.to}>{item.value}</NavLink>
+                                                <NavLink className={({ isActive }) => `${isActive ? s.active : ''} ${s.nav_items_links}`}
+                                                         to={item.to}>{item.value}</NavLink>
                                                 {dropDownMenuCollections && <DropDownCollections/>}
                                             </li>
                                         )
@@ -66,9 +68,9 @@ export const Header = () => {
                                     }
                                 return (
                                     <li className={s.nav_items_li} key={index}>
-                                        <NavLink className={s.nav_items_links} to={item.to}>{item.value}</NavLink>
+                                        <NavLink className={({ isActive }) => `${isActive ? s.active : ''} ${s.nav_items_links}`}
+                                                 to={item.to}>{item.value}</NavLink>
                                     </li>
-
                                 )
                                 }
                             )}

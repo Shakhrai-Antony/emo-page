@@ -503,12 +503,14 @@ const initialState = {
             path: '/collections/all-products/products/emos-not-dead-digital-gift-card', id: 59, price: `from $25.00`}
     ],
     email: '' as string,
+    name: '' as string,
+    message: '' as string,
     itemsOnPage: 24,
     currentPage: 1,
     totalItemsCount: 0,
     watchSection: [
-        {value: feltemomightdelete, description: 'felt emo might delete', id: 1, path: '/blogs/felt-emo-might-delete/felt-emo-might-delete-5'},
-        {value: feltemoindaclub, description: 'felt emo in da club', id: 2, path: '/blogs/felt-emo-might-delete/felt-emo-in-da-club'},
+        {value: feltemomightdelete, description: 'felt emo might delete', id: 1, path: '/blogs/felt-emo-might-delete'},
+        {value: feltemoindaclub, description: 'felt emo in da club', id: 2, path: '/blogs/felt-emo-might-delete'},
         {value: brewcoffee, description: 'felt emo might brew coffee', id: 3, path: '/blogs/felt-emo-might-delete/felt-emo-might-brew-coffee'},
         {value: remotecontroller, description: 'felt emo might delete', id: 4, path: '/blogs/felt-emo-might-delete/felt-emo-might-delete-4'},
         {value: might_cruise, description: 'felt emo might cruise', id: 5, path: '/blogs/felt-emo-might-delete/felt-emo-might-cruise'},
@@ -550,13 +552,23 @@ const initialState = {
 }
 initialState.totalItemsCount = initialState.merchSection.length
 
-
 const goodsReducer = (state = initialState, action: GoodsReducerType) => {
     switch (action.type) {
         case 'SET_EMAIL':
             return {
                 ...state,
                 email: action.email
+            }
+        case 'SET_NAME':
+            return {
+                ...state,
+                name: action.name
+            }
+
+        case 'SET_MESSAGE':
+            return {
+                ...state,
+                message: action.message
             }
 
         case 'SET_CURRENT_PAGE':
@@ -568,12 +580,17 @@ const goodsReducer = (state = initialState, action: GoodsReducerType) => {
             return state;
     }
 }
-
 type GoodsReducerType = InferActionsTypes<typeof actions>
 
 export const actions = {
     setUserEmail: (email: string) => {
         return ({type: 'SET_EMAIL', email} as const)
+    },
+    setUserName: (name: string) => {
+      return ({type: 'SET_NAME', name} as const)
+    },
+    setUserMessage: (message: string) => {
+        return ({type: 'SET_MESSAGE', message} as const)
     },
     setNewPage: (page: number) => {
         return ({type: 'SET_CURRENT_PAGE', page} as const)

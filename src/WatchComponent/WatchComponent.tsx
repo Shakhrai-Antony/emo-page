@@ -14,7 +14,7 @@ export const WatchComponent = () => {
         if(watchSection[i]) arr.push(watchSection[i])
     }
     const watchSectionList = arr.map(item =>
-    <WatchComponentList value={ <img src={item.value} key={item.id} alt={item.path}/> } id={item.id}
+    <WatchComponentList value={ <img src={item.value}  alt={item.path}/> } key={item.id} id={item.id}
                         description={item.description} path={item.path} />
     )
     const watchSectionCollection = useSelector(getCollectionForWatchSection)
@@ -34,9 +34,9 @@ export const WatchComponent = () => {
                 <Paginator/>
             </div>
             <div className={s.watch_collection}>
-                {watchSectionCollection.map(item => {
+                {watchSectionCollection.map((item) => {
                     return (
-                        <div>
+                        <div key={item.id}>
                             <NavLink to={item.path}>
                                 <img src={item.value} alt={item.path}/>
                                 <p>{item.description}</p>

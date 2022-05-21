@@ -1,0 +1,136 @@
+.contact_us_section {
+  width: 900px;
+  margin: 90px auto;
+  p {
+    text-align: start;
+    margin-left: 10px;
+    color: #000000;
+    font-weight: bold;
+    margin-bottom: 40px;
+    font-size: 18px;
+  }
+  h1 {
+    text-align: center;
+    margin-bottom: 150px;
+    text-transform: uppercase;
+    font-size: 40px;
+  }
+  h2 {
+    text-align: start;
+    text-transform: uppercase;
+    font-size: 25px;
+    margin-left: 0;
+    padding-left: 0;
+    margin-bottom: 50px;
+  }
+  ul {
+    margin-left: 0;
+    padding-left: 0;
+  }
+  li {
+    cursor: pointer;
+    padding-left: 10px;
+    margin-left: 0;
+    text-align: start;
+    list-style-type: '+';
+    font-weight: bold;
+    font-size: 20px;
+    padding-bottom: 25px;
+  }
+  a {
+    text-decoration: none;
+    color: #000000;
+  }
+}
+
+.contact_us_form_name {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+    text-align: center;
+  gap: 1rem;
+  div {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+
+    p{
+      text-align: start;
+    }
+    input {
+      width: 100%;
+      border-style: none;
+      color: #000000;
+      font-size: 15px;
+      border-bottom: 2px solid;
+      border-bottom-color: #000000;
+      padding-bottom: 5px;
+    }
+    input:focus{
+      outline: none;
+    }
+  }
+  }
+.contact_us_form_message {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  margin-top: 50px;
+  text-align: center;
+
+  div {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+
+     p{
+      text-align: start;
+    }
+    textarea {
+      resize: none;
+      width: 100%;
+      color: #000000;
+      font-size: 15px;
+      border: 2px solid #000000;
+      padding-bottom: 5px;
+    }
+  }
+}
+.contact_us_form {
+  button {
+    margin-top: 20px;
+    border-radius: 30%;
+    border: none;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 15px;
+    padding: 25px;
+    font-weight: bold;
+    letter-spacing: 4px;
+  }
+}
+.order_track_active {
+  display: block;
+}
+.order_track {
+  display: none;
+}
+.international_fees_active {
+  display: block;
+}
+.international_fees {
+  display: none;
+}
+.size_chart_active {
+  display: block;
+}
+.size_chart {
+  display: none;
+}
+.return_order_active {
+  display: block;
+}
+.return_order {
+  display: none;
+}

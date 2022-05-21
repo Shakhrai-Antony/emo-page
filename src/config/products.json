@@ -1,10 +1,19 @@
 {
-  "sweet-script-crop-hoodie-cotton-candy": {
-    "price": "12",
-    "description": "hoodie"
+  "emos-not-dead-snapback-black": {
+    "value": {
+      "url": "emogoods/not_dead_cap.png"
+    },
+    "description": "emo's not dead snapback - black",
+    "price": "$33.95",
+    "id": 1
   },
-  "privet": {
-    "price": "15",
-    "description": "bla"
+  "v-m-a-snapback-black": {
+    "value": {
+      "url": "emogoods/not_dead_cap.png"
+    },
+    "description": "very much alive snapback - black",
+    "price": "$33.95",
+    "id": 2
   }
+
 }

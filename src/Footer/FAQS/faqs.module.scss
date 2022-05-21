@@ -1,0 +1,135 @@
+.faqs_section {
+  width: 900px;
+  margin: 90px auto;
+  p {
+    text-align: start;
+    margin-left: 10px;
+    color: #000000;
+    font-weight: bold;
+    margin-bottom: 40px;
+    font-size: 18px;
+  }
+  h1 {
+    text-align: center;
+    margin-bottom: 150px;
+    text-transform: uppercase;
+    font-size: 40px;
+  }
+  h2 {
+    text-align: start;
+    text-transform: uppercase;
+    font-size: 25px;
+    margin-left: 0;
+    padding-left: 0;
+    margin-bottom: 50px;
+  }
+  ul {
+    margin-left: 0;
+    padding-left: 0;
+  }
+  li {
+    cursor: pointer;
+    padding-left: 10px;
+    margin-left: 0;
+    text-align: start;
+    list-style-type: '+';
+    font-weight: bold;
+    font-size: 20px;
+    padding-bottom: 25px;
+  }
+  a {
+    text-decoration: none;
+    color: #000000;
+  }
+  .merch_care li {
+    list-style-type: disc;
+    padding-right: 10px;
+    list-style-position: inside;
+  }
+}
+
+.shipping_policy_active {
+  display: block;
+}
+.shipping_policy {
+  display: none;
+}
+
+.receive_shipment_active {
+  display: block;
+}
+.receive_shipment {
+  display: none;
+}
+.shipping_address_active {
+  display: block;
+}
+.shipping_address {
+  display: none;
+}
+.order_of_ship_active {
+  display: block;
+}
+.order_of_ship {
+  display: none;
+}
+.track_order_active {
+  display: block;
+}
+.track_order {
+  display: none;
+}
+.order_location_active {
+  display: block;
+}
+.order_location {
+  display: none;
+}
+.order_receive_active {
+  display: block;
+}
+.order_receive {
+  display: none;
+}
+.payment_forms_active {
+  display: block;
+}
+.payment_forms {
+  display: none;
+}
+.card_issues_active {
+  display: block;
+}
+.card_issues {
+  display: none;
+}
+.non_sterling_active {
+  display: block;
+}
+.non_sterling {
+  display: none;
+}
+.return_policy_active {
+  display: block;
+}
+.return_policy {
+  display: none;
+}
+.international_order_active {
+  display: block;
+}
+.international_order {
+  display: none;
+}
+.order_exchange_active {
+  display: block;
+}
+.order_exchange {
+  display: none;
+}
+.wash_merch_active {
+  display: block;
+}
+.wash_merch {
+  display: none;
+}
