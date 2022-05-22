@@ -12,6 +12,10 @@ import {WatchBlog} from "./WatchComponent/WatchBlog";
 import {ShippingPolicy} from "./Header/ShippingPolicy";
 import {Faqs} from "./Footer/FAQS/FAQS";
 import {ContactUs} from "./Footer/ContactUs/ContactUsComponent";
+import {ReturnsExchanges} from "./Footer/Returns & Exchanges/Returns & Exchanges";
+import {RefundPolicy} from "./Footer/RefundPolicy/RefundPolicy";
+import {PrivacyPolicy} from "./Footer/PrivacyPolicy/PrivacyPolicy";
+import {TermsOfService} from "./Footer/TermsOfService/TermsOfService";
 
 function App() {
 
@@ -21,7 +25,6 @@ function App() {
             <div>
                 <Routes>
                     <Route path='/pages/shipping-policy' element={<ShippingPolicy/>}/>
-                    <Route path='/pages/contact-us' element={<ContactUs/>}/>
                     <Route path='/' element={<Main/>}/>
                     <Route path='/merch' element={<MerchComponent/>}/>
                     <Route path='/collections' element={<CollectionComponent/>}/>
@@ -29,6 +32,11 @@ function App() {
                     <Route path='/blogs/felt-emo-might-delete/:felt' element={<WatchBlog/>}/>
                     <Route path='/watch' element={<WatchComponent/>}/>
                     <Route path='/pages/faqs' element={<Faqs/>}/>
+                    <Route path='/pages/contact-us' element={<ContactUs/>}/>
+                    <Route path='/pages/returns-exchanges' element={<ReturnsExchanges/>}/>
+                    <Route path='/pages/refund-policy' element={<RefundPolicy/>}/>
+                    <Route path='/pages/privacy-policy' element={<PrivacyPolicy/>}/>
+                    <Route path='/policies/terms-of-service' element={<TermsOfService/>}/>
                 </Routes>
             </div>
             <Footer/>

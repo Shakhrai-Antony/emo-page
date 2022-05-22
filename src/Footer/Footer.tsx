@@ -14,7 +14,7 @@ export const Footer = () => {
         {value: 'FAQS', to: '/pages/faqs'}, {value: 'Contact Us', to: '/pages/contact-us'},
         {value: 'Shipping Info', to: '/pages/shipping-policy'}, {value: 'Return & Exchanges', to: '/pages/returns-exchanges'},
         {value: 'Refund Policy', to: '/pages/refund-policy'}, {value: 'Privacy Policy', to: '/pages/privacy-policy'},
-        {value: 'Terms of Service', to: '/terms-of-service'}]
+        {value: 'Terms of Service', to: '/policies/terms-of-service'}]
 
     const iconsSection = icons.map((item, index) =>
         <a href={item.to} key={index}>

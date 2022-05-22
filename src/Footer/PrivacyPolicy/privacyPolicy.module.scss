@@ -1,0 +1,226 @@
+.privacy_policy_section {
+  text-align: center;
+  max-width: 700px;
+  margin: 80px auto;
+  h1 {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 40px;
+  }
+  p {
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 20px;
+  }
+  .privacy_policy {
+    p {
+      text-align: start;
+    }
+  }
+  .collection_personal_information_section {
+    margin-top: 100px;
+    text-align: start;
+    p {
+      margin-top: 50px;
+    }
+  }
+  .device_information_section {
+    text-align: start;
+    h4 {
+      font-size: 20px;
+    }
+    ul {
+      margin-top: 30px;
+      margin-bottom: 30px;
+      margin-left: 20px;
+      padding-left: 0;
+    }
+    ul li {
+      font-weight: bold;
+      font-size: 18px;
+      padding-bottom: 5px;
+    }
+  }
+  .order_information_section {
+    text-align: start;
+    h4 {
+      font-size: 20px;
+    }
+    ul {
+      margin-top: 30px;
+      margin-bottom: 30px;
+      margin-left: 20px;
+      padding-left: 0;
+    }
+    ul li {
+      font-weight: bold;
+      font-size: 18px;
+      padding-bottom: 5px;
+    }
+  }
+  .custom_support_section {
+    text-align: start;
+    h4 {
+      font-size: 20px;
+    }
+    ul {
+      margin-top: 30px;
+      margin-bottom: 30px;
+      margin-left: 20px;
+      padding-left: 0;
+    }
+    ul li {
+      font-weight: bold;
+      font-size: 18px;
+      padding-bottom: 5px;
+    }
+  }
+  .minors_section {
+    margin-top: 100px;
+    text-align: start;
+    h2 {
+      margin-bottom: 40px;
+      font-size: 25px;
+    }
+  }
+  .sharing_personal_information_section {
+    margin-top: 100px;
+    text-align: start;
+    ul {
+      margin-top: 30px;
+      margin-bottom: 30px;
+      margin-left: 20px;
+      padding-left: 0;
+    }
+    ul li {
+      font-weight: bold;
+      font-size: 18px;
+      padding-bottom: 5px;
+    }
+    a {
+      color: #000000;
+    }
+  }
+  .behavioral_advertising_section {
+    margin-top: 80px;
+    text-align: start;
+    ul {
+      margin-top: 30px;
+      margin-bottom: 30px;
+      margin-left: 20px;
+      padding-left: 0;
+    }
+    ul li {
+      font-weight: bold;
+      font-size: 18px;
+      padding-bottom: 5px;
+    }
+    a {
+      color: #000000;
+    }
+  }
+  .using_personal_information_section {
+    margin-top: 100px;
+    text-align: start;
+  }
+  .lawful_basis_section {
+    margin-top: 100px;
+    text-align: start;
+    ul {
+      margin-top: 30px;
+      margin-bottom: 30px;
+      margin-left: 20px;
+      padding-left: 0;
+    }
+    ul li {
+      font-weight: bold;
+      font-size: 18px;
+      padding-bottom: 5px;
+    }
+  }
+  .retention_section {
+    margin-top: 80px;
+    text-align: start;
+  }
+  .automatic_decision_making_section {
+    margin-top: 80px;
+    text-align: start;
+    ul {
+      margin-top: 30px;
+      margin-bottom: 30px;
+      margin-left: 20px;
+      padding-left: 0;
+    }
+    ul li {
+      font-weight: bold;
+      font-size: 18px;
+      padding-bottom: 5px;
+    }
+  }
+  .your_rights_section {
+    margin-top: 100px;
+    text-align: start;
+    h2 {
+      margin-top: 50px;
+      margin-bottom: 40px;
+    }
+    a {
+      color: #000000;
+    }
+  }
+  .ccpa_section {
+    margin-top: 80px;
+    text-align: start;
+    h2 {
+      margin-bottom: 40px;
+      margin-top: 40px;
+      font-size: 25px;
+    }
+  }
+  .cookies_section {
+    margin-top: 100px;
+    text-align: start;
+  }
+  .cookies_td_section {
+    margin-top: 80px;
+    text-align: start;
+    td {
+      border: 1px solid #000000;
+      padding: 10px 10px 10px 10px;
+      font-weight: bold;
+    }
+  }
+  .reporting_analytics_section {
+    margin-top: 80px;
+    text-align: start;
+    td {
+      border: 1px solid #000000;
+      padding: 10px 10px 10px 10px;
+      font-weight: bold;
+    }
+    a{
+      color:#000000;
+    }
+  }
+  .do_not_track_section {
+    margin-top: 80px;
+    text-align: start;
+  }
+  .changes_section {
+    margin-top: 100px;
+    text-align: start;
+    h1 {
+      margin-bottom: 40px;
+    }
+  }
+  .contact_section {
+    margin-top: 100px;
+    text-align: start;
+    h1 {
+      margin-bottom: 40px;
+    }
+    a {
+      color: #000000;
+    }
+  }
+}

@@ -509,8 +509,8 @@ const initialState = {
     currentPage: 1,
     totalItemsCount: 0,
     watchSection: [
-        {value: feltemomightdelete, description: 'felt emo might delete', id: 1, path: '/blogs/felt-emo-might-delete'},
-        {value: feltemoindaclub, description: 'felt emo in da club', id: 2, path: '/blogs/felt-emo-might-delete'},
+        {value: feltemomightdelete, description: 'felt emo might delete', id: 1, path: '/blogs/felt-emo-might-delete/felt-emo-might-delete-5'},
+        {value: feltemoindaclub, description: 'felt emo in da club', id: 2, path: '/blogs/felt-emo-might-delete/felt-emo-in-da-club'},
         {value: brewcoffee, description: 'felt emo might brew coffee', id: 3, path: '/blogs/felt-emo-might-delete/felt-emo-might-brew-coffee'},
         {value: remotecontroller, description: 'felt emo might delete', id: 4, path: '/blogs/felt-emo-might-delete/felt-emo-might-delete-4'},
         {value: might_cruise, description: 'felt emo might cruise', id: 5, path: '/blogs/felt-emo-might-delete/felt-emo-might-cruise'},
