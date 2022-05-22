@@ -16,6 +16,10 @@ import {ReturnsExchanges} from "./Footer/Returns & Exchanges/Returns & Exchanges
 import {RefundPolicy} from "./Footer/RefundPolicy/RefundPolicy";
 import {PrivacyPolicy} from "./Footer/PrivacyPolicy/PrivacyPolicy";
 import {TermsOfService} from "./Footer/TermsOfService/TermsOfService";
+import {ClassicEndMerch} from "./MerchComponent/ClassicEndMerch/ClassicEndMerch";
+import {CrystalDyeMerch} from "./MerchComponent/CrystalDyeMerch/CrystalDyeMerch";
+import {EmoUndeadMerch} from "./MerchComponent/Emo'sUndeadMerch/EmoUndeadMerch";
+import {RevivalTourMerch} from "./MerchComponent/RevivalTourMerch/RevivalTourMerch";
 
 function App() {
 
@@ -27,6 +31,10 @@ function App() {
                     <Route path='/pages/shipping-policy' element={<ShippingPolicy/>}/>
                     <Route path='/' element={<Main/>}/>
                     <Route path='/merch' element={<MerchComponent/>}/>
+                    <Route path='/collections/essential-end-merch' element={<ClassicEndMerch/>}/>
+                    <Route path='/collections/tiedye21' element={<CrystalDyeMerch/>}/>
+                    <Route path='/collections/revival-tour-collection' element={<RevivalTourMerch/>}/>
+                    <Route path='/collections/emos-undead' element={<EmoUndeadMerch/>}/>
                     <Route path='/collections' element={<CollectionComponent/>}/>
                     <Route path='/products/:product' element={<Product/>}/>
                     <Route path='/blogs/felt-emo-might-delete/:felt' element={<WatchBlog/>}/>

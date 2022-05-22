@@ -33,3 +33,15 @@ export const getWatchList = (state:AppStateType) => {
 export const getCollectionForWatchSection = (state: AppStateType) => {
     return state.goodsPage.collectionForWatchSection
 }
+export const getClassicEndMerch = (state:AppStateType) => {
+    return state.goodsPage.classicEndMerch
+}
+export const getCrystalDyeMerch = (state:AppStateType) => {
+    return state.goodsPage.crystalDyeMerch
+}
+export const getRevivalTourMerch = (state:AppStateType) => {
+    return state.goodsPage.revivalTourMerch
+}
+export const getEmosUndeadMerch = (state: AppStateType) => {
+    return state.goodsPage.emosUndeadMerch
+}
