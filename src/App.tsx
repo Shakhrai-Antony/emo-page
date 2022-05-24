@@ -20,6 +20,12 @@ import {ClassicEndMerch} from "./MerchComponent/ClassicEndMerch/ClassicEndMerch"
 import {CrystalDyeMerch} from "./MerchComponent/CrystalDyeMerch/CrystalDyeMerch";
 import {EmoUndeadMerch} from "./MerchComponent/Emo'sUndeadMerch/EmoUndeadMerch";
 import {RevivalTourMerch} from "./MerchComponent/RevivalTourMerch/RevivalTourMerch";
+import {CoffeeMugsMerch} from "./MerchComponent/CoffeeAndMugs/CoffeeMugsMerch";
+import {TeeAndLongSleevesMerch} from "./MerchComponent/TeeAndLongSleevesMerch/TeeAndLongSleeves";
+import {HoodiesMerch} from "./MerchComponent/HoodiesMerch/HoodiesMerch";
+import {HeadwearAndAccessoriesMerch} from "./MerchComponent/HeadwearAndAccessoriesMerch/HeadWearAndAccessoriesMerch";
+import {GoodsForKidsMerch} from "./MerchComponent/GoodsForKidsMerch/GoodsForKidsMerch";
+import {GoodsForLadiesMerch} from "./MerchComponent/GoodsForLadiesMerch/GoodsForLadiesMerch";
 
 function App() {
 
@@ -31,6 +37,12 @@ function App() {
                     <Route path='/pages/shipping-policy' element={<ShippingPolicy/>}/>
                     <Route path='/' element={<Main/>}/>
                     <Route path='/merch' element={<MerchComponent/>}/>
+                    <Route path='/collections/coffee' element={<CoffeeMugsMerch/>}/>
+                    <Route path='/collections/tees-long-sleeves' element={<TeeAndLongSleevesMerch/>}/>
+                    <Route path='/collections/hoodies' element={<HoodiesMerch/>}/>
+                    <Route path='/collections/headwear-accessories' element={<HeadwearAndAccessoriesMerch/>}/>
+                    <Route path='/collections/emo-kids' element={<GoodsForKidsMerch/>}/>
+                    <Route path='/collections/emo-girls' element={<GoodsForLadiesMerch/>}/>
                     <Route path='/collections/essential-end-merch' element={<ClassicEndMerch/>}/>
                     <Route path='/collections/tiedye21' element={<CrystalDyeMerch/>}/>
                     <Route path='/collections/revival-tour-collection' element={<RevivalTourMerch/>}/>

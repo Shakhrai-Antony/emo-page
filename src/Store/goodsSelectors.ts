@@ -45,3 +45,18 @@ export const getRevivalTourMerch = (state:AppStateType) => {
 export const getEmosUndeadMerch = (state: AppStateType) => {
     return state.goodsPage.emosUndeadMerch
 }
+export const getCoffeeMugsMerch = (state: AppStateType) => {
+    return state.goodsPage.coffeeMugsMerch
+}
+export const getTeeAndLongSleevesMerch = (state: AppStateType) => {
+    return state.goodsPage.teesAndLongSleevesMerch
+}
+export const getHoodiesMerch = (state: AppStateType) => {
+    return state.goodsPage.hoodiesMerch
+}
+export const getHeadwearAndAccessoriesMerch = (state: AppStateType) => {
+    return state.goodsPage.headwearAndAccessoriesMerch
+}
+export const getGoodsForKidsMerch = (state: AppStateType) => {
+    return state.goodsPage.goodsForKids
+}

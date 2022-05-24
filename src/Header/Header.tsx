@@ -13,10 +13,7 @@ export const Header = () => {
         to: '/collections'
     },
         {value: 'Watch', to: '/watch'}, {value: 'Playlist', to: '/playlist'}, {value: 'Cruise', to: 'https://www.emosnotdeadcruise.com/'  },
-        {value: <img src={user} alt='user'/>, to: '/login'}, {
-            value: <img src={search} alt='user'/>,
-            to: '/search'
-        }, {value: <img src={cart} alt='user'/>, to: '/cart'}]
+        {value: <img src={user} alt='user'/>, to: '/login'},  {value: <img src={cart} alt='user'/>, to: '/cart'}]
 
     const [dropDownMenuMerch, setDropDownMenuMerch] = useState(false)
     const [dropDownMenuCollections, setDropDownMenuCollections] = useState(false)
