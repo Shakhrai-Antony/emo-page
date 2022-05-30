@@ -1,0 +1,217 @@
+.modal {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0,0,0,0.4);
+  position: fixed;
+  top: 0;
+  left: 73%;
+  text-align: center;
+  align-items: start;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.5s;
+
+  p{
+    color: #000000;
+    font-size: 20px;
+  }
+}
+.modal_active {
+  pointer-events: all;
+  opacity: 1;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0,0,0,0.4);
+  position: fixed;
+  top: 0;
+  left: 73%;
+  text-align: center;
+  align-items: start;
+
+  p{
+    color: #000000;
+    font-size: 20px;
+  }
+}
+.modal_content {
+  padding: 20px;
+  border-top-left-radius: 12px;
+  background-color: white;
+  width: 25vw;
+  height: 100vh;
+  transform: scale(0.5);
+  transition: 0.4s all;
+}
+.modal_content_active {
+  padding: 20px;
+  border-top-left-radius: 12px;
+  background-color: white;
+  width: 25vw;
+  height: 100vh;
+  transform: scale(1);
+  transition: 0.4s all;
+
+}
+.span_close_cart {
+  margin-top: 10px;
+  float: right;
+  cursor: pointer;
+}
+
+.description_section {
+  margin-top: 45px;
+  display: flex;
+  justify-content: space-between;
+
+  h3 {
+    text-transform: uppercase;
+    padding-right: 10px;
+    margin-bottom: 0;
+  }
+  img{
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+  }
+}
+.size_of_goods {
+  font-weight: bold;
+  font-size: 20px;
+  position: fixed;
+  left: 30%;
+  top: 12%;
+}
+.count_section {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-around;
+
+  span {
+    padding-right: 20px;
+    font-weight: bold;
+    font-size: 25px;
+    border-bottom: 2px solid #000000;
+  }
+  span:first-child {
+    cursor: pointer;
+    color: gray;
+    font-size: 25px;
+  }
+  span:last-child{
+    cursor: pointer;
+    padding-right: 0;
+    color: gray;
+    font-size: 25px;
+  }
+  span:first-child:hover {
+    opacity: 0.8;
+  }
+  span:last-child:hover {
+    opacity: 0.8;
+  }
+}
+.price_section {
+  font-weight: bold;
+  font-size: 25px;
+}
+.order_note_section {
+  margin-top: 30px;
+  text-align: start;
+
+  textarea {
+    resize: none;
+    border: none;
+    border-bottom: 2px solid #000000;
+    width: 100%;
+  }
+  p {
+    font-size: 12px;
+    color: rgba(0,0,0,0.8);
+  }
+}
+.total_price_section {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  font-weight: bold;
+}
+.payment_methods_section {
+  margin-top: 50px;
+  p {
+    color: #1d1d1d;
+    font-size: 12px;
+    margin-bottom: 25px;
+  }
+  .button_check_out {
+    color: #ffffff;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+    border: 2px solid #000000;
+    border-radius: 25px;
+    padding: 15px 0;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #000000;
+    letter-spacing: 3px;
+    cursor: pointer;
+  }
+  .button_shop_pay {
+    background-image: url("../imges/shop_pay.png");
+    background-size: 150px 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 57px;
+    color: #ffffff;
+    margin-bottom: 15px;
+    width: 100%;
+    border: 2px solid mediumpurple;
+    border-radius: 25px;
+    padding: 15px 0;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: mediumpurple;
+    letter-spacing: 3px;
+    cursor: pointer;
+  }
+  .button_pay_pal {
+    background-image: url("../imges/pay_pal.png");
+    background-size: 150px 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 57px;
+    color: #ffffff;
+    margin-bottom: 15px;
+    width: 100%;
+    border: 2px solid darkorange;
+    border-radius: 25px;
+    padding: 15px 0;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: darkorange;
+    letter-spacing: 3px;
+    cursor: pointer;
+  }
+  .button_google_pay {
+    background-image: url("../imges/g_pay.png");
+    background-size: 110px 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 57px;
+    color: #ffffff;
+    width: 100%;
+    border: 2px solid #000000;
+    border-radius: 25px;
+    padding: 15px 0;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #ffffff;
+    letter-spacing: 3px;
+    cursor: pointer;
+  }
+}

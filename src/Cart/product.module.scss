@@ -1,4 +1,212 @@
+.goods_cart_section {
+  margin: 50px;
+  display: grid;
+  grid-template-columns: 1fr 3fr 3fr;
+
+  .description_section{
+    width: 400px;
+
+    .shipping_section {
+      font-size: 15px;
+      font-weight: bold;
+      a {
+        color: #000000;
+        text-decoration: none;
+        position: relative;
+      }
+      a:after {
+        content: '';
+        border-bottom: 2px solid #000000;
+        height: 2px;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        right: 0;
+      }
+    }
+    h1{
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .price_section {
+      font-size: 25px;
+      font-weight: bold;
+      margin-top: 0;
+    }
+    .size_section {
+      p {
+        font-weight: bold;
+        font-size: 20px;
+      }
+      ul {
+        display:flex;
+        list-style: none;
+        justify-content: start;
+        padding-left: 0;
+      }
+      li {
+        font-weight: bold;
+        font-size: 20px;
+        margin-right: 7px;
+        padding: 10px 15px;
+        cursor: pointer;
+      }
+      .size_status_active {
+        border: 2px solid #000000;
+        border-radius: 100%;
+      }
+    }
+    .cart_buttons_section {
+      .add_to_cart {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 100%;
+        border: 2px solid #000000;
+        border-radius: 25px;
+        padding: 15px 0;
+        font-size: 20px;
+        font-weight: bold;
+        text-transform: uppercase;
+        background-color: #ffffff;
+        letter-spacing: 3px;
+        cursor: pointer;
+      }
+      .buy_it_now {
+        color: #ffffff;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 100%;
+        border: 2px solid #000000;
+        border-radius: 25px;
+        padding: 15px 0;
+        font-size: 20px;
+        font-weight: bold;
+        text-transform: uppercase;
+        background-color: #000000;
+        letter-spacing: 3px;
+        cursor: pointer;
+      }
+    }
+    .about_section {
+      ul {
+        list-style-type: '+';
+        padding-right: 0;
+        padding-left: 15px;
+      }
+      li {
+        font-weight: bold;
+        font-size: 18px;
+        margin-right: 7px;
+        padding: 10px 15px;
+        cursor: pointer;
+      }
+      .goods_describer {
+        display: none;
+      }
+      .goods_describer_active p{
+        font-size: 18px;
+        font-weight: bold;
+      }
+      .shipping_status {
+        display: none;
+      }
+      .shipping_status_active {
+        p {
+          font-size: 18px;
+          font-weight: bold;
+        }
+        a {
+          color: #000000;
+          text-decoration: none;
+          position: relative;
+        }
+        a:after {
+          content: '';
+          border-bottom: 2px solid #000000;
+          height: 2px;
+          width: 100%;
+          position: absolute;
+          top: 100%;
+          right: 0;
+        }
+      }
+      .question_status {
+        display: none;
+      }
+      .question_status_active {
+        .contact_us_form_name {
+          margin-top: 20px;
+          display: flex;
+          gap: 1rem;
+          font-size: 18px;
+          font-weight: bold;
+          input {
+            border: none;
+            border-bottom: 2px solid #000000;
+            outline: none;
+          }
+        }
+
+        .contact_us_form_message {
+          margin-top: 40px;
+          font-weight: bold;
+          font-size: 18px;
+          textarea {
+            width: 100%;
+            border: none;
+            border-bottom: 2px solid #000000;
+            resize: none;
+          }
+          button {
+            margin-top: 20px;
+            border-radius: 30%;
+            border: none;
+            background-color: #000000;
+            color: #ffffff;
+            font-size: 15px;
+            padding: 25px;
+            font-weight: bold;
+            letter-spacing: 4px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    .size_chart {
+        font-weight: bold;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    .share_twitt {
+      margin-top: 60px;
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+
+      a {
+        text-align: center;
+        align-items: center;
+        display: flex;
+        color: #000000;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      p {
+        padding-left: 10px;
+      }
+      img {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+
+}
+
 .productCart {
+  text-align: center;
+ object-position: top;
+  align-items: start;
   img {
     width: 400px;
     height: 400px;
