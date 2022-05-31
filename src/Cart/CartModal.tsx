@@ -6,7 +6,7 @@ export const ModalCart = (props: any) => {
     const [count, setCount] = useState(1)
 
     return (
-        <div onClick={ () => props.setCart(false) } className={props.cart ? s.modal_active : s.modal}>
+        <div onClick={ () => { props.setCart(false); props.setLocker(false) } } className={props.cart ? s.modal_active : s.modal}>
             <div className={props.cart ? s.modal_content_active : s.modal_content} onClick={ e => e.stopPropagation() }>
                 <div className={s.span_close_cart}>
                     <span onClick={ () => { props.setCart(false); props.setLocker(false) } }

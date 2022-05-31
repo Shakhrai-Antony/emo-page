@@ -1,7 +1,8 @@
 {
   "emos-not-dead-snapback-black": {
     "value": {
-      "url": "../../not_dead_cap.png"
+      "url": "../../not_dead_cap.png",
+      "secondUrl": "../../not_dead_cap2.png"
     },
     "description": "emo's not dead snapback - black",
     "price": "$33.95",
@@ -9,7 +10,8 @@
   },
   "v-m-a-snapback-black": {
     "value": {
-      "url": "emogoods/not_dead_cap.png"
+      "url": "emogoods/not_dead_cap.png",
+      "secondUrl": "../../not_dead_cap2.png"
     },
     "description": "very much alive snapback - black",
     "price": "$33.95",

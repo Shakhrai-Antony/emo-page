@@ -10,6 +10,7 @@ import logo_facebook from './../imges/logo-facebook.png'
 import logo_twitter from './../imges/logo_twitter.png'
 import {ModalCart} from "./CartModal";
 import {useLockBodyScroll, useToggle} from "react-use";
+import {CarouselForCart} from "./CarouselForCart";
 
 export const Product = (props: any) => {
 
@@ -50,29 +51,20 @@ export const Product = (props: any) => {
     })
     const [sizeChartStatus, setSizeChartStatus] = useState(false)
     const [cartStatus, setCartStatus] = useState(false)
-    const cartRef = React.useRef() as React.MutableRefObject<HTMLInputElement>
-    useEffect(() => {
-        const closeCart = (e: any) => {
-            if (!cartRef.current.contains(e.target)) {
-                setCartStatus(false)
-                toggleLocked(false)
-            }
-        }
-        document.body.addEventListener('click', closeCart);
-        return () => document.body.removeEventListener('click', closeCart)
-    }, [])
     const [locked, toggleLocked] = useToggle(false)
     useLockBodyScroll(locked);
 
     return (
         <div className={s.goods_cart_section}>
             <div>
-                carousel
+                <CarouselForCart firstImage={data[myVar].value.url}
+                                 secondImage={data[myVar].value.secondUrl}/>
             </div>
             <div className={s.productCart}>
-                <img src={data[myVar].value.url} alt=""/>
+                <img src={data[myVar].value.url} alt="cap"/>
+                <img src={data[myVar].value.secondUrl} alt="cap"/>
             </div>
-            <div ref={cartRef} className={s.description_section}>
+            <div className={s.description_section}>
                 <div>
                     <h1>
                         {data[myVar].description}
@@ -90,7 +82,7 @@ export const Product = (props: any) => {
                                 <li key={item.id}
                                     onClick={ () => { setSizeStatus(item.id); setSizeParam(item.value) } }
                                     className={sizeStatus === item.id ? s.size_status_active : ''}>
-                                    {item.value}</li>
+                                        {item.value}</li>
                             )
                         })}
                     </ul>

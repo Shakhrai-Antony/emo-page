@@ -4,12 +4,14 @@
   background-color: rgba(0,0,0,0.4);
   position: fixed;
   top: 0;
-  left: 73%;
+  left: 0;
   text-align: center;
   align-items: start;
   opacity: 0;
   pointer-events: none;
   transition: 0.5s;
+  display: flex;
+  justify-content: end;
 
   p{
     color: #000000;
@@ -24,10 +26,11 @@
   background-color: rgba(0,0,0,0.4);
   position: fixed;
   top: 0;
-  left: 73%;
+  left: 0;
   text-align: center;
   align-items: start;
-
+  display: flex;
+  justify-content: end;
   p{
     color: #000000;
     font-size: 20px;
