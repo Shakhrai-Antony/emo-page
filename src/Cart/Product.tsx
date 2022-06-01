@@ -53,16 +53,22 @@ export const Product = (props: any) => {
     const [cartStatus, setCartStatus] = useState(false)
     const [locked, toggleLocked] = useToggle(false)
     useLockBodyScroll(locked);
-
+    const imagesForCarousel = [{image: data[myVar].value.url, id: 1}, {image: data[myVar].value.secondUrl, id: 2}]
+    const refForFirstImage = React.useRef() as React.MutableRefObject<HTMLInputElement>
+    const refForSecondImage = React.useRef() as React.MutableRefObject<HTMLInputElement>
     return (
         <div className={s.goods_cart_section}>
             <div>
-                <CarouselForCart firstImage={data[myVar].value.url}
-                                 secondImage={data[myVar].value.secondUrl}/>
+                <CarouselForCart images={imagesForCarousel} firstImageLocation={refForFirstImage}
+                secondImageLocation={refForSecondImage}/>
             </div>
             <div className={s.productCart}>
-                <img src={data[myVar].value.url} alt="cap"/>
-                <img src={data[myVar].value.secondUrl} alt="cap"/>
+                <div ref={refForFirstImage}>
+                    <img src={data[myVar].value.url} alt="cap"/>
+                </div>
+                <div ref={refForSecondImage}>
+                    <img src={data[myVar].value.secondUrl} alt="cap"/>
+                </div>
             </div>
             <div className={s.description_section}>
                 <div>

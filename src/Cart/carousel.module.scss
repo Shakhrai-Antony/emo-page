@@ -5,6 +5,12 @@
     margin-top: 20px;
     cursor: pointer;
   }
+  .active_image {
+    border: 2px solid #000000;
+  }
+  .inactive_image {
+    border: none;
+  }
   img {
     width: 120px;
     height: 120px;
