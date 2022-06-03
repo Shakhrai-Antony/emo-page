@@ -6,6 +6,8 @@ import search from './../imges/search.png'
 import user from './../imges/user.png'
 import cart from './../imges/cart.png'
 import {DropDownCollections, DropDownMerch} from "./dropDownMenu";
+import {CartComponent} from "../CartComponent/CartComponent";
+import {useLockBodyScroll, useToggle} from "react-use";
 
 export const Header = () => {
     const items = [{value: 'Home', to: '/'}, {value: 'Merch', to: '/merch'}, {
@@ -17,7 +19,9 @@ export const Header = () => {
 
     const [dropDownMenuMerch, setDropDownMenuMerch] = useState(false)
     const [dropDownMenuCollections, setDropDownMenuCollections] = useState(false)
-
+    const [cartStatus, setCartStatus] = useState(false)
+    const [locked, toggleLocked] = useToggle(false)
+    useLockBodyScroll(locked);
     return (
         <header>
             <nav>

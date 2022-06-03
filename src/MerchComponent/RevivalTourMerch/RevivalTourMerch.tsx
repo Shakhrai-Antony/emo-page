@@ -15,7 +15,7 @@ export const RevivalTourMerch = () => {
     const revivalMerch = useSelector(getRevivalTourMerch)
     return (
         <div className={s.revival_merch_collection}>
-            {revivalMerch.map((item) => {
+            {revivalMerch.map((item: any) => {
                 return (
                     <div key={item.id}>
                         <NavLink to={item.path}>

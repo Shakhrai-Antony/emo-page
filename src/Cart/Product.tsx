@@ -38,6 +38,9 @@ export const Product = (props: any) => {
         dispatch(actions.setUserEmail(email))
         dispatch(actions.setUserMessage(message))
     }
+    const addToCart = (goods: object, size: string) => {
+        dispatch(actions.setGoodsInCart(goods, size))
+    }
     const {handleSubmit, handleChange, values, resetForm} = useFormik({
         initialValues: {
             name: '',
@@ -53,22 +56,21 @@ export const Product = (props: any) => {
     const [cartStatus, setCartStatus] = useState(false)
     const [locked, toggleLocked] = useToggle(false)
     useLockBodyScroll(locked);
-    const imagesForCarousel = [{image: data[myVar].value.url, id: 1}, {image: data[myVar].value.secondUrl, id: 2}]
-    const refForFirstImage = React.useRef() as React.MutableRefObject<HTMLInputElement>
-    const refForSecondImage = React.useRef() as React.MutableRefObject<HTMLInputElement>
+
     return (
         <div className={s.goods_cart_section}>
             <div>
-                <CarouselForCart images={imagesForCarousel} firstImageLocation={refForFirstImage}
-                secondImageLocation={refForSecondImage}/>
+                <CarouselForCart data={data[myVar]}
+                />
             </div>
             <div className={s.productCart}>
-                <div ref={refForFirstImage}>
-                    <img src={data[myVar].value.url} alt="cap"/>
-                </div>
-                <div ref={refForSecondImage}>
-                    <img src={data[myVar].value.secondUrl} alt="cap"/>
-                </div>
+                {data[myVar].value.map((item) => {
+                    return (
+                        <div id={item.image} key={item.id}>
+                            <img src={item.image}  alt=""/>
+                        </div>
+                    )
+                })}
             </div>
             <div className={s.description_section}>
                 <div>
@@ -102,14 +104,14 @@ export const Product = (props: any) => {
                     <div className={s.cart_buttons_section}>
                         <button
                             onClick={ () => { setCartStatus(true);
-                            toggleLocked(true) } }
+                            toggleLocked(true); addToCart(data[myVar], sizeParam) } }
                             className={s.add_to_cart}>
                             add to cart
                         </button>
                         <button className={s.buy_it_now}>buy it now</button>
                     </div>
                 <ModalCart cart={cartStatus} setCart={setCartStatus} setLocker={toggleLocked}
-                description={data[myVar].description} image={data[myVar].value.url} price={data[myVar].price}
+                data={data[myVar]}
                 size={sizeParam}>
 
                 </ModalCart>

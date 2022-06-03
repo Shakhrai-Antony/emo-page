@@ -7,7 +7,7 @@ import s from './latestVideos.module.scss'
 
 export const LatestVideosSection = () => {
     const videos = useSelector(getVideos)
-    const videosList = videos.map(item =>
+    const videosList = videos.map((item: any) =>
         <VideosList value={<img src={item.value} alt={item.to}/>} key={item.id} path={item.to}
                     description={item.description} date={item.date}/>
     )

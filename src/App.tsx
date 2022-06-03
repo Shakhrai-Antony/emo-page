@@ -26,9 +26,10 @@ import {HoodiesMerch} from "./MerchComponent/HoodiesMerch/HoodiesMerch";
 import {HeadwearAndAccessoriesMerch} from "./MerchComponent/HeadwearAndAccessoriesMerch/HeadWearAndAccessoriesMerch";
 import {GoodsForKidsMerch} from "./MerchComponent/GoodsForKidsMerch/GoodsForKidsMerch";
 import {GoodsForLadiesMerch} from "./MerchComponent/GoodsForLadiesMerch/GoodsForLadiesMerch";
+import {Player} from "./Player/Player";
+import {CartComponent} from "./CartComponent/CartComponent";
 
 function App() {
-
     return (
         <div>
 
@@ -52,6 +53,8 @@ function App() {
                     <Route path='/products/:product' element={<Product/>}/>
                     <Route path='/blogs/felt-emo-might-delete/:felt' element={<WatchBlog/>}/>
                     <Route path='/watch' element={<WatchComponent/>}/>
+                    <Route path='/playlist' element={<Player/>}/>
+                    <Route path='/cart' element={<CartComponent/>}/>
                     <Route path='/pages/faqs' element={<Faqs/>}/>
                     <Route path='/pages/contact-us' element={<ContactUs/>}/>
                     <Route path='/pages/returns-exchanges' element={<ReturnsExchanges/>}/>

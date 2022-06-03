@@ -13,7 +13,7 @@ export const WatchComponent = () => {
     for (let i = (currentPage - 1) * 12; (i < 12 + (currentPage - 1) * 12); i++) {
         if(watchSection[i]) arr.push(watchSection[i])
     }
-    const watchSectionList = arr.map(item =>
+    const watchSectionList = arr.map((item: any) =>
     <WatchComponentList value={ <img src={item.value}  alt={item.path}/> } key={item.id} id={item.id}
                         description={item.description} path={item.path} />
     )
@@ -34,7 +34,7 @@ export const WatchComponent = () => {
                 <Paginator/>
             </div>
             <div className={s.watch_collection}>
-                {watchSectionCollection.map((item) => {
+                {watchSectionCollection.map((item: any) => {
                     return (
                         <div key={item.id}>
                             <NavLink to={item.path}>

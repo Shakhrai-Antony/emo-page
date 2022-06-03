@@ -760,6 +760,12 @@ const initialState = {
     digitalCardGift: [
         {value: giftcard, description: 'digital gift card', id: 1,
             price: `$25`, path: '/products/emos-not-dead-digital-gift-card'}
+    ],
+    goodsInCart: [
+
+    ],
+    goodsCount: [
+
     ]
 }
 initialState.totalItemsCount = initialState.merchSection.length
@@ -788,6 +794,18 @@ const goodsReducer = (state = initialState, action: GoodsReducerType) => {
                 ...state,
                 currentPage: action.page
             }
+        case 'SET_GOODS_IN_CART': {
+            return {
+                ...state,
+                goodsInCart: {...action.goods, size: action.size}
+            }
+        }
+        case 'SET_GOODS_COUNT': {
+            return {
+                ...state,
+                goodsCount: action.count
+            }
+        }
         default:
             return state;
     }
@@ -806,6 +824,13 @@ export const actions = {
     },
     setNewPage: (page: number) => {
         return ({type: 'SET_CURRENT_PAGE', page} as const)
+    },
+    setGoodsInCart: (goods: object, size: string) => {
+        return ({type: 'SET_GOODS_IN_CART', goods, size} as const)
+    },
+    setGoodsCount: (count: number) => {
+        console.log(count)
+        return ({type: 'SET_GOODS_COUNT', count} as const)
     }
 }
 

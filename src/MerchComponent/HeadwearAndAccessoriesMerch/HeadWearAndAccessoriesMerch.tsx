@@ -15,7 +15,7 @@ export const HeadwearAndAccessoriesMerch = () => {
     const headwearAndAccessoriesList = useSelector(getHeadwearAndAccessoriesMerch)
     return (
         <div className={s.headwear_and_accessories_section}>
-            {headwearAndAccessoriesList.map((item) => {
+            {headwearAndAccessoriesList.map((item: any) => {
                 return (
                     <div key={item.id}>
                         <NavLink to={item.path}>

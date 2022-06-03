@@ -1,20 +1,32 @@
 {
   "emos-not-dead-snapback-black": {
-    "value": {
-      "url": "../../not_dead_cap.png",
-      "secondUrl": "../../not_dead_cap2.png"
-    },
+    "value": [
+      {"image": "../../not_dead_cap.png",
+        "id": 1
+      },
+      {"image": "../../not_dead_cap2.png",
+        "id": 2
+      }
+    ],
     "description": "emo's not dead snapback - black",
     "price": "$33.95",
     "id": 1
   },
-  "v-m-a-snapback-black": {
-    "value": {
-      "url": "emogoods/not_dead_cap.png",
-      "secondUrl": "../../not_dead_cap2.png"
-    },
-    "description": "very much alive snapback - black",
-    "price": "$33.95",
+  "stacked-repeat-hoodie-mint": {
+    "value": [
+      {"image": "../../not_dead_blue_hoodie.png",
+        "id": 1
+      },
+      {"image": "../../mint_hoodie_1.png",
+        "id": 2
+      },
+      {
+        "image": "../../mint_hoodie_2.png",
+        "id": 3
+      }
+        ],
+    "description": "stacked & repeat hoodie - blue",
+    "price": "$64.95",
     "id": 2
   }
 }

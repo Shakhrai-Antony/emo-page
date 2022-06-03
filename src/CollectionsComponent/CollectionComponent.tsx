@@ -14,7 +14,7 @@ export const CollectionComponent = () => {
     for (let i = (currentPage - 1) * 24; (i < 24 + (currentPage -1) * 24); i++ ) {
         if (goodsForCollectionSection[i]) array.push(goodsForCollectionSection[i])
     }
-    const goodsListForCollectionSection = array.map(item =>
+    const goodsListForCollectionSection = array.map((item: any) =>
         <GoodsListCollectionSection key={item.id} value={<img src={item.value} alt={item.path}/>}
                                price={item.price} description={item.description} path={item.path}/>
     )

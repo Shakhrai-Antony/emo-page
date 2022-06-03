@@ -15,7 +15,7 @@ export const CoffeeMugsMerch = () => {
     const coffeeMugsList = useSelector(getCoffeeMugsMerch)
     return (
         <div className={s.coffee_mugs_merch_section}>
-            {coffeeMugsList.map((item) => {
+            {coffeeMugsList.map((item: any) => {
                 return (
                     <div key={item.id}>
                         <NavLink to={item.path}>

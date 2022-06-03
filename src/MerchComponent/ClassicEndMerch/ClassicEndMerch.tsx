@@ -15,7 +15,7 @@ export const ClassicEndMerch = () => {
     const endMerch = useSelector(getClassicEndMerch)
     return (
         <div className={s.classic_end_merch_collection}>
-            {endMerch.map((item) => {
+            {endMerch.map((item: any) => {
                 return (
                     <div key={item.id}>
                         <NavLink to={item.path}>

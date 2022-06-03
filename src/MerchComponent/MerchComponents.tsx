@@ -13,7 +13,7 @@ export const MerchComponent = () => {
         for (let i = (currentPage - 1) * 24; (i < 24 + (currentPage -1) * 24); i++ ) {
             if (goodsForMerchSection[i]) array.push(goodsForMerchSection[i])
         }
-    const goodsListForMerchSection = array.map(item =>
+    const goodsListForMerchSection = array.map((item: any) =>
         <GoodsListMerchSection key={item.id} value={<img src={item.value} alt={item.path}/>}
         price={item.price} description={item.description} path={item.path}/>
     )

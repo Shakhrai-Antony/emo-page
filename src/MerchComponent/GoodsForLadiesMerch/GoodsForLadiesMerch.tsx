@@ -15,7 +15,7 @@ export const GoodsForLadiesMerch = () => {
     const goodsForLadiesList = useSelector(getGirlsGoods)
     return (
         <div className={s.goods_for_ladies_section}>
-            {goodsForLadiesList.map((item) => {
+            {goodsForLadiesList.map((item: any) => {
                 return (
                     <div key={item.id}>
                         <NavLink to={item.to}>

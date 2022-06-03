@@ -15,7 +15,7 @@ export const CrystalDyeMerch = () => {
     const crystalMerch = useSelector(getCrystalDyeMerch)
     return (
         <div className={s.crystal_dye_merch_collection}>
-            {crystalMerch.map((item) => {
+            {crystalMerch.map((item: any) => {
                 return (
                     <div key={item.id}>
                         <NavLink to={item.path}>

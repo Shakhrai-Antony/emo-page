@@ -15,7 +15,7 @@ export const TeeAndLongSleevesMerch = () => {
     const teeAndLongSleevesList = useSelector(getTeeAndLongSleevesMerch)
     return (
         <div className={s.tee_long_sleeves_section}>
-            {teeAndLongSleevesList.map((item) => {
+            {teeAndLongSleevesList.map((item: any) => {
                 return (
                     <div key={item.id}>
                         <NavLink to={item.path}>

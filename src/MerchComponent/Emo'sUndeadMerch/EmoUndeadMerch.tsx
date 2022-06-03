@@ -15,7 +15,7 @@ export const EmoUndeadMerch = () => {
     const undeadMerch = useSelector(getEmosUndeadMerch)
     return (
         <div className={s.undead_merch_collection}>
-            {undeadMerch.map((item) => {
+            {undeadMerch.map((item: any) => {
                 return (
                     <div key={item.id}>
                         <NavLink to={item.path}>

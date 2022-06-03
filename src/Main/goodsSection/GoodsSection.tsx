@@ -7,7 +7,7 @@ import {NavLink} from "react-router-dom";
 
 export const GoodsSection = () => {
     const goods = useSelector(getGoods)
-    const goodsList = goods.map(item =>
+    const goodsList = goods.map((item: any) =>
         <GoodsList value={<img src={item.value} alt={item.to}/>} path={item.to} description={item.description}
                    key={item.id} price={item.price}/>
     )
@@ -27,7 +27,7 @@ export const GoodsSection = () => {
 
 export const CoffeeSection = () => {
     const coffeeGoods = useSelector(getCoffeeGoods)
-    const coffeeList = coffeeGoods.map(item =>
+    const coffeeList = coffeeGoods.map((item: any) =>
         <CoffeeGoodsList value={<img src={item.value} alt={item.to}/>} path={item.to} description={item.description}
                          key={item.id} price={item.price}/>
     )
