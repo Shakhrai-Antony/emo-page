@@ -56,6 +56,38 @@
         border-radius: 100%;
       }
     }
+    .amount_section {
+      margin-top: 40px;
+      p {
+        font-size: 20px;
+        font-weight: bold;
+      }
+    }
+    .count_section {
+      span {
+        padding-right: 20px;
+        font-weight: bold;
+        font-size: 25px;
+        border-bottom: 2px solid #000000;
+      }
+      span:first-child {
+        cursor: pointer;
+        color: gray;
+        font-size: 25px;
+      }
+      span:last-child{
+        cursor: pointer;
+        padding-right: 0;
+        color: gray;
+        font-size: 25px;
+      }
+      span:first-child:hover {
+        opacity: 0.8;
+      }
+      span:last-child:hover {
+        opacity: 0.8;
+      }
+    }
     .cart_buttons_section {
       .add_to_cart {
         margin-top: 10px;
@@ -172,11 +204,15 @@
         }
       }
     }
-    .size_chart {
+    .modal_size_chart {
+      margin-top: 40px;
+      .size_chart {
         font-weight: bold;
         font-size: 20px;
         cursor: pointer;
+      }
     }
+
     .share_twitt {
       margin-top: 60px;
       display: flex;

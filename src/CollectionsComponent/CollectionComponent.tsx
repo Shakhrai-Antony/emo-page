@@ -6,7 +6,7 @@ import {GoodsListCollectionSection} from "./GoodsListCollectionSection";
 import s from './collection.module.scss'
 
 
-export const CollectionComponent = () => {
+const CollectionComponent = () => {
 
     const goodsForCollectionSection = useSelector(getTotalItemsForMerchSection)
     const currentPage = useSelector(getCurrentPage)
@@ -29,3 +29,4 @@ export const CollectionComponent = () => {
         </div>
     )
 }
+export default CollectionComponent

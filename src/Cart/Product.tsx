@@ -38,8 +38,17 @@ export const Product = (props: any) => {
         dispatch(actions.setUserEmail(email))
         dispatch(actions.setUserMessage(message))
     }
-    const addToCart = (goods: object, size: string) => {
-        dispatch(actions.setGoodsInCart(goods, size))
+    const addGoodsToCart = (goods: object) => {
+        dispatch(actions.setGoodsInCart(goods))
+    }
+    const addGoodsSizeToCart = (size: string) => {
+        dispatch(actions.setGoodsSize(size))
+    }
+    const addGoodsAmountToCart = (amount: number) => {
+        dispatch(actions.setGoodsCount(amount))
+    }
+    const addGoodsPriceToCart = (price: number | string) => {
+        dispatch(actions.setGoodsPrice(price))
     }
     const {handleSubmit, handleChange, values, resetForm} = useFormik({
         initialValues: {
@@ -56,6 +65,7 @@ export const Product = (props: any) => {
     const [cartStatus, setCartStatus] = useState(false)
     const [locked, toggleLocked] = useToggle(false)
     useLockBodyScroll(locked);
+    const [count, setCount] = useState(1)
 
     return (
         <div className={s.goods_cart_section}>
@@ -95,6 +105,14 @@ export const Product = (props: any) => {
                         })}
                     </ul>
                 </div>
+                <div className={s.amount_section}>
+                    <p>Amount: </p>
+                </div>
+                <div className={s.count_section}>
+                    <span onClick={ () => count > 1 ? setCount(count - 1) : null }>-</span>
+                    <span>{count}</span>
+                    <span onClick={ () => setCount(count + 1) }>+</span>
+                </div>
                 <div className={s.modal_size_chart} onClick={ () => setSizeChartStatus(true)}>
                     <p className={s.size_chart}><u>Size Chart</u></p>
                 </div>
@@ -104,7 +122,11 @@ export const Product = (props: any) => {
                     <div className={s.cart_buttons_section}>
                         <button
                             onClick={ () => { setCartStatus(true);
-                            toggleLocked(true); addToCart(data[myVar], sizeParam) } }
+                            toggleLocked(true);
+                            addGoodsToCart(data[myVar]);
+                            addGoodsSizeToCart(sizeParam);
+                            addGoodsAmountToCart(count);
+                            addGoodsPriceToCart(+(parseFloat(data[myVar].price.slice(1)) * count).toFixed(2)) } }
                             className={s.add_to_cart}>
                             add to cart
                         </button>
@@ -112,7 +134,7 @@ export const Product = (props: any) => {
                     </div>
                 <ModalCart cart={cartStatus} setCart={setCartStatus} setLocker={toggleLocked}
                 data={data[myVar]}
-                size={sizeParam}>
+                size={sizeParam} count={count}>
 
                 </ModalCart>
                     <div className={s.about_section}>

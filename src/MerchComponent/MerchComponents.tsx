@@ -5,7 +5,7 @@ import {getCurrentPage, getTotalItemsForMerchSection} from "../Store/goodsSelect
 import {GoodsListMerchSection} from "./GoodsListMerchSection";
 import s from './merchgoods.module.scss'
 
-export const MerchComponent = () => {
+const MerchComponent = () => {
 
     const goodsForMerchSection = useSelector(getTotalItemsForMerchSection)
     const currentPage = useSelector(getCurrentPage)
@@ -28,3 +28,4 @@ export const MerchComponent = () => {
         </div>
     )
 }
+export default MerchComponent

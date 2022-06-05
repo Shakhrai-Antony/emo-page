@@ -66,3 +66,9 @@ export const getGoodsForCart = (state) => {
 export const getAmountOfGood = (state) => {
     return state.goodsPage.goodsCount
 }
+export const getGoodsSize = (state) => {
+    return state.goodsPage.goodsSize
+}
+export const getGoodsPrice = (state) => {
+    return state.goodsPage.goodsPrice
+}

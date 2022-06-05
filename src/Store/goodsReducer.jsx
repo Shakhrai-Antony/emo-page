@@ -522,9 +522,9 @@ const initialState = {
         {value: giftcard, description: 'digital gift card',
             path: '/collections/all-products/products/emos-not-dead-digital-gift-card', id: 59, price: `from $25.00`}
     ],
-    email: '' as string,
-    name: '' as string,
-    message: '' as string,
+    email: '',
+    name: '',
+    message: '',
     itemsOnPage: 24,
     currentPage: 1,
     totalItemsCount: 0,
@@ -766,11 +766,17 @@ const initialState = {
     ],
     goodsCount: [
 
+    ],
+    goodsSize: [
+
+    ],
+    goodsPrice: [
+
     ]
 }
 initialState.totalItemsCount = initialState.merchSection.length
 
-const goodsReducer = (state = initialState, action: GoodsReducerType) => {
+const goodsReducer = (state = initialState, action) => {
     switch (action.type) {
         case 'SET_EMAIL':
             return {
@@ -797,40 +803,55 @@ const goodsReducer = (state = initialState, action: GoodsReducerType) => {
         case 'SET_GOODS_IN_CART': {
             return {
                 ...state,
-                goodsInCart: {...action.goods, size: action.size}
+                goodsInCart: [...state.goodsInCart, action.goods],
             }
         }
         case 'SET_GOODS_COUNT': {
             return {
                 ...state,
-                goodsCount: action.count
+                goodsCount: [...state.goodsCount, action.count]
+            }
+        }
+        case 'SET_GOODS_SIZE': {
+            return {
+                ...state,
+                goodsSize: [...state.goodsSize, action.size]
+            }
+        }
+        case 'SET_GOODS_PRICE': {
+            return {
+                ...state,
+                goodsPrice: [...state.goodsPrice, action.price]
             }
         }
         default:
             return state;
     }
 }
-type GoodsReducerType = InferActionsTypes<typeof actions>
-
 export const actions = {
-    setUserEmail: (email: string) => {
-        return ({type: 'SET_EMAIL', email} as const)
+    setUserEmail: (email) => {
+        return ({type: 'SET_EMAIL', email})
     },
-    setUserName: (name: string) => {
-      return ({type: 'SET_NAME', name} as const)
+    setUserName: (name) => {
+      return ({type: 'SET_NAME', name})
     },
-    setUserMessage: (message: string) => {
-        return ({type: 'SET_MESSAGE', message} as const)
+    setUserMessage: (message) => {
+        return ({type: 'SET_MESSAGE', message})
     },
-    setNewPage: (page: number) => {
-        return ({type: 'SET_CURRENT_PAGE', page} as const)
+    setNewPage: (page) => {
+        return ({type: 'SET_CURRENT_PAGE', page})
     },
-    setGoodsInCart: (goods: object, size: string) => {
-        return ({type: 'SET_GOODS_IN_CART', goods, size} as const)
+    setGoodsInCart: (goods) => {
+        return ({type: 'SET_GOODS_IN_CART', goods})
     },
-    setGoodsCount: (count: number) => {
-        console.log(count)
-        return ({type: 'SET_GOODS_COUNT', count} as const)
+    setGoodsCount: (count) => {
+        return ({type: 'SET_GOODS_COUNT', count} )
+    },
+    setGoodsSize: (size) => {
+        return ({type: 'SET_GOODS_SIZE', size})
+    },
+    setGoodsPrice: (price) => {
+        return ({type: 'SET_GOODS_PRICE', price})
     }
 }
 

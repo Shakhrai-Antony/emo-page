@@ -6,7 +6,7 @@ import {Paginator} from "../Paginator/Paginator";
 import s from './watchcomponent.module.scss'
 import {NavLink} from "react-router-dom";
 
-export const WatchComponent = () => {
+const WatchComponent = () => {
     const watchSection = useSelector(getWatchList)
     const currentPage = useSelector(getCurrentPage)
     const arr:any[]=[]
@@ -48,3 +48,4 @@ export const WatchComponent = () => {
         </div>
     )
 }
+export default WatchComponent

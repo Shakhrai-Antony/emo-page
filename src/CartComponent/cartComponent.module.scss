@@ -1,10 +1,7 @@
 .cart_section {
   margin-top: 50px;
-  display: flex;
-  justify-content: start;
   align-items: start;
   text-align: center;
-  background-color: rgba(0,0,0,0.4);
   height: 100vh;
   .cart_content_section {
     margin-top: 25px;
@@ -14,7 +11,7 @@
     text-align: start;
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
-    background-color: #ffffff;
+    border: 2px solid rgba(0,0,0,0.4);
     width: 50vw;
     p {
       font-size: 15px;
@@ -32,6 +29,11 @@
       border: 2px solid #000000;
       border-radius: 25px;
     }
-
+  }
+  .subtotal_section {
+    margin-top: 50px;
+    h3 {
+      text-align: start;
+    }
   }
 }

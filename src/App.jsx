@@ -1,13 +1,10 @@
-import React from 'react';
+import React, {lazy, Suspense} from 'react';
 import './App.css';
 import {Header} from "./Header/Header";
 import {Main} from "./Main/Main";
 import {Footer} from "./Footer/Footer";
 import {Route, Routes} from "react-router-dom";
-import {MerchComponent} from "./MerchComponent/MerchComponents";
 import {Product} from "./Cart/Product";
-import {CollectionComponent} from "./CollectionsComponent/CollectionComponent";
-import {WatchComponent} from "./WatchComponent/WatchComponent";
 import {WatchBlog} from "./WatchComponent/WatchBlog";
 import {ShippingPolicy} from "./Header/ShippingPolicy";
 import {Faqs} from "./Footer/FAQS/FAQS";
@@ -26,16 +23,22 @@ import {HoodiesMerch} from "./MerchComponent/HoodiesMerch/HoodiesMerch";
 import {HeadwearAndAccessoriesMerch} from "./MerchComponent/HeadwearAndAccessoriesMerch/HeadWearAndAccessoriesMerch";
 import {GoodsForKidsMerch} from "./MerchComponent/GoodsForKidsMerch/GoodsForKidsMerch";
 import {GoodsForLadiesMerch} from "./MerchComponent/GoodsForLadiesMerch/GoodsForLadiesMerch";
-import {Player} from "./Player/Player";
 import {CartComponent} from "./CartComponent/CartComponent";
+import {Preloader} from "./Preloader/Preloader";
+
+const MerchComponent = lazy(() => import("./MerchComponent/MerchComponents"))
+const CollectionComponent = lazy(() => import("./CollectionsComponent/CollectionComponent"))
+const WatchComponent = lazy(() => import("./WatchComponent/WatchComponent"))
+const PlayerComponent = lazy(() => import("./Player/Player"))
 
 function App() {
     return (
         <div>
-
             <Header/>
             <div>
+                <Suspense fallback={<Preloader/>}>
                 <Routes>
+                    <Route path={'/preloader'} element={<Preloader/>}/>
                     <Route path='/pages/shipping-policy' element={<ShippingPolicy/>}/>
                     <Route path='/' element={<Main/>}/>
                     <Route path='/merch' element={<MerchComponent/>}/>
@@ -53,7 +56,7 @@ function App() {
                     <Route path='/products/:product' element={<Product/>}/>
                     <Route path='/blogs/felt-emo-might-delete/:felt' element={<WatchBlog/>}/>
                     <Route path='/watch' element={<WatchComponent/>}/>
-                    <Route path='/playlist' element={<Player/>}/>
+                    <Route path='/playlist' element={<PlayerComponent/>}/>
                     <Route path='/cart' element={<CartComponent/>}/>
                     <Route path='/pages/faqs' element={<Faqs/>}/>
                     <Route path='/pages/contact-us' element={<ContactUs/>}/>
@@ -62,6 +65,7 @@ function App() {
                     <Route path='/pages/privacy-policy' element={<PrivacyPolicy/>}/>
                     <Route path='/policies/terms-of-service' element={<TermsOfService/>}/>
                 </Routes>
+                </Suspense>
             </div>
             <Footer/>
         </div>
