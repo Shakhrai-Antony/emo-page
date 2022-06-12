@@ -1,13 +1,13 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import s from './header.module.scss'
-import {NavLink, useHref} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 import logo from './../imges/notdead.png'
-import search from './../imges/search.png'
 import user from './../imges/user.png'
 import cart from './../imges/cart.png'
 import {DropDownCollections, DropDownMerch} from "./dropDownMenu";
-import {CartComponent} from "../CartComponent/CartComponent";
 import {useLockBodyScroll, useToggle} from "react-use";
+import {getAmountOfGoods} from "../Store/goodsSelectors";
+import {useSelector} from "react-redux";
 
 export const Header = () => {
     const items = [{value: 'Home', to: '/'}, {value: 'Merch', to: '/merch'}, {
@@ -19,9 +19,11 @@ export const Header = () => {
 
     const [dropDownMenuMerch, setDropDownMenuMerch] = useState(false)
     const [dropDownMenuCollections, setDropDownMenuCollections] = useState(false)
-    const [cartStatus, setCartStatus] = useState(false)
-    const [locked, toggleLocked] = useToggle(false)
-    useLockBodyScroll(locked);
+    const amountOfGoodsInCart = useSelector(getAmountOfGoods)
+    const totalAmountOfGoodsInCart = amountOfGoodsInCart.length >= 1
+        ? amountOfGoodsInCart.reduce((a: number, b: number) =>  a + b)
+        : ''
+
     return (
         <header>
             <nav>
@@ -64,6 +66,16 @@ export const Header = () => {
                                         return (
                                             <li className={s.nav_items_li} key={index}>
                                                 <a className={s.nav_items_links} href="https://www.emosnotdeadcruise.com/">{item.value}</a>
+                                            </li>
+                                        )
+                                    }
+                                    if (item.to === '/cart') {
+                                        return (
+                                            <li className={s.nav_items_li} key={index}>
+                                                <NavLink to={item.to}>
+                                                    {item.value}
+                                                </NavLink>
+                                                <span className={s.goods_amount_section}>{totalAmountOfGoodsInCart}</span>
                                             </li>
                                         )
                                     }

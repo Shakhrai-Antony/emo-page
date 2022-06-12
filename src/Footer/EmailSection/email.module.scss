@@ -23,10 +23,12 @@
   .email {
     padding-bottom: 50px;
     padding-top: 10px;
-    position: relative;
     form {
       width: 25%;
       text-align: center;
+      position: relative;
+      display: flex;
+      justify-content: space-evenly;
     }
     input {
       border-style: none;
@@ -58,8 +60,8 @@
     }*/
     button {
       position: absolute;
-      top: 5px;
-      right: 35%;
+      top: 0;
+      right: 0;
       bottom: 0;
       display: block;
       width: 26px;
@@ -74,5 +76,8 @@
       background-position: center;
       filter: invert(99%) sepia(1%) saturate(44%) hue-rotate(336deg) brightness(113%) contrast(100%)
     }
+  }
+  .error {
+    color: red;
   }
 }

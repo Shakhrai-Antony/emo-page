@@ -18,16 +18,14 @@ header {
   }
 }
 .headerNavigation {
+  padding: 0 40px;
   display: flex;
-  justify-content: space-between;
-  margin-top: 30px;
+  justify-content: space-evenly;
 
-  .home_img {
-    padding-left:150px;
-  }
   .nav_section {
     display: flex;
-    width: 100%;
+    justify-content: space-between;
+
     .nav_items {
       margin: 0;
       padding: 0;
@@ -51,6 +49,11 @@ header {
           font-size: 22px;
           padding: 0;
           align-items: center;
+      }
+      .goods_amount_section {
+          color: #000000;
+          font-weight: bold;
+          align-items: start;
       }
       .nav_items_li:nth-child(-n+6) .nav_items_links:after {
         content: '';

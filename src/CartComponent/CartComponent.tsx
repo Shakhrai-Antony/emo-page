@@ -1,7 +1,7 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import {useSelector} from "react-redux";
 import s from './cartComponent.module.scss'
-import {getAmountOfGood, getGoodsForCart, getGoodsPrice, getGoodsSize} from "../Store/goodsSelectors";
+import {getAmountOfGood, getAmountOfGoods, getGoodsForCart, getGoodsPrice, getGoodsSize} from "../Store/goodsSelectors";
 
 export const CartComponent = (props: any) => {
 
@@ -9,10 +9,21 @@ export const CartComponent = (props: any) => {
     const goodsAmount = useSelector(getAmountOfGood)
     const goodsSize = useSelector(getGoodsSize)
     const goodsPrice = useSelector(getGoodsPrice)
+    const amountOfGoodsInCart = useSelector(getAmountOfGoods)
     const totalBill = goodsPrice.length >= 1
         ? goodsPrice.reduce((a: number, b: number) =>  a + b).toFixed(2)
         : 0
 
+    useEffect(() => {
+        return () => {
+            sessionStorage.setItem('clientGoods', JSON.stringify(clientGoods))
+            sessionStorage.setItem('goodsAmount', JSON.stringify(goodsAmount))
+            sessionStorage.setItem('goodsSize', JSON.stringify(goodsSize))
+            sessionStorage.setItem('goodsPrice', JSON.stringify(goodsPrice))
+            sessionStorage.setItem('amountOfGoodsInCart', JSON.stringify(amountOfGoodsInCart))
+        }
+
+    }, [])
     return (
         <div className={s.cart_section}>
             {clientGoods.map((item: any, index: number) => {

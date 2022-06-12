@@ -772,8 +772,20 @@ const initialState = {
     ],
     goodsPrice: [
 
+    ],
+    amountOfGoodsInCart: [
+
     ]
 }
+
+const getStorage = () => {
+    initialState.goodsInCart = JSON.parse(sessionStorage.getItem('clientGoods')) || []
+    initialState.goodsCount = JSON.parse(sessionStorage.getItem('goodsAmount')) || []
+    initialState.goodsSize = JSON.parse(sessionStorage.getItem('goodsSize')) || []
+    initialState.goodsPrice = JSON.parse(sessionStorage.getItem('goodsPrice')) || []
+    initialState.amountOfGoodsInCart = JSON.parse(sessionStorage.getItem('amountOfGoodsInCart')) || []
+}
+getStorage()
 initialState.totalItemsCount = initialState.merchSection.length
 
 const goodsReducer = (state = initialState, action) => {
@@ -824,6 +836,12 @@ const goodsReducer = (state = initialState, action) => {
                 goodsPrice: [...state.goodsPrice, action.price]
             }
         }
+            case 'SET_AMOUNT_OF_GOODS_IN_CART': {
+                return {
+                    ...state,
+                    amountOfGoodsInCart: [...state.amountOfGoodsInCart, action.count]
+                }
+            }
         default:
             return state;
     }
@@ -852,6 +870,9 @@ export const actions = {
     },
     setGoodsPrice: (price) => {
         return ({type: 'SET_GOODS_PRICE', price})
+    },
+    setAmountOfGoods: (count) => {
+        return ({type: 'SET_AMOUNT_OF_GOODS_IN_CART', count})
     }
 }
 

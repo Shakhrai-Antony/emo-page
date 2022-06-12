@@ -3,7 +3,8 @@ import {NavLink} from "react-router-dom";
 import {useFormik} from "formik";
 import {useDispatch} from "react-redux";
 import {actions} from "../../Store/goodsReducer";
-import s from './contactus.module.scss'
+import s from './contactus.module.scss';
+import * as Yup from 'yup'
 
 export const ContactUs = () => {
     useEffect(() => {
@@ -24,12 +25,25 @@ export const ContactUs = () => {
     const [sizeChart, setSizeChart] = useState(false)
     const [returnOrder, setReturnOrder] = useState(false)
 
-    const {handleSubmit, handleChange, values, resetForm} = useFormik({
+    const {handleSubmit, handleChange, values, resetForm, touched, errors, handleBlur} = useFormik({
         initialValues: {
             name: '',
             email: '',
             message: ''
         },
+        validationSchema: Yup.object({
+            name: Yup.string()
+                .min(3, 'Name should be longer than 2 characters')
+                .max(15, 'Name should be shorter than 15 characters')
+                .required('Name is required'),
+            email: Yup.string()
+                .email()
+                .max(20, 'Email should be shorter than 20 characters')
+                .required('Email is required'),
+            message: Yup.string()
+                .max(100, 'Messages should be shorter than 100 characters')
+                .required('Message is required')
+        }),
         onSubmit: ({name, email, message}) => {
             onSubmit(name, email, message)
             resetForm()
@@ -68,19 +82,28 @@ export const ContactUs = () => {
                             <div>
                                 <p>Name</p>
                                 <input name='name' onChange={handleChange}
-                                       value={values.name} />
+                                       value={values.name} onBlur={handleBlur}/>
+                                {touched.name && errors.name ?
+                                    <div className={s.error}>{errors.name}</div> : null
+                                }
                             </div>
                             <div>
                                 <p>Email</p>
                                 <input name='email' onChange={handleChange}
-                                       value={values.email} />
+                                       value={values.email} onBlur={handleBlur}/>
+                                {touched.email && errors.email ?
+                                    <div className={s.error}>{errors.email}</div> : null
+                                }
                             </div>
                         </div>
                         <div className={s.contact_us_form_message}>
                             <div>
                                 <p>Message</p>
                                 <textarea  wrap='off' rows={10} cols={30} name='message' onChange={handleChange}
-                                          value={values.message} />
+                                          value={values.message} onBlur={handleBlur}/>
+                                {touched.message && errors.message ?
+                                    <div className={s.error}>{errors.message}</div> : null
+                                }
                             </div>
                         </div>
                         <button type='submit' onClick={ () => onSubmit}>
