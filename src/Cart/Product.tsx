@@ -1,6 +1,5 @@
 import React, {useEffect, useRef, useState} from 'react'
 import {NavLink, useMatch} from "react-router-dom";
-import data from '../config/products.json'
 import s from './product.module.scss'
 import {useFormik} from "formik";
 import {actions} from "../Store/goodsReducer";
