@@ -1,9 +1,16 @@
 import notdeadcap from './../imges/emogoods/not_dead_cap.png'
+import notdeadcap2 from './../imges/emogoods/not_dead_cap2.png'
 import alivecap from './../imges/emogoods/alive_cap.png'
+import alivecap_back from './../imges/emogoods/alive_cap_back.png'
+import alivecap_on from './../imges/emogoods/alive_cap_on.png'
 import coffee from './../imges/emogoods/coffee.png'
 import greyrosecup from './../imges/emogoods/grey_rose_cup.png'
 import notdeadbluehoodie from './../imges/emogoods/not_dead_blue_hoodie.png'
+import mint_hoodie_1 from './../imges/emogoods/mint_hoodie_1.png'
+import mint_hoodie_2 from './../imges/emogoods/mint_hoodie_2.png'
 import notdeadpinkhoodie from './../imges/emogoods/not_dead_pink_hoodie.png'
+import pink_hoodie_girl from './../imges/emogoods/pink_hoodie_girl.png'
+import pink_hoodie_guy from './../imges/emogoods/pink_hoodie_guy.png'
 import whitesocks from './../imges/emogoods/white_socks.png'
 import blackhandcup from './../imges/emogoods/black_hand_cup.png'
 import emohoodieblack from './../imges/emogoods/emohoodieblack.png'
@@ -109,14 +116,38 @@ const initialState = {
             to: '/products/emos-not-dead-snapback-black',
             description: 'emo\'s not dead snapback - black',
             id: 1,
-            price: `$33.95`
+            price: `$33.95`,
+            images: [
+                {
+                    image: notdeadcap,
+                    id: 1
+                },
+                {
+                    image: notdeadcap2,
+                    id: 2
+                }
+            ]
         },
         {
             value: alivecap,
             to: '/products/v-m-a-snapback-black',
             description: 'very much alive snapback - black',
             id: 2,
-            price: `$33.95`
+            price: `$33.95`,
+            images: [
+                {
+                    image: alivecap,
+                    id: 1
+                },
+                {
+                    image: alivecap_back,
+                    id: 2
+                },
+                {
+                    image: alivecap_on,
+                    id: 2
+                }
+            ]
         },
         {
             value: coffee,
@@ -137,14 +168,42 @@ const initialState = {
             to: '/products/stacked-repeat-hoodie-mint',
             description: 'stacked & repeat hoodie - blue',
             id: 5,
-            price: `$64.95`
+            price: `$64.95`,
+            images: [
+                {
+                    image: notdeadbluehoodie,
+                    id: 1
+                },
+                {
+                    image: mint_hoodie_1,
+                    id: 2
+                },
+                {
+                    image: mint_hoodie_2,
+                    id: 2
+                }
+            ]
         },
         {
             value: notdeadpinkhoodie,
             to: '/products/stacked-repeat-hoodie-pink',
             description: 'stacked & repeat hoodie - pink',
             id: 6,
-            price: `$64.95`
+            price: `$64.95`,
+            images: [
+                {
+                    image: notdeadpinkhoodie,
+                    id: 1
+                },
+                {
+                    image: pink_hoodie_girl,
+                    id: 2
+                },
+                {
+                    image: pink_hoodie_guy,
+                    id: 2
+                }
+            ]
         },
         {
             value: whitesocks,
@@ -207,23 +266,47 @@ const initialState = {
 
     ],
     goodsForKids: [
-        {value: youthemokidtee, path: '/collections/emo-kids/products/youth-emo-kid-tee-black', description: 'youth emo kid tee - black',
-            price: `$21.95`, id: 1
+        {
+            value: youthemokidtee,
+            path: '/collections/emo-kids/products/youth-emo-kid-tee-black',
+            description: 'youth emo kid tee - black',
+            price: `$21.95`,
+            id: 1
         },
-        {value: emokidhoodie, path: '/collections/emo-kids/products/youth-emo-kid-hoodie-black', description: 'youth emo kid hoodie - black',
-            price: `$39.95`, id: 2
+        {
+            value: emokidhoodie,
+            path: '/collections/emo-kids/products/youth-emo-kid-hoodie-black',
+            description: 'youth emo kid hoodie - black',
+            price: `$39.95`,
+            id: 2
         },
-        {value: endyouthtee, path: '/collections/emo-kids/products/youth-e-n-d-tee-black', description: 'youth e.n.d. tee - black',
-            price: `$21.95`, id: 3
+        {
+            value: endyouthtee,
+            path: '/collections/emo-kids/products/youth-e-n-d-tee-black',
+            description: 'youth e.n.d. tee - black',
+            price: `$21.95`,
+            id: 3
         },
-        {value: endyouthhoodie, path: '/collections/emo-kids/products/youth-e-n-d-hoodie-black', description: 'youth e.n.d. hoodie - black',
-            price: `$39.95`, id: 4
+        {
+            value: endyouthhoodie,
+            path: '/collections/emo-kids/products/youth-e-n-d-hoodie-black',
+            description: 'youth e.n.d. hoodie - black',
+            price: `$39.95`,
+            id: 4
         },
-        {value: notdead3tee, path: '/collections/emo-kids/products/e-n-d-toddler-tee-black', description: 'e.n.d. toddler tee black',
-            price: `$19.95`, id: 5
+        {
+            value: notdead3tee,
+            path: '/collections/emo-kids/products/e-n-d-toddler-tee-black',
+            description: 'e.n.d. toddler tee black',
+            price: `$19.95`,
+            id: 5
         },
-        {value: notdead3hoodie, path: '/collections/emo-kids/products/e-n-d-toddler-hoodie-black', description: 'e.n.d. toddler hoodie black',
-            price: `$29.95`, id: 6
+        {
+            value: notdead3hoodie,
+            path: '/collections/emo-kids/products/e-n-d-toddler-hoodie-black',
+            description: 'e.n.d. toddler hoodie black',
+            price: `$29.95`,
+            id: 6
         }
     ],
     goodsForCarousel: [
@@ -403,124 +486,248 @@ const initialState = {
         }
     ],
     merchSection: [
-        {value: notdeadbluehoodie, description: 'stacked & repeat hoodie - mint',
-        path: '/collections/all-products/products/stacked-repeat-hoodie-mint', id: 1, price: `$64.95`},
-        {value: notdeadpinkhoodie, description: 'stacked & repeat hoodie - pink',
-        path: '/collections/all-products/products/stacked-repeat-hoodie-pink', id: 2, price: `$64.95`},
-        {value: coffee, description: 'triste mexicana blend coffee',
-        path: '/collections/all-products/products/triste-mexicana-blend-coffee', id: 3, price: `$16.95`},
-        {value: whitesocks, description: 'e.n.d. socks - white',
-        path: '/collections/all-products/products/e-n-d-socks-white', id: 4, price: `$14.95`},
-        {value: blackhandcup, description: 'live forever coffee mug',
-            path: '/collections/all-products/products/live-forever-coffee-mug', id: 5, price: `$19.95`},
-        {value: greyrosecup, description: 'weeping rose coffee mug',
-            path: '/collections/all-products/products/weeping-rose-coffee-mug', id: 6, price: `$19.95`},
-        {value: notdeadcap, description: 'emo\'s not dead snapback - black',
-            path: '/collections/all-products/products/emos-not-dead-snapback-black', id: 7, price: `$39.95`},
-        {value: alivecap, description: 'very much alive snapback - black',
-            path: '/collections/all-products/products/v-m-a-snapback-black', id: 8, price: `$39.95`},
-        {value: end_dad_cap, description: 'e.n.d. snapback - black',
-            path: '/collections/all-products/products/e-n-d-snapback', id: 9, price: `$39.95`},
-        {value: dadhat, description: 'broken heart beanie',
-            path: '/collections/all-products/products/broken-heart-beanie', id: 10, price: `$24.95`},
-        {value: notdeadteee, description: 'emo\'s not dead tee - black',
-            path: '/collections/all-products/products/emos-not-dead-tee-black', id: 11, price: `$29.95`},
-        {value: emohoodieblack, description: 'emo\'s not dead hoodie - black',
-            path: '/collections/all-products/products/emos-not-dead-hoodie-black', id: 12, price: `$54.95`},
-        {value: teegray, description: 'e.n.d. vintage tee',
-            path: '/collections/all-products/products/e-n-d-vintage-tee', id: 13, price: `$29.95`},
-        {value: emohoodiegray, description: 'e.n.d. vintage hoodie',
-            path: '/collections/all-products/products/e-n-d-vintage-hoodie', id: 14, price: `$64.95`},
-        {value: muchalivetee, description: 'very much alive tee - black',
-            path: '/collections/all-products/products/very-much-alive-tee-black', id: 15, price: `$29.95`},
-        {value: verymuchalivehoodie, description: 'very much alive hoodie - black',
-            path: '/collections/all-products/products/very-much-alive-hoodie-black', id: 16, price: `$59.95`},
-        {value: muchalivewhitetee, description: 'very much alive tee - white',
-            path: '/collections/all-products/products/very-much-alive-white', id: 17, price: `$29.95`},
-        {value: ElectricHorseTee, description: 'electric horse tee - black',
-            path: '/collections/all-products/products/electric-horse-tee-black', id: 18, price: `$34.95`},
-        {value: zipblackwhitehoodie, description: 'e.n.d. zip hoodie - black/white',
-            path: '/collections/all-products/products/e-n-d-zip-hoodie-black-white', id: 19, price: `$54.95`},
-        {value: zipblackhoodie, description: 'e.n.d. zip hoodie - black/red',
-            path: '/collections/all-products/products/black-red-zip-up-hoodie', id: 20, price: `$54.95`},
-        {value: scremocoffee, description: 'screamo blend coffee',
-            path: '/collections/all-products/products/screamo-blend-coffee', id: 21, price: `$16.95`},
-        {value: blackheartcoffee, description: 'black heart blend coffee',
-            path: '/collections/all-products/products/black-heart-blend-coffee', id: 22, price: `$16.95`},
-        {value: notdeadmug, description: 'emo\'s not dead coffee mug',
-            path: '/collections/all-products/products/emos-not-dead-coffee-mug', id: 23, price: `$15.95`},
-        {value: makermug, description: 'e.n.d. heart coffee mug',
-            path: '/collections/all-products/products/e-n-d-heart-coffee-mug', id: 24, price: `$15.95`},
-        {value: endblackdyetee, description: 'crystal dye tee - black',
-            path: '/collections/all-products/products/crystal-dye-tee-black', id: 25, price: `$34.95`},
-        {value: endblackdyehoodie, description: 'crystal dye hoodie - black',
-            path: '/collections/all-products/products/crystal-dye-hoodie-black', id: 26, price: `$64.95`},
-        {value: nodeadteegirlblack, description: 'ladies sweet script tee - charcoal',
-            path: '/collections/all-products/products/ladies-sweet-script-tee-charcoal', id: 27, price: `$34.95`},
-        {value: hoodigirlpink, description: 'sweet script crop hoodie - cotton candy',
-            path: '/collections/all-products/products/sweet-script-crop-hoodie-cotton-candy', id: 28, price: `$44.95`},
-        {value: hoodiegirlblack, description: 'e.n.d. crop hoodie - black',
-            path: '/collections/all-products/products/ladies-e-n-d-crop-hoodie-black', id: 29, price: `$44.95`},
-        {value: teegirlblack, description: 'crystal dye crop tee - black',
-            path: '/collections/all-products/products/crystal-dye-crop-tee-black', id: 30, price: `$29.95`},
-        {value: teegirlpink, description: 'crystal dye crop tee - lavender',
-            path: '/collections/all-products/products/crystal-dye-crop-tee-lavender', id: 31, price: `$29.95`},
-        {value: teegirlblue, description: 'crystal dye crop tee - blue',
-            path: '/collections/all-products/products/crystal-dye-crop-tee-blue', id: 32, price: `$29.95`},
-        {value: endpinktee, description: 'crystal dye tee - lavender',
-            path: '/collections/all-products/products/crystal-dye-tee-lavender', id: 33, price: `$34.95`},
-        {value: endpinkhoodie, description: 'crystal dye hoodie - lavender',
-            path: '/collections/all-products/products/crystal-dye-hoodie-lavender', id: 34, price: `$64.95`},
-        {value: endlavendertee, description: 'crystal dye hoodie - lavender',
-            path: '/collections/all-products/products/crystal-dye-tee-blue', id: 35, price: `$34.95`},
-        {value: endlavenderhoodie, description: 'crystal dye hoodie - blue',
-            path: '/collections/all-products/products/crystal-dye-hoodie-blue', id: 36, price: `$64.95`},
-        {value: trucktee, description: 'hoopty truck tee - black',
-            path: '/collections/all-products/products/hoopty-truck-tee-black', id: 37, price: `$34.95`},
-        {value: undeadhoodie, description: 'emo\'s undead hoodie - black',
-            path: '/collections/all-products/products/emos-undead-hoodie-black', id: 38, price: `$59.95`},
-        {value: bitesleeve, description: 'bite long sleeve - black/white',
-            path: '/collections/all-products/products/bite-long-sleeve-black-white', id: 39, price: `$39.95`},
-        {value: endforkstee, description: 'forks baseball tee - navy/white',
-            path: '/collections/all-products/products/forks-baseball-tee-navy-white', id: 40, price: `$39.95`},
-        {value: rosesblack, description: '19-80 whatever tee - black',
-            path: '/collections/all-products/products/19-90-whatever-tee-black', id: 41, price: `$34.95`},
-        {value: roseswhite, description: '19-80 whatever tee - white',
-            path: '/collections/all-products/products/19-90-whatever-tee-white', id: 42, price: `$34.95`},
-        {value: rivivalblacktee, description: 'from the grave tee - black',
-            path: '/collections/all-products/products/from-the-grave-tee-black', id: 43, price: `$34.95`},
-        {value: rivivalwhitetee, description: 'from the grave long sleeve - white',
-            path: '/collections/all-products/products/from-the-grave-long-sleeve-white', id: 44, price: `$39.95`},
-        {value: notdeadsleeveblack, description: 'fringed long sleeve - charcoal',
-            path: '/collections/all-products/products/fringed-long-sleeve-charcoal', id: 45, price: `$39.95`},
-        {value: notdeadsleevewhite, description: 'fringed long sleeve - white',
-            path: '/collections/all-products/products/fringed-long-sleeve-white', id: 46, price: `$39.95`},
-        {value: rivivaltourblack, description: 'parade tee - black',
-            path: '/collections/all-products/products/parade-tee-black', id: 47, price: `$34.95`},
-        {value: endlongsleeveblack, description: 'fill or burst long sleeve - black',
-            path: '/collections/all-products/products/fill-or-burst-long-sleeve-black', id: 48, price: `$39.95`},
-        {value: dadhatlove, description: 'e.n.d. heart strapback - black',
-            path: '/collections/all-products/products/e-n-d-dad-hat-black', id: 49, price: `$34.95`},
-        {value: end_dad_cap, description: 'e.n.d. strapback - black',
-            path: '/collections/all-products/products/e-n-d-strapback-black', id: 50, price: `$34.95`},
-        {value: leatherwalletend, description: 'e.n.d. classic skinny wallet + keychain',
-            path: '/collections/all-products/products/e-n-d-classic-skinny-wallet-keychain-bundle', id: 51, price: `$39.95`},
-        {value: leatherwalletlove, description: 'e.n.d. heart skinny wallet + keychain',
-            path: '/collections/all-products/products/e-n-d-heart-skinny-wallet-keychain-bundle', id: 52, price: `$39.95`},
-        {value: endyouthtee, description: 'youth e.n.d. tee - black',
-            path: '/collections/all-products/products/youth-e-n-d-tee-black', id: 53, price: `$21.95`},
-        {value: endyouthhoodie, description: 'youth e.n.d. hoodie - black',
-            path: '/collections/all-products/products/youth-e-n-d-hoodie-black', id: 54, price: `$39.95`},
-        {value: youthemokidtee, description: 'youth emo kid tee - black',
-            path: '/collections/all-products/products/youth-emo-kid-tee-black', id: 55, price: `$21.95`},
-        {value: emokidhoodie, description: 'youth emo kid hoodie - black',
-            path: '/collections/all-products/products/youth-emo-kid-hoodie-black', id: 56, price: `$39.95`},
-        {value: notdead3tee, description: 'e.n.d toddler tee - black',
-            path: '/collections/all-products/products/e-n-d-toddler-tee-black', id: 57, price: `$19.95`},
-        {value: notdead3hoodie, description: 'e.n.d toddler hoodie - black',
-            path: '/collections/all-products/products/e-n-d-toddler-hoodie-black', id: 58, price: `$29.95`},
-        {value: giftcard, description: 'digital gift card',
-            path: '/collections/all-products/products/emos-not-dead-digital-gift-card', id: 59, price: `from $25.00`}
+        {
+            value: notdeadbluehoodie, description: 'stacked & repeat hoodie - mint',
+            path: '/collections/all-products/products/stacked-repeat-hoodie-mint', id: 1, price: `$64.95`
+        },
+        {
+            value: notdeadpinkhoodie, description: 'stacked & repeat hoodie - pink',
+            path: '/collections/all-products/products/stacked-repeat-hoodie-pink', id: 2, price: `$64.95`
+        },
+        {
+            value: coffee, description: 'triste mexicana blend coffee',
+            path: '/collections/all-products/products/triste-mexicana-blend-coffee', id: 3, price: `$16.95`
+        },
+        {
+            value: whitesocks, description: 'e.n.d. socks - white',
+            path: '/collections/all-products/products/e-n-d-socks-white', id: 4, price: `$14.95`
+        },
+        {
+            value: blackhandcup, description: 'live forever coffee mug',
+            path: '/collections/all-products/products/live-forever-coffee-mug', id: 5, price: `$19.95`
+        },
+        {
+            value: greyrosecup, description: 'weeping rose coffee mug',
+            path: '/collections/all-products/products/weeping-rose-coffee-mug', id: 6, price: `$19.95`
+        },
+        {
+            value: notdeadcap, description: 'emo\'s not dead snapback - black',
+            path: '/collections/all-products/products/emos-not-dead-snapback-black', id: 7, price: `$39.95`
+        },
+        {
+            value: alivecap, description: 'very much alive snapback - black',
+            path: '/collections/all-products/products/v-m-a-snapback-black', id: 8, price: `$39.95`
+        },
+        {
+            value: end_dad_cap, description: 'e.n.d. snapback - black',
+            path: '/collections/all-products/products/e-n-d-snapback', id: 9, price: `$39.95`
+        },
+        {
+            value: dadhat, description: 'broken heart beanie',
+            path: '/collections/all-products/products/broken-heart-beanie', id: 10, price: `$24.95`
+        },
+        {
+            value: notdeadteee, description: 'emo\'s not dead tee - black',
+            path: '/collections/all-products/products/emos-not-dead-tee-black', id: 11, price: `$29.95`
+        },
+        {
+            value: emohoodieblack, description: 'emo\'s not dead hoodie - black',
+            path: '/collections/all-products/products/emos-not-dead-hoodie-black', id: 12, price: `$54.95`
+        },
+        {
+            value: teegray, description: 'e.n.d. vintage tee',
+            path: '/collections/all-products/products/e-n-d-vintage-tee', id: 13, price: `$29.95`
+        },
+        {
+            value: emohoodiegray, description: 'e.n.d. vintage hoodie',
+            path: '/collections/all-products/products/e-n-d-vintage-hoodie', id: 14, price: `$64.95`
+        },
+        {
+            value: muchalivetee, description: 'very much alive tee - black',
+            path: '/collections/all-products/products/very-much-alive-tee-black', id: 15, price: `$29.95`
+        },
+        {
+            value: verymuchalivehoodie, description: 'very much alive hoodie - black',
+            path: '/collections/all-products/products/very-much-alive-hoodie-black', id: 16, price: `$59.95`
+        },
+        {
+            value: muchalivewhitetee, description: 'very much alive tee - white',
+            path: '/collections/all-products/products/very-much-alive-white', id: 17, price: `$29.95`
+        },
+        {
+            value: ElectricHorseTee, description: 'electric horse tee - black',
+            path: '/collections/all-products/products/electric-horse-tee-black', id: 18, price: `$34.95`
+        },
+        {
+            value: zipblackwhitehoodie, description: 'e.n.d. zip hoodie - black/white',
+            path: '/collections/all-products/products/e-n-d-zip-hoodie-black-white', id: 19, price: `$54.95`
+        },
+        {
+            value: zipblackhoodie, description: 'e.n.d. zip hoodie - black/red',
+            path: '/collections/all-products/products/black-red-zip-up-hoodie', id: 20, price: `$54.95`
+        },
+        {
+            value: scremocoffee, description: 'screamo blend coffee',
+            path: '/collections/all-products/products/screamo-blend-coffee', id: 21, price: `$16.95`
+        },
+        {
+            value: blackheartcoffee, description: 'black heart blend coffee',
+            path: '/collections/all-products/products/black-heart-blend-coffee', id: 22, price: `$16.95`
+        },
+        {
+            value: notdeadmug, description: 'emo\'s not dead coffee mug',
+            path: '/collections/all-products/products/emos-not-dead-coffee-mug', id: 23, price: `$15.95`
+        },
+        {
+            value: makermug, description: 'e.n.d. heart coffee mug',
+            path: '/collections/all-products/products/e-n-d-heart-coffee-mug', id: 24, price: `$15.95`
+        },
+        {
+            value: endblackdyetee, description: 'crystal dye tee - black',
+            path: '/collections/all-products/products/crystal-dye-tee-black', id: 25, price: `$34.95`
+        },
+        {
+            value: endblackdyehoodie, description: 'crystal dye hoodie - black',
+            path: '/collections/all-products/products/crystal-dye-hoodie-black', id: 26, price: `$64.95`
+        },
+        {
+            value: nodeadteegirlblack, description: 'ladies sweet script tee - charcoal',
+            path: '/collections/all-products/products/ladies-sweet-script-tee-charcoal', id: 27, price: `$34.95`
+        },
+        {
+            value: hoodigirlpink, description: 'sweet script crop hoodie - cotton candy',
+            path: '/collections/all-products/products/sweet-script-crop-hoodie-cotton-candy', id: 28, price: `$44.95`
+        },
+        {
+            value: hoodiegirlblack, description: 'e.n.d. crop hoodie - black',
+            path: '/collections/all-products/products/ladies-e-n-d-crop-hoodie-black', id: 29, price: `$44.95`
+        },
+        {
+            value: teegirlblack, description: 'crystal dye crop tee - black',
+            path: '/collections/all-products/products/crystal-dye-crop-tee-black', id: 30, price: `$29.95`
+        },
+        {
+            value: teegirlpink, description: 'crystal dye crop tee - lavender',
+            path: '/collections/all-products/products/crystal-dye-crop-tee-lavender', id: 31, price: `$29.95`
+        },
+        {
+            value: teegirlblue, description: 'crystal dye crop tee - blue',
+            path: '/collections/all-products/products/crystal-dye-crop-tee-blue', id: 32, price: `$29.95`
+        },
+        {
+            value: endpinktee, description: 'crystal dye tee - lavender',
+            path: '/collections/all-products/products/crystal-dye-tee-lavender', id: 33, price: `$34.95`
+        },
+        {
+            value: endpinkhoodie, description: 'crystal dye hoodie - lavender',
+            path: '/collections/all-products/products/crystal-dye-hoodie-lavender', id: 34, price: `$64.95`
+        },
+        {
+            value: endlavendertee, description: 'crystal dye hoodie - lavender',
+            path: '/collections/all-products/products/crystal-dye-tee-blue', id: 35, price: `$34.95`
+        },
+        {
+            value: endlavenderhoodie, description: 'crystal dye hoodie - blue',
+            path: '/collections/all-products/products/crystal-dye-hoodie-blue', id: 36, price: `$64.95`
+        },
+        {
+            value: trucktee, description: 'hoopty truck tee - black',
+            path: '/collections/all-products/products/hoopty-truck-tee-black', id: 37, price: `$34.95`
+        },
+        {
+            value: undeadhoodie, description: 'emo\'s undead hoodie - black',
+            path: '/collections/all-products/products/emos-undead-hoodie-black', id: 38, price: `$59.95`
+        },
+        {
+            value: bitesleeve, description: 'bite long sleeve - black/white',
+            path: '/collections/all-products/products/bite-long-sleeve-black-white', id: 39, price: `$39.95`
+        },
+        {
+            value: endforkstee, description: 'forks baseball tee - navy/white',
+            path: '/collections/all-products/products/forks-baseball-tee-navy-white', id: 40, price: `$39.95`
+        },
+        {
+            value: rosesblack, description: '19-80 whatever tee - black',
+            path: '/collections/all-products/products/19-90-whatever-tee-black', id: 41, price: `$34.95`
+        },
+        {
+            value: roseswhite, description: '19-80 whatever tee - white',
+            path: '/collections/all-products/products/19-90-whatever-tee-white', id: 42, price: `$34.95`
+        },
+        {
+            value: rivivalblacktee, description: 'from the grave tee - black',
+            path: '/collections/all-products/products/from-the-grave-tee-black', id: 43, price: `$34.95`
+        },
+        {
+            value: rivivalwhitetee, description: 'from the grave long sleeve - white',
+            path: '/collections/all-products/products/from-the-grave-long-sleeve-white', id: 44, price: `$39.95`
+        },
+        {
+            value: notdeadsleeveblack, description: 'fringed long sleeve - charcoal',
+            path: '/collections/all-products/products/fringed-long-sleeve-charcoal', id: 45, price: `$39.95`
+        },
+        {
+            value: notdeadsleevewhite, description: 'fringed long sleeve - white',
+            path: '/collections/all-products/products/fringed-long-sleeve-white', id: 46, price: `$39.95`
+        },
+        {
+            value: rivivaltourblack, description: 'parade tee - black',
+            path: '/collections/all-products/products/parade-tee-black', id: 47, price: `$34.95`
+        },
+        {
+            value: endlongsleeveblack, description: 'fill or burst long sleeve - black',
+            path: '/collections/all-products/products/fill-or-burst-long-sleeve-black', id: 48, price: `$39.95`
+        },
+        {
+            value: dadhatlove, description: 'e.n.d. heart strapback - black',
+            path: '/collections/all-products/products/e-n-d-dad-hat-black', id: 49, price: `$34.95`
+        },
+        {
+            value: end_dad_cap, description: 'e.n.d. strapback - black',
+            path: '/collections/all-products/products/e-n-d-strapback-black', id: 50, price: `$34.95`
+        },
+        {
+            value: leatherwalletend,
+            description: 'e.n.d. classic skinny wallet + keychain',
+            path: '/collections/all-products/products/e-n-d-classic-skinny-wallet-keychain-bundle',
+            id: 51,
+            price: `$39.95`
+        },
+        {
+            value: leatherwalletlove,
+            description: 'e.n.d. heart skinny wallet + keychain',
+            path: '/collections/all-products/products/e-n-d-heart-skinny-wallet-keychain-bundle',
+            id: 52,
+            price: `$39.95`
+        },
+        {
+            value: endyouthtee, description: 'youth e.n.d. tee - black',
+            path: '/collections/all-products/products/youth-e-n-d-tee-black', id: 53, price: `$21.95`
+        },
+        {
+            value: endyouthhoodie, description: 'youth e.n.d. hoodie - black',
+            path: '/collections/all-products/products/youth-e-n-d-hoodie-black', id: 54, price: `$39.95`
+        },
+        {
+            value: youthemokidtee, description: 'youth emo kid tee - black',
+            path: '/collections/all-products/products/youth-emo-kid-tee-black', id: 55, price: `$21.95`
+        },
+        {
+            value: emokidhoodie, description: 'youth emo kid hoodie - black',
+            path: '/collections/all-products/products/youth-emo-kid-hoodie-black', id: 56, price: `$39.95`
+        },
+        {
+            value: notdead3tee, description: 'e.n.d toddler tee - black',
+            path: '/collections/all-products/products/e-n-d-toddler-tee-black', id: 57, price: `$19.95`
+        },
+        {
+            value: notdead3hoodie, description: 'e.n.d toddler hoodie - black',
+            path: '/collections/all-products/products/e-n-d-toddler-hoodie-black', id: 58, price: `$29.95`
+        },
+        {
+            value: giftcard, description: 'digital gift card',
+            path: '/collections/all-products/products/emos-not-dead-digital-gift-card', id: 59, price: `from $25.00`
+        }
     ],
     email: '',
     name: '',
@@ -529,38 +736,190 @@ const initialState = {
     currentPage: 1,
     totalItemsCount: 0,
     watchSection: [
-        {value: feltemomightdelete, description: 'felt emo might delete', id: 1, path: '/blogs/felt-emo-might-delete/felt-emo-might-delete-5'},
-        {value: feltemoindaclub, description: 'felt emo in da club', id: 2, path: '/blogs/felt-emo-might-delete/felt-emo-in-da-club'},
-        {value: brewcoffee, description: 'felt emo might brew coffee', id: 3, path: '/blogs/felt-emo-might-delete/felt-emo-might-brew-coffee'},
-        {value: remotecontroller, description: 'felt emo might delete', id: 4, path: '/blogs/felt-emo-might-delete/felt-emo-might-delete-4'},
-        {value: might_cruise, description: 'felt emo might cruise', id: 5, path: '/blogs/felt-emo-might-delete/felt-emo-might-cruise'},
-        {value: bluenails, description: 'felt emo might delete', id: 6, path: '/blogs/felt-emo-might-delete/felt-emo-might-delete-3'},
-        {value: tommysface, description: 'your broken hero - tommy\'s face ft. spencer chamberlain of underoath',
-            id: 7, path: '/blogs/felt-emo-might-delete/your-broken-hero-tommys-face-ft-spencer-chamberlain'},
-        {value: horse, description: 'felt emo might delete', id: 8, path: '/blogs/felt-emo-might-delete/felt-emo-again-might-delete-18'},
-        {value: dateemoguys, description: 'her: "i only date emo guys" us...', id: 9, path: '/blogs/felt-emo-might-delete/her-i-only-date-emo-guys-us'},
-        {value: straightlook, description: 'felt emo might delete', id: 10, path: '/blogs/felt-emo-might-delete/felt-emo-again-might-delete-17'},
-        {value: pants, description: 'felt emo might delete', id: 11, path: '/blogs/felt-emo-might-delete/felt-emo-again-might-delete-16'},
-        {value: dancebattle, description: 'felt emo might delete', id: 12, path: '/blogs/felt-emo-might-delete/felt-emo-again-might-delete-15'},
-        {value: blondehair, description: 'felt emo might delete', id: 13, path: '/blogs/felt-emo-might-delete/felt-emo-again-might-delete-14'},
-        {value: brokenhero, description: 'your broken hero - a letter to ashley', id: 14, path: '/blogs/felt-emo-might-delete/your-broken-hero-a-letter-to-ashley'},
-        {value: church, description: 'felt emo might delete', id: 15, path: '/blogs/felt-emo-might-delete/felt-emo-again-might-delete-13'},
-        {value: carroof, description: 'felt emo might delete', id: 16, path: '/blogs/felt-emo-might-delete/felt-emo-again-might-delete-12'},
-        {value: coffeemorning, description: 'felt emo might delete', id: 17, path: '/blogs/felt-emo-might-delete/felt-emo-again-might-delete-11'},
-        {value: bed, description: 'felt emo might delete', id: 18, path: '/blogs/felt-emo-might-delete/felt-emo-again-might-delete-10'},
-        {value: dancebattle, description: 'felt emo might delete', id: 19, path: '/blogs/felt-emo-might-delete/felt-emo-again-might-delete-9'},
-        {value: houseroof, description: 'felt emo might delete', id: 20, path: '/blogs/felt-emo-might-delete/felt-emo-again-might-delete-8'},
-        {value: delailo, description: 'felt emo might delete', id: 21, path: '/blogs/felt-emo-might-delete/felt-emo-again-might-delete-7'},
-        {value: makeitbymyown, description: 'felt emo might delete', id: 22, path: '/blogs/felt-emo-might-delete/felt-emo-again-might-delete-6'},
-        {value: lionking, description: 'felt emo might delete', id: 23, path: '/blogs/felt-emo-might-delete/felt-emo-again-might-delete-5'},
-        {value: guitar, description: 'felt emo might delete', id: 24, path: '/blogs/felt-emo-might-delete/felt-emo-again-might-delete-4'},
-        {value: oceanavenue, description: 'felt emo might delete', id: 25, path: '/blogs/felt-emo-might-delete/felt-emo-again-might-delete-3'},
-        {value: carafraid, description: 'felt emo might delete', id: 26, path: '/blogs/felt-emo-might-delete/felt-emo-again-might-delete-2'},
-        {value: desert, description: 'felt emo might delete', id: 27, path: '/blogs/felt-emo-might-delete/felt-emo-again-might-delete-1'},
-        {value: blackparade, description: 'felt emo might delete', id: 28, path: '/blogs/felt-emo-might-delete/felt-emo-again-might-delete'},
-        {value: umbrella, description: 'felt emo might delete', id: 29, path: '/blogs/felt-emo-might-delete/felt-emo-might-delete'},
-        {value: microfone, description: 'felt emo might delete', id: 30, path: '/blogs/felt-emo-might-delete/felt-emo-might-delete-2'},
-        {value: bettercalluber, description: 'felt emo might delete', id: 31, path: '/blogs/felt-emo-might-delete/felt-emo-might-delete-1'}
+        {
+            value: feltemomightdelete,
+            description: 'felt emo might delete',
+            id: 1,
+            path: '/blogs/felt-emo-might-delete/felt-emo-might-delete-5'
+        },
+        {
+            value: feltemoindaclub,
+            description: 'felt emo in da club',
+            id: 2,
+            path: '/blogs/felt-emo-might-delete/felt-emo-in-da-club'
+        },
+        {
+            value: brewcoffee,
+            description: 'felt emo might brew coffee',
+            id: 3,
+            path: '/blogs/felt-emo-might-delete/felt-emo-might-brew-coffee'
+        },
+        {
+            value: remotecontroller,
+            description: 'felt emo might delete',
+            id: 4,
+            path: '/blogs/felt-emo-might-delete/felt-emo-might-delete-4'
+        },
+        {
+            value: might_cruise,
+            description: 'felt emo might cruise',
+            id: 5,
+            path: '/blogs/felt-emo-might-delete/felt-emo-might-cruise'
+        },
+        {
+            value: bluenails,
+            description: 'felt emo might delete',
+            id: 6,
+            path: '/blogs/felt-emo-might-delete/felt-emo-might-delete-3'
+        },
+        {
+            value: tommysface, description: 'your broken hero - tommy\'s face ft. spencer chamberlain of underoath',
+            id: 7, path: '/blogs/felt-emo-might-delete/your-broken-hero-tommys-face-ft-spencer-chamberlain'
+        },
+        {
+            value: horse,
+            description: 'felt emo might delete',
+            id: 8,
+            path: '/blogs/felt-emo-might-delete/felt-emo-again-might-delete-18'
+        },
+        {
+            value: dateemoguys,
+            description: 'her: "i only date emo guys" us...',
+            id: 9,
+            path: '/blogs/felt-emo-might-delete/her-i-only-date-emo-guys-us'
+        },
+        {
+            value: straightlook,
+            description: 'felt emo might delete',
+            id: 10,
+            path: '/blogs/felt-emo-might-delete/felt-emo-again-might-delete-17'
+        },
+        {
+            value: pants,
+            description: 'felt emo might delete',
+            id: 11,
+            path: '/blogs/felt-emo-might-delete/felt-emo-again-might-delete-16'
+        },
+        {
+            value: dancebattle,
+            description: 'felt emo might delete',
+            id: 12,
+            path: '/blogs/felt-emo-might-delete/felt-emo-again-might-delete-15'
+        },
+        {
+            value: blondehair,
+            description: 'felt emo might delete',
+            id: 13,
+            path: '/blogs/felt-emo-might-delete/felt-emo-again-might-delete-14'
+        },
+        {
+            value: brokenhero,
+            description: 'your broken hero - a letter to ashley',
+            id: 14,
+            path: '/blogs/felt-emo-might-delete/your-broken-hero-a-letter-to-ashley'
+        },
+        {
+            value: church,
+            description: 'felt emo might delete',
+            id: 15,
+            path: '/blogs/felt-emo-might-delete/felt-emo-again-might-delete-13'
+        },
+        {
+            value: carroof,
+            description: 'felt emo might delete',
+            id: 16,
+            path: '/blogs/felt-emo-might-delete/felt-emo-again-might-delete-12'
+        },
+        {
+            value: coffeemorning,
+            description: 'felt emo might delete',
+            id: 17,
+            path: '/blogs/felt-emo-might-delete/felt-emo-again-might-delete-11'
+        },
+        {
+            value: bed,
+            description: 'felt emo might delete',
+            id: 18,
+            path: '/blogs/felt-emo-might-delete/felt-emo-again-might-delete-10'
+        },
+        {
+            value: dancebattle,
+            description: 'felt emo might delete',
+            id: 19,
+            path: '/blogs/felt-emo-might-delete/felt-emo-again-might-delete-9'
+        },
+        {
+            value: houseroof,
+            description: 'felt emo might delete',
+            id: 20,
+            path: '/blogs/felt-emo-might-delete/felt-emo-again-might-delete-8'
+        },
+        {
+            value: delailo,
+            description: 'felt emo might delete',
+            id: 21,
+            path: '/blogs/felt-emo-might-delete/felt-emo-again-might-delete-7'
+        },
+        {
+            value: makeitbymyown,
+            description: 'felt emo might delete',
+            id: 22,
+            path: '/blogs/felt-emo-might-delete/felt-emo-again-might-delete-6'
+        },
+        {
+            value: lionking,
+            description: 'felt emo might delete',
+            id: 23,
+            path: '/blogs/felt-emo-might-delete/felt-emo-again-might-delete-5'
+        },
+        {
+            value: guitar,
+            description: 'felt emo might delete',
+            id: 24,
+            path: '/blogs/felt-emo-might-delete/felt-emo-again-might-delete-4'
+        },
+        {
+            value: oceanavenue,
+            description: 'felt emo might delete',
+            id: 25,
+            path: '/blogs/felt-emo-might-delete/felt-emo-again-might-delete-3'
+        },
+        {
+            value: carafraid,
+            description: 'felt emo might delete',
+            id: 26,
+            path: '/blogs/felt-emo-might-delete/felt-emo-again-might-delete-2'
+        },
+        {
+            value: desert,
+            description: 'felt emo might delete',
+            id: 27,
+            path: '/blogs/felt-emo-might-delete/felt-emo-again-might-delete-1'
+        },
+        {
+            value: blackparade,
+            description: 'felt emo might delete',
+            id: 28,
+            path: '/blogs/felt-emo-might-delete/felt-emo-again-might-delete'
+        },
+        {
+            value: umbrella,
+            description: 'felt emo might delete',
+            id: 29,
+            path: '/blogs/felt-emo-might-delete/felt-emo-might-delete'
+        },
+        {
+            value: microfone,
+            description: 'felt emo might delete',
+            id: 30,
+            path: '/blogs/felt-emo-might-delete/felt-emo-might-delete-2'
+        },
+        {
+            value: bettercalluber,
+            description: 'felt emo might delete',
+            id: 31,
+            path: '/blogs/felt-emo-might-delete/felt-emo-might-delete-1'
+        }
 
     ],
     collectionForWatchSection: [
@@ -570,212 +929,382 @@ const initialState = {
         {value: emosundead, description: 'emo\s undead', id: 4, path: '/collections/emos-undead'}
     ],
     classicEndMerch: [
-        {value: notdeadteee, description: 'emo\'s not dead tee - black', id: 1,
-            price: `$29.95`, path: '/collections/essential-end-merch/products/emos-not-dead-tee-black'},
-        {value: emohoodieblack, description: 'emo\'s not dead hoodie - black', id: 2,
-            price: `$54.95`, path: '/collections/essential-end-merch/products/emos-not-dead-hoodie-black'},
-        {value: teegray, description: 'e.n.d. vintage tee', id: 3,
-            price: `$29.95`, path: '/collections/essential-end-merch/products/e-n-d-vintage-tee'},
-        {value: emohoodiegray, description: 'e.n.d. vintage hoodie', id: 4,
-            price: `$64.95`, path: '/collections/essential-end-merch/products/e-n-d-vintage-hoodie'},
-        {value: zipblackhoodie, description: 'e.n.d. zip hoodie - black/red', id: 5,
-            price: `$54.95`, path: '/collections/essential-end-merch/products/black-red-zip-up-hoodie'},
-        {value: zipblackwhitehoodie, description: 'e.n.d. zip hoodie - black/white', id: 6,
-            price: `$54.95`, path: '/collections/essential-end-merch/products/e-n-d-zip-hoodie-black-white'},
-        {value: notdeadpinkhoodie, description: 'stacked & repeat hoodie - pink', id: 7,
-            price: `$64.95`, path: '/collections/essential-end-merch/products/stacked-repeat-hoodie-pink'},
-        {value: notdeadbluehoodie, description: 'stacked & repeat hoodie - mint', id: 8,
-            price: `$64.95`, path: '/collections/essential-end-merch/products/stacked-repeat-hoodie-mint'},
-        {value: muchalivetee, description: 'very much alive tee - black', id: 9,
-            price: `$29.95`, path: '/collections/essential-end-merch/products/very-much-alive-tee-black'},
-        {value: verymuchalivehoodie, description: 'very much alive hoodie - black', id: 10,
-            price: `$59.95`, path: '/collections/essential-end-merch/products/very-much-alive-hoodie-black'},
-        {value: muchalivewhitetee, description: 'very much alive tee - white', id: 11,
-            price: `$29.95`, path: '/collections/essential-end-merch/products/very-much-alive-white'}
+        {
+            value: notdeadteee, description: 'emo\'s not dead tee - black', id: 1,
+            price: `$29.95`, path: '/collections/essential-end-merch/products/emos-not-dead-tee-black'
+        },
+        {
+            value: emohoodieblack, description: 'emo\'s not dead hoodie - black', id: 2,
+            price: `$54.95`, path: '/collections/essential-end-merch/products/emos-not-dead-hoodie-black'
+        },
+        {
+            value: teegray, description: 'e.n.d. vintage tee', id: 3,
+            price: `$29.95`, path: '/collections/essential-end-merch/products/e-n-d-vintage-tee'
+        },
+        {
+            value: emohoodiegray, description: 'e.n.d. vintage hoodie', id: 4,
+            price: `$64.95`, path: '/collections/essential-end-merch/products/e-n-d-vintage-hoodie'
+        },
+        {
+            value: zipblackhoodie, description: 'e.n.d. zip hoodie - black/red', id: 5,
+            price: `$54.95`, path: '/collections/essential-end-merch/products/black-red-zip-up-hoodie'
+        },
+        {
+            value: zipblackwhitehoodie, description: 'e.n.d. zip hoodie - black/white', id: 6,
+            price: `$54.95`, path: '/collections/essential-end-merch/products/e-n-d-zip-hoodie-black-white'
+        },
+        {
+            value: notdeadpinkhoodie, description: 'stacked & repeat hoodie - pink', id: 7,
+            price: `$64.95`, path: '/collections/essential-end-merch/products/stacked-repeat-hoodie-pink'
+        },
+        {
+            value: notdeadbluehoodie, description: 'stacked & repeat hoodie - mint', id: 8,
+            price: `$64.95`, path: '/collections/essential-end-merch/products/stacked-repeat-hoodie-mint'
+        },
+        {
+            value: muchalivetee, description: 'very much alive tee - black', id: 9,
+            price: `$29.95`, path: '/collections/essential-end-merch/products/very-much-alive-tee-black'
+        },
+        {
+            value: verymuchalivehoodie, description: 'very much alive hoodie - black', id: 10,
+            price: `$59.95`, path: '/collections/essential-end-merch/products/very-much-alive-hoodie-black'
+        },
+        {
+            value: muchalivewhitetee, description: 'very much alive tee - white', id: 11,
+            price: `$29.95`, path: '/collections/essential-end-merch/products/very-much-alive-white'
+        }
     ],
     crystalDyeMerch: [
-        {value: endlavendertee, description: 'crystal dye tee - blue', id: 1,
-            price: `$34.95`, path: '/collections/tiedye21/products/crystal-dye-tee-blue'},
-        {value: endlavenderhoodie, description: 'crystal dye hoodie - blue', id: 2,
-            price: `$64.95`, path: '/collections/tiedye21/products/crystal-dye-hoodie-blue'},
-        {value: teegirlblue, description: 'crystal dye crop tee - blue', id: 3,
-            price: `$29.95`, path: '/collections/tiedye21/products/crystal-dye-crop-tee-blue'},
-        {value: teegirlpink, description: 'crystal dye crop tee - lavender', id: 4,
-            price: `$29.95`, path: '/collections/tiedye21/products/crystal-dye-crop-tee-lavender'},
-        {value: endpinktee, description: 'crystal dye tee - lavender', id: 5,
-            price: `$34.95`, path: '/collections/tiedye21/products/crystal-dye-tee-lavender'},
-        {value: endpinkhoodie, description: 'crystal dye hoodie - lavender', id: 6,
-            price: `$64.95`, path: '/collections/tiedye21/products/crystal-dye-hoodie-lavender'},
-        {value: endblackdyetee, description: 'crystal dye tee - black', id: 7,
-            price: `$34.95`, path: '/collections/tiedye21/products/crystal-dye-tee-black'},
-        {value: endblackdyehoodie, description: 'crystal dye hoodie - black', id: 8,
-            price: `$64.95`, path: '/collections/tiedye21/products/crystal-dye-hoodie-black'},
-        {value: teegirlblack, description: 'crystal dye crop tee - black', id: 9,
-            price: `$29.95`, path: '/collections/tiedye21/products/crystal-dye-crop-tee-black'}
+        {
+            value: endlavendertee, description: 'crystal dye tee - blue', id: 1,
+            price: `$34.95`, path: '/collections/tiedye21/products/crystal-dye-tee-blue'
+        },
+        {
+            value: endlavenderhoodie, description: 'crystal dye hoodie - blue', id: 2,
+            price: `$64.95`, path: '/collections/tiedye21/products/crystal-dye-hoodie-blue'
+        },
+        {
+            value: teegirlblue, description: 'crystal dye crop tee - blue', id: 3,
+            price: `$29.95`, path: '/collections/tiedye21/products/crystal-dye-crop-tee-blue'
+        },
+        {
+            value: teegirlpink, description: 'crystal dye crop tee - lavender', id: 4,
+            price: `$29.95`, path: '/collections/tiedye21/products/crystal-dye-crop-tee-lavender'
+        },
+        {
+            value: endpinktee, description: 'crystal dye tee - lavender', id: 5,
+            price: `$34.95`, path: '/collections/tiedye21/products/crystal-dye-tee-lavender'
+        },
+        {
+            value: endpinkhoodie, description: 'crystal dye hoodie - lavender', id: 6,
+            price: `$64.95`, path: '/collections/tiedye21/products/crystal-dye-hoodie-lavender'
+        },
+        {
+            value: endblackdyetee, description: 'crystal dye tee - black', id: 7,
+            price: `$34.95`, path: '/collections/tiedye21/products/crystal-dye-tee-black'
+        },
+        {
+            value: endblackdyehoodie, description: 'crystal dye hoodie - black', id: 8,
+            price: `$64.95`, path: '/collections/tiedye21/products/crystal-dye-hoodie-black'
+        },
+        {
+            value: teegirlblack, description: 'crystal dye crop tee - black', id: 9,
+            price: `$29.95`, path: '/collections/tiedye21/products/crystal-dye-crop-tee-black'
+        }
     ],
     revivalTourMerch: [
-        {value: endlongsleeveblack, description: 'fringed long sleeve - charcoal', id: 1,
-            price: `$39.95`, path: '/collections/revival-tour-collection/products/fringed-long-sleeve-charcoal'},
-        {value: notdeadsleevewhite, description: 'fringed long sleeve - white', id: 2,
-            price: `$39.95`, path: '/collections/revival-tour-collection/products/fringed-long-sleeve-white'},
-        {value: rivivalblacktee, description: 'from the grave tee - black', id: 3,
-            price: `$34.95`, path: '/collections/revival-tour-collection/products/from-the-grave-tee-black'},
-        {value: rivivalwhitetee, description: 'from the grave long sleeve - white', id: 4,
-            price: `$39.95`, path: '/collections/revival-tour-collection/products/from-the-grave-long-sleeve-white'},
-        {value: notdeadsleeveblack, description: 'fill or burst long sleeve - black', id: 5,
-            price: `$39.95`, path: '/collections/revival-tour-collection/products/fill-or-burst-long-sleeve-black'},
-        {value: rivivaltourblack, description: 'parade tee - black', id: 6,
-            price: `$34.95`, path: '/collections/revival-tour-collection/products/parade-tee-black'},
-        {value: rosesblack, description: '19-80 whatever tee - black', id: 7,
-            price: `$34.95`, path: '/collections/revival-tour-collection/products/19-90-whatever-tee-black'},
-        {value: roseswhite, description: '19-80 whatever tee - white', id: 8,
-            price: `$34.95`, path: '/collections/revival-tour-collection/products/19-90-whatever-tee-white'},
-        {value: ElectricHorseTee, description: 'electric horse tee - black', id: 9,
-            price: `$34.95`, path: '/collections/revival-tour-collection/products/electric-horse-tee-black'}
+        {
+            value: endlongsleeveblack, description: 'fringed long sleeve - charcoal', id: 1,
+            price: `$39.95`, path: '/collections/revival-tour-collection/products/fringed-long-sleeve-charcoal'
+        },
+        {
+            value: notdeadsleevewhite, description: 'fringed long sleeve - white', id: 2,
+            price: `$39.95`, path: '/collections/revival-tour-collection/products/fringed-long-sleeve-white'
+        },
+        {
+            value: rivivalblacktee, description: 'from the grave tee - black', id: 3,
+            price: `$34.95`, path: '/collections/revival-tour-collection/products/from-the-grave-tee-black'
+        },
+        {
+            value: rivivalwhitetee, description: 'from the grave long sleeve - white', id: 4,
+            price: `$39.95`, path: '/collections/revival-tour-collection/products/from-the-grave-long-sleeve-white'
+        },
+        {
+            value: notdeadsleeveblack, description: 'fill or burst long sleeve - black', id: 5,
+            price: `$39.95`, path: '/collections/revival-tour-collection/products/fill-or-burst-long-sleeve-black'
+        },
+        {
+            value: rivivaltourblack, description: 'parade tee - black', id: 6,
+            price: `$34.95`, path: '/collections/revival-tour-collection/products/parade-tee-black'
+        },
+        {
+            value: rosesblack, description: '19-80 whatever tee - black', id: 7,
+            price: `$34.95`, path: '/collections/revival-tour-collection/products/19-90-whatever-tee-black'
+        },
+        {
+            value: roseswhite, description: '19-80 whatever tee - white', id: 8,
+            price: `$34.95`, path: '/collections/revival-tour-collection/products/19-90-whatever-tee-white'
+        },
+        {
+            value: ElectricHorseTee, description: 'electric horse tee - black', id: 9,
+            price: `$34.95`, path: '/collections/revival-tour-collection/products/electric-horse-tee-black'
+        }
     ],
     emosUndeadMerch: [
-        {value: trucktee, description: 'hoopty truck tee - black', id: 1,
-            price: `$34.95`, path: '/collections/emos-undead/products/hoopty-truck-tee-black'},
-        {value: undeadhoodie, description: 'emo\'s undead hoodie - black', id: 2,
-            price: `$59.95`, path: '/collections/emos-undead/products/emos-undead-hoodie-black'},
-        {value: bitesleeve, description: 'bite long sleeve - black/white', id: 3,
-            price: `$39.95`, path: '/collections/emos-undead/products/bite-long-sleeve-black-white'},
-        {value: endforkstee, description: 'forks baseball tee - navy/white', id: 4,
-            price: `$39.95`, path: '/collections/emos-undead/products/forks-baseball-tee-navy-white'}
+        {
+            value: trucktee, description: 'hoopty truck tee - black', id: 1,
+            price: `$34.95`, path: '/collections/emos-undead/products/hoopty-truck-tee-black'
+        },
+        {
+            value: undeadhoodie, description: 'emo\'s undead hoodie - black', id: 2,
+            price: `$59.95`, path: '/collections/emos-undead/products/emos-undead-hoodie-black'
+        },
+        {
+            value: bitesleeve, description: 'bite long sleeve - black/white', id: 3,
+            price: `$39.95`, path: '/collections/emos-undead/products/bite-long-sleeve-black-white'
+        },
+        {
+            value: endforkstee, description: 'forks baseball tee - navy/white', id: 4,
+            price: `$39.95`, path: '/collections/emos-undead/products/forks-baseball-tee-navy-white'
+        }
     ],
     coffeeMugsMerch: [
-        {value: coffee, description: 'triste mexicana blend coffee', id: 1,
-            price: `$16.95`, path: '/collections/coffee/products/triste-mexicana-blend-coffee'},
-        {value: scremocoffee, description: 'screamo blend coffee', id: 2,
-            price: `$16.95`, path: '/collections/coffee/products/screamo-blend-coffee'},
-        {value: blackheartcoffee, description: 'black heart blend coffee', id: 3,
-            price: `$16.95`, path: '/collections/coffee/products/black-heart-blend-coffee'},
-        {value: makermug, description: 'e.n.d. heart coffee mug', id: 4,
-            price: `$15.95`, path: '/collections/coffee/products/e-n-d-heart-coffee-mug'},
-        {value: blackhandcup, description: 'live forever coffee mug', id: 5,
-            price: `$19.95`, path: '/collections/coffee/products/live-forever-coffee-mug'},
-        {value: greyrosecup, description: 'weeping rose coffee mug', id: 6,
-            price: `$19.95`, path: '/collections/coffee/products/weeping-rose-coffee-mug'},
-        {value: notdeadmug, description: 'emo\'s not dead coffee mug', id: 7,
-            price: `$15.95`, path: '/collections/coffee/products/emos-not-dead-coffee-mug'}
+        {
+            value: coffee, description: 'triste mexicana blend coffee', id: 1,
+            price: `$16.95`, path: '/collections/coffee/products/triste-mexicana-blend-coffee'
+        },
+        {
+            value: scremocoffee, description: 'screamo blend coffee', id: 2,
+            price: `$16.95`, path: '/collections/coffee/products/screamo-blend-coffee'
+        },
+        {
+            value: blackheartcoffee, description: 'black heart blend coffee', id: 3,
+            price: `$16.95`, path: '/collections/coffee/products/black-heart-blend-coffee'
+        },
+        {
+            value: makermug, description: 'e.n.d. heart coffee mug', id: 4,
+            price: `$15.95`, path: '/collections/coffee/products/e-n-d-heart-coffee-mug'
+        },
+        {
+            value: blackhandcup, description: 'live forever coffee mug', id: 5,
+            price: `$19.95`, path: '/collections/coffee/products/live-forever-coffee-mug'
+        },
+        {
+            value: greyrosecup, description: 'weeping rose coffee mug', id: 6,
+            price: `$19.95`, path: '/collections/coffee/products/weeping-rose-coffee-mug'
+        },
+        {
+            value: notdeadmug, description: 'emo\'s not dead coffee mug', id: 7,
+            price: `$15.95`, path: '/collections/coffee/products/emos-not-dead-coffee-mug'
+        }
     ],
     teesAndLongSleevesMerch: [
-        {value: notdeadteee, description: 'emo\'s not dead tee - black', id: 1,
-            price: `$29.95`, path: '/collections/tees-long-sleeves/products/emos-not-dead-tee-black'},
-        {value: teegray, description: 'e.n.d. vintage tee', id: 2,
-            price: `$29.95`, path: '/collections/tees-long-sleeves/products/e-n-d-vintage-tee'},
-        {value: muchalivewhitetee, description: 'very much alive tee - white', id: 3,
-            price: `$29.95`, path: '/collections/tees-long-sleeves/products/very-much-alive-white'},
-        {value: muchalivetee, description: 'very much alive tee - black', id: 4,
-            price: `$29.95`, path: '/collections/tees-long-sleeves/products/very-much-alive-tee-black'},
-        {value: endblackdyetee, description: 'crystal dye tee - black', id: 5,
-            price: `$34.95`, path: '/collections/tees-long-sleeves/products/crystal-dye-tee-black'},
-        {value: endpinktee, description: 'crystal dye tee - lavender', id: 6,
-            price: `$34.95`, path: '/collections/tees-long-sleeves/products/crystal-dye-tee-lavender'},
-        {value: endlavendertee, description: 'crystal dye tee - blue', id: 7,
-            price: `$34.95`, path: '/collections/tees-long-sleeves/products/crystal-dye-tee-blue'},
-        {value: ElectricHorseTee, description: 'electric horse tee - black', id: 8,
-            price: `$34.95`, path: '/collections/tees-long-sleeves/products/electric-horse-tee-black'},
-        {value: rosesblack, description: '19-80 whatever tee - black', id: 9,
-            price: `$34.95`, path: '/collections/tees-long-sleeves/products/19-90-whatever-tee-black'},
-        {value: roseswhite, description: '19-80 whatever tee - white', id: 10,
-            price: `$34.95`, path: '/collections/tees-long-sleeves/products/19-90-whatever-tee-white'},
-        {value: rivivalblacktee, description: 'from the grave tee - black', id: 11,
-            price: `$34.95`, path: '/collections/tees-long-sleeves/products/from-the-grave-tee-black'},
-        {value: rivivalwhitetee, description: 'from the grave long sleeve - white', id: 12,
-            price: `$39.95`, path: '/collections/tees-long-sleeves/products/from-the-grave-long-sleeve-white'},
-        {value: endlongsleeveblack, description: 'fringed long sleeve - charcoal', id: 13,
-            price: `$39.95`, path: '/collections/tees-long-sleeves/products/fringed-long-sleeve-charcoal'},
-        {value: notdeadsleevewhite, description: 'fringed long sleeve - white', id: 14,
-            price: `$39.95`, path: '/collections/tees-long-sleeves/products/fringed-long-sleeve-white'},
-        {value: rivivaltourblack, description: 'parade tee - black', id: 15,
-            price: `$34.95`, path: '/collections/tees-long-sleeves/products/parade-tee-black'},
-        {value: notdeadsleeveblack, description: 'fill or burst long sleeve - black', id: 16,
-            price: `$39.95`, path: '/collections/tees-long-sleeves/products/fill-or-burst-long-sleeve-black'},
-        {value: bitesleeve, description: 'bite long sleeve - black/white', id: 17,
-            price: `$39.95`, path: '/collections/tees-long-sleeves/products/bite-long-sleeve-black-white'},
-        {value: endforkstee, description: 'forks baseball tee - navy/white', id: 18,
-            price: `$39.95`, path: '/collections/tees-long-sleeves/products/forks-baseball-tee-navy-white'},
-        {value: trucktee, description: 'hoopty truck tee - black', id: 19,
-            price: `$34.95`, path: '/collections/tees-long-sleeves/products/hoopty-truck-tee-black'},
-        {value: nodeadteegirlblack, description: 'ladies sweet script tee - charcoal', id: 20,
-            price: `$34.95`, path: '/collections/tees-long-sleeves/products/ladies-sweet-script-tee-charcoal'},
-        {value: teegirlblack, description: 'crystal dye crop tee - black', id: 21,
-            price: `$29.95`, path: '/collections/tees-long-sleeves/products/crystal-dye-crop-tee-black'},
-        {value: teegirlpink, description: 'crystal dye crop tee - lavender', id: 22,
-            price: `$29.95`, path: '/collections/tees-long-sleeves/products/crystal-dye-crop-tee-lavender'},
-        {value: teegirlblue, description: 'crystal dye crop tee - blue', id: 23,
-            price: `$29.95`, path: '/collections/tees-long-sleeves/products/crystal-dye-crop-tee-blue'}
+        {
+            value: notdeadteee, description: 'emo\'s not dead tee - black', id: 1,
+            price: `$29.95`, path: '/collections/tees-long-sleeves/products/emos-not-dead-tee-black'
+        },
+        {
+            value: teegray, description: 'e.n.d. vintage tee', id: 2,
+            price: `$29.95`, path: '/collections/tees-long-sleeves/products/e-n-d-vintage-tee'
+        },
+        {
+            value: muchalivewhitetee, description: 'very much alive tee - white', id: 3,
+            price: `$29.95`, path: '/collections/tees-long-sleeves/products/very-much-alive-white'
+        },
+        {
+            value: muchalivetee, description: 'very much alive tee - black', id: 4,
+            price: `$29.95`, path: '/collections/tees-long-sleeves/products/very-much-alive-tee-black'
+        },
+        {
+            value: endblackdyetee, description: 'crystal dye tee - black', id: 5,
+            price: `$34.95`, path: '/collections/tees-long-sleeves/products/crystal-dye-tee-black'
+        },
+        {
+            value: endpinktee, description: 'crystal dye tee - lavender', id: 6,
+            price: `$34.95`, path: '/collections/tees-long-sleeves/products/crystal-dye-tee-lavender'
+        },
+        {
+            value: endlavendertee, description: 'crystal dye tee - blue', id: 7,
+            price: `$34.95`, path: '/collections/tees-long-sleeves/products/crystal-dye-tee-blue'
+        },
+        {
+            value: ElectricHorseTee, description: 'electric horse tee - black', id: 8,
+            price: `$34.95`, path: '/collections/tees-long-sleeves/products/electric-horse-tee-black'
+        },
+        {
+            value: rosesblack, description: '19-80 whatever tee - black', id: 9,
+            price: `$34.95`, path: '/collections/tees-long-sleeves/products/19-90-whatever-tee-black'
+        },
+        {
+            value: roseswhite, description: '19-80 whatever tee - white', id: 10,
+            price: `$34.95`, path: '/collections/tees-long-sleeves/products/19-90-whatever-tee-white'
+        },
+        {
+            value: rivivalblacktee, description: 'from the grave tee - black', id: 11,
+            price: `$34.95`, path: '/collections/tees-long-sleeves/products/from-the-grave-tee-black'
+        },
+        {
+            value: rivivalwhitetee, description: 'from the grave long sleeve - white', id: 12,
+            price: `$39.95`, path: '/collections/tees-long-sleeves/products/from-the-grave-long-sleeve-white'
+        },
+        {
+            value: endlongsleeveblack, description: 'fringed long sleeve - charcoal', id: 13,
+            price: `$39.95`, path: '/collections/tees-long-sleeves/products/fringed-long-sleeve-charcoal'
+        },
+        {
+            value: notdeadsleevewhite, description: 'fringed long sleeve - white', id: 14,
+            price: `$39.95`, path: '/collections/tees-long-sleeves/products/fringed-long-sleeve-white'
+        },
+        {
+            value: rivivaltourblack, description: 'parade tee - black', id: 15,
+            price: `$34.95`, path: '/collections/tees-long-sleeves/products/parade-tee-black'
+        },
+        {
+            value: notdeadsleeveblack, description: 'fill or burst long sleeve - black', id: 16,
+            price: `$39.95`, path: '/collections/tees-long-sleeves/products/fill-or-burst-long-sleeve-black'
+        },
+        {
+            value: bitesleeve, description: 'bite long sleeve - black/white', id: 17,
+            price: `$39.95`, path: '/collections/tees-long-sleeves/products/bite-long-sleeve-black-white'
+        },
+        {
+            value: endforkstee, description: 'forks baseball tee - navy/white', id: 18,
+            price: `$39.95`, path: '/collections/tees-long-sleeves/products/forks-baseball-tee-navy-white'
+        },
+        {
+            value: trucktee, description: 'hoopty truck tee - black', id: 19,
+            price: `$34.95`, path: '/collections/tees-long-sleeves/products/hoopty-truck-tee-black'
+        },
+        {
+            value: nodeadteegirlblack, description: 'ladies sweet script tee - charcoal', id: 20,
+            price: `$34.95`, path: '/collections/tees-long-sleeves/products/ladies-sweet-script-tee-charcoal'
+        },
+        {
+            value: teegirlblack, description: 'crystal dye crop tee - black', id: 21,
+            price: `$29.95`, path: '/collections/tees-long-sleeves/products/crystal-dye-crop-tee-black'
+        },
+        {
+            value: teegirlpink, description: 'crystal dye crop tee - lavender', id: 22,
+            price: `$29.95`, path: '/collections/tees-long-sleeves/products/crystal-dye-crop-tee-lavender'
+        },
+        {
+            value: teegirlblue, description: 'crystal dye crop tee - blue', id: 23,
+            price: `$29.95`, path: '/collections/tees-long-sleeves/products/crystal-dye-crop-tee-blue'
+        }
     ],
     hoodiesMerch: [
-        {value: notdeadpinkhoodie, description: 'stacked & repeat hoodie - pink', id: 1,
-            price: `$64.95`, path: '/collections/hoodies/products/stacked-repeat-hoodie-pink'},
-        {value: notdeadbluehoodie, description: 'stacked & repeat hoodie - mint', id: 2,
-            price: `$64.95`, path: '/collections/hoodies/products/stacked-repeat-hoodie-mint'},
-        {value: emohoodieblack, description: 'emo\'s not dead hoodie - black', id: 3,
-            price: `$54.95`, path: '/collections/hoodies/products/emos-not-dead-hoodie-black'},
-        {value: emohoodiegray, description: 'e.n.d. vintage hoodie', id: 4,
-            price: `$64.95`, path: '/collections/hoodies/products/e-n-d-vintage-hoodie'},
-        {value: zipblackwhitehoodie, description: 'e.n.d. zip hoodie - black/white', id: 5,
-            price: `$54.95`, path: '/collections/hoodies/products/e-n-d-zip-hoodie-black-white'},
-        {value: zipblackhoodie, description: 'e.n.d. zip hoodie - black/red', id: 6,
-            price: `$54.95`, path: '/collections/hoodies/products/black-red-zip-up-hoodie'},
-        {value: verymuchalivehoodie, description: 'very much alive hoodie - black', id: 7,
-            price: `$59.95`, path: '/collections/hoodies/products/very-much-alive-hoodie-black'},
-        {value: undeadhoodie, description: 'emo\'s undead hoodie - black', id: 8,
-            price: `$59.95`, path: '/collections/hoodies/products/emos-undead-hoodie-black'},
-        {value: hoodiegirlblack, description: 'e.n.d. crop hoodie - black', id: 9,
-            price: `$44.95`, path: '/collections/hoodies/products/ladies-e-n-d-crop-hoodie-black'},
-        {value: hoodigirlpink, description: 'sweet script crop hoodie - cotton candy', id: 10,
-            price: `$44.95`, path: '/collections/hoodies/products/sweet-script-crop-hoodie-cotton-candy'},
-        {value: endblackdyehoodie, description: 'crystal dye hoodie - black', id: 11,
-            price: `$64.95`, path: '/collections/hoodies/products/crystal-dye-hoodie-black'},
-        {value: endpinkhoodie, description: 'crystal dye hoodie - lavender', id: 12,
-            price: `$64.95`, path: '/collections/hoodies/products/crystal-dye-hoodie-lavender'},
-        {value: endlavenderhoodie, description: 'crystal dye hoodie - blue', id: 13,
-            price: `$64.95`, path: '/collections/hoodies/products/crystal-dye-hoodie-blue'},
-        {value: doghoodie, description: 'e.n.d. dog hoodie', id: 14,
-            price: `$29.95`, path: '/collections/hoodies/products/emos-not-dead-dog-hoodie'}
+        {
+            value: notdeadpinkhoodie, description: 'stacked & repeat hoodie - pink', id: 1,
+            price: `$64.95`, path: '/collections/hoodies/products/stacked-repeat-hoodie-pink'
+        },
+        {
+            value: notdeadbluehoodie, description: 'stacked & repeat hoodie - mint', id: 2,
+            price: `$64.95`, path: '/collections/hoodies/products/stacked-repeat-hoodie-mint'
+        },
+        {
+            value: emohoodieblack, description: 'emo\'s not dead hoodie - black', id: 3,
+            price: `$54.95`, path: '/collections/hoodies/products/emos-not-dead-hoodie-black'
+        },
+        {
+            value: emohoodiegray, description: 'e.n.d. vintage hoodie', id: 4,
+            price: `$64.95`, path: '/collections/hoodies/products/e-n-d-vintage-hoodie'
+        },
+        {
+            value: zipblackwhitehoodie, description: 'e.n.d. zip hoodie - black/white', id: 5,
+            price: `$54.95`, path: '/collections/hoodies/products/e-n-d-zip-hoodie-black-white'
+        },
+        {
+            value: zipblackhoodie, description: 'e.n.d. zip hoodie - black/red', id: 6,
+            price: `$54.95`, path: '/collections/hoodies/products/black-red-zip-up-hoodie'
+        },
+        {
+            value: verymuchalivehoodie, description: 'very much alive hoodie - black', id: 7,
+            price: `$59.95`, path: '/collections/hoodies/products/very-much-alive-hoodie-black'
+        },
+        {
+            value: undeadhoodie, description: 'emo\'s undead hoodie - black', id: 8,
+            price: `$59.95`, path: '/collections/hoodies/products/emos-undead-hoodie-black'
+        },
+        {
+            value: hoodiegirlblack, description: 'e.n.d. crop hoodie - black', id: 9,
+            price: `$44.95`, path: '/collections/hoodies/products/ladies-e-n-d-crop-hoodie-black'
+        },
+        {
+            value: hoodigirlpink, description: 'sweet script crop hoodie - cotton candy', id: 10,
+            price: `$44.95`, path: '/collections/hoodies/products/sweet-script-crop-hoodie-cotton-candy'
+        },
+        {
+            value: endblackdyehoodie, description: 'crystal dye hoodie - black', id: 11,
+            price: `$64.95`, path: '/collections/hoodies/products/crystal-dye-hoodie-black'
+        },
+        {
+            value: endpinkhoodie, description: 'crystal dye hoodie - lavender', id: 12,
+            price: `$64.95`, path: '/collections/hoodies/products/crystal-dye-hoodie-lavender'
+        },
+        {
+            value: endlavenderhoodie, description: 'crystal dye hoodie - blue', id: 13,
+            price: `$64.95`, path: '/collections/hoodies/products/crystal-dye-hoodie-blue'
+        },
+        {
+            value: doghoodie, description: 'e.n.d. dog hoodie', id: 14,
+            price: `$29.95`, path: '/collections/hoodies/products/emos-not-dead-dog-hoodie'
+        }
     ],
     headwearAndAccessoriesMerch: [
-        {value: notdeadcap, description: 'emo\'s not dead snapback - black', id: 1,
-            price: `$39.95`, path: '/collections/headwear-accessories/products/emos-not-dead-snapback-black'},
-        {value: alivecap, description: 'very much alive snapback - black', id: 2,
-            price: `$39.95`, path: '/collections/headwear-accessories/products/v-m-a-snapback-black'},
-        {value: capend, description: 'e.n.d. snapback - black', id: 3,
-            price: `$39.95`, path: '/collections/headwear-accessories/products/e-n-d-snapback'},
-        {value: whitesocks, description: 'e.n.d. socks - white', id: 4,
-            price: `$14.95`, path: '/collections/headwear-accessories/products/e-n-d-socks-white'},
-        {value: leatherwalletend, description: 'e.n.d. classic skinny wallet + keychain', id: 5,
-            price: `$39.95`, path: '/collections/headwear-accessories/products/e-n-d-classic-skinny-wallet-keychain-bundle'},
-        {value: leatherwalletlove, description: 'e.n.d. heart skinny wallet + keychain', id: 6,
-            price: `$39.95`, path: '/collections/headwear-accessories/products/e-n-d-heart-skinny-wallet-keychain-bundle'},
-        {value: dadhatlove, description: 'e.n.d. heart strapback - black', id: 7,
-            price: `$34.95`, path: '/collections/headwear-accessories/products/e-n-d-dad-hat-black'},
-        {value: end_dad_cap, description: 'e.n.d. strapback - black', id: 8,
-            price: `$34.95`, path: '/collections/headwear-accessories/products/e-n-d-strapback-black'},
-        {value: dadhat, description: 'broken heart beanie', id: 9,
-            price: `$24.95`, path: '/collections/headwear-accessories/products/broken-heart-beanie'}
+        {
+            value: notdeadcap, description: 'emo\'s not dead snapback - black', id: 1,
+            price: `$39.95`, path: '/collections/headwear-accessories/products/emos-not-dead-snapback-black'
+        },
+        {
+            value: alivecap, description: 'very much alive snapback - black', id: 2,
+            price: `$39.95`, path: '/collections/headwear-accessories/products/v-m-a-snapback-black'
+        },
+        {
+            value: capend, description: 'e.n.d. snapback - black', id: 3,
+            price: `$39.95`, path: '/collections/headwear-accessories/products/e-n-d-snapback'
+        },
+        {
+            value: whitesocks, description: 'e.n.d. socks - white', id: 4,
+            price: `$14.95`, path: '/collections/headwear-accessories/products/e-n-d-socks-white'
+        },
+        {
+            value: leatherwalletend,
+            description: 'e.n.d. classic skinny wallet + keychain',
+            id: 5,
+            price: `$39.95`,
+            path: '/collections/headwear-accessories/products/e-n-d-classic-skinny-wallet-keychain-bundle'
+        },
+        {
+            value: leatherwalletlove,
+            description: 'e.n.d. heart skinny wallet + keychain',
+            id: 6,
+            price: `$39.95`,
+            path: '/collections/headwear-accessories/products/e-n-d-heart-skinny-wallet-keychain-bundle'
+        },
+        {
+            value: dadhatlove, description: 'e.n.d. heart strapback - black', id: 7,
+            price: `$34.95`, path: '/collections/headwear-accessories/products/e-n-d-dad-hat-black'
+        },
+        {
+            value: end_dad_cap, description: 'e.n.d. strapback - black', id: 8,
+            price: `$34.95`, path: '/collections/headwear-accessories/products/e-n-d-strapback-black'
+        },
+        {
+            value: dadhat, description: 'broken heart beanie', id: 9,
+            price: `$24.95`, path: '/collections/headwear-accessories/products/broken-heart-beanie'
+        }
     ],
     digitalCardGift: [
-        {value: giftcard, description: 'digital gift card', id: 1,
-            price: `$25`, path: '/products/emos-not-dead-digital-gift-card'}
+        {
+            value: giftcard, description: 'digital gift card', id: 1,
+            price: `$25`, path: '/products/emos-not-dead-digital-gift-card'
+        }
     ],
-    goodsInCart: [
-
-    ],
-    goodsCount: [
-
-    ],
-    goodsSize: [
-
-    ],
-    goodsPrice: [
-
-    ],
-    amountOfGoodsInCart: [
-
-    ]
+    goodsInCart: [],
+    goodsCount: [],
+    goodsSize: [],
+    goodsPrice: [],
+    amountOfGoodsInCart: []
 }
 
 const getStorage = () => {
@@ -836,12 +1365,12 @@ const goodsReducer = (state = initialState, action) => {
                 goodsPrice: [...state.goodsPrice, action.price]
             }
         }
-            case 'SET_AMOUNT_OF_GOODS_IN_CART': {
-                return {
-                    ...state,
-                    amountOfGoodsInCart: [...state.amountOfGoodsInCart, action.count]
-                }
+        case 'SET_AMOUNT_OF_GOODS_IN_CART': {
+            return {
+                ...state,
+                amountOfGoodsInCart: [...state.amountOfGoodsInCart, action.count]
             }
+        }
         default:
             return state;
     }
@@ -851,7 +1380,7 @@ export const actions = {
         return ({type: 'SET_EMAIL', email})
     },
     setUserName: (name) => {
-      return ({type: 'SET_NAME', name})
+        return ({type: 'SET_NAME', name})
     },
     setUserMessage: (message) => {
         return ({type: 'SET_MESSAGE', message})
@@ -863,7 +1392,7 @@ export const actions = {
         return ({type: 'SET_GOODS_IN_CART', goods})
     },
     setGoodsCount: (count) => {
-        return ({type: 'SET_GOODS_COUNT', count} )
+        return ({type: 'SET_GOODS_COUNT', count})
     },
     setGoodsSize: (size) => {
         return ({type: 'SET_GOODS_SIZE', size})

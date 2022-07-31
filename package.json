@@ -2,6 +2,7 @@
   "name": "emo-page",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://shakhrai-antony.github.io/emo-s-not-dead/",
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.1",
     "@testing-library/jest-dom": "^5.14.1",
@@ -12,9 +13,11 @@
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "antd": "^4.20.2",
+    "axios": "^0.27.2",
     "bootstrap": "^5.1.3",
     "classnames": "^2.3.1",
     "formik": "^2.2.9",
+    "gh-pages": "^4.0.0",
     "react": "^18.1.0",
     "react-bootstrap": "^2.3.1",
     "react-dom": "^18.1.0",
@@ -38,7 +41,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build",
+    "predeploy": "npm run build"
   },
   "eslintConfig": {
     "extends": [

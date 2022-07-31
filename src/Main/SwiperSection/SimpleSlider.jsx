@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { Navigation, Pagination } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -23,8 +23,10 @@ export const SimpleSliderSection = () => {
             className='swiper__slider'
             modules={[Navigation, Pagination]}
             spaceBetween={1}
-            slidesPerView={4}
+            slidesPerView={3}
             navigation={{ clickable: true }}
+
+
 
         >
             {goodsForCarousel.map(item =>

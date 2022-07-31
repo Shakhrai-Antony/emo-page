@@ -4,7 +4,7 @@ import data from '../config/products.json'
 import s from './product.module.scss'
 import {useFormik} from "formik";
 import {actions} from "../Store/goodsReducer";
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {SizeChart} from "./SizeChartModal";
 import logo_facebook from './../imges/logo-facebook.png'
 import logo_twitter from './../imges/logo_twitter.png'
@@ -12,6 +12,7 @@ import {ModalCart} from "./CartModal";
 import {useLockBodyScroll, useToggle} from "react-use";
 import {CarouselForCart} from "./CarouselForCart";
 import * as Yup from 'yup'
+import {getGoods} from "../Store/goodsSelectors";
 
 export const Product = (props: any) => {
 
@@ -25,8 +26,6 @@ export const Product = (props: any) => {
 
     const match = useMatch('/products/:product/');
     const productName = match?.params.product
-    type ObjectKey = keyof typeof data;
-    const myVar = productName as ObjectKey;
     const size = [{value: 'S', id: 1}, {value: 'M', id: 2}, {value: 'L', id: 3}, {value: 'XL', id: 4}, {
         value: '2XL',
         id: 5
@@ -87,15 +86,17 @@ export const Product = (props: any) => {
         useLockBodyScroll(locked);
         const [count, setCount] = useState(1)
         const [countForCart, setCountForCart] = useState(1)
-
+        const productData = useSelector(getGoods).filter((item: any) => item.to === `/products/${productName}`)[0]
+    console.log(useSelector(getGoods).filter((item: any) => item.to === `/products/${productName}`))
+    console.log(productData)
         return (
             <div className={s.goods_cart_section}>
                 <div>
-                    <CarouselForCart data={data[myVar]}
+                    <CarouselForCart data={productData}
                     />
                 </div>
                 <div className={s.productCart}>
-                    {data[myVar].value.map((item) => {
+                    {productData.images.map((item: any) => {
                         return (
                             <div id={item.image} key={item.id}>
                                 <img src={item.image} alt=""/>
@@ -106,10 +107,10 @@ export const Product = (props: any) => {
                 <div className={s.description_section}>
                     <div>
                         <h1>
-                            {data[myVar].description}
+                            {productData.description}
                         </h1>
                         <p className={s.price_section}>
-                            {data[myVar].price}
+                            {productData.price}
                         </p>
                         <p className={s.shipping_section}><NavLink
                             to='/pages/shipping-policy'>Shipping</NavLink> calculated at checkout.</p>
@@ -163,10 +164,10 @@ export const Product = (props: any) => {
                             onClick={() => {
                                 setCartStatus(true);
                                 toggleLocked(true);
-                                addGoodsToCart(data[myVar]);
+                                addGoodsToCart(productData);
                                 addGoodsSizeToCart(sizeParam);
                                 addGoodsAmountToCart(count);
-                                addGoodsPriceToCart(+(parseFloat(data[myVar].price.slice(1)) * count).toFixed(2));
+                                addGoodsPriceToCart(+(parseFloat(productData.price.slice(1)) * count).toFixed(2));
                                 addCountToCart(countForCart)
                             }}
                             className={s.add_to_cart}>
@@ -175,7 +176,7 @@ export const Product = (props: any) => {
                         <button className={s.buy_it_now}>buy it now</button>
                     </div>
                     <ModalCart cart={cartStatus} setCart={setCartStatus} setLocker={toggleLocked}
-                               data={data[myVar]}
+                               data={productData}
                                size={sizeParam} count={count}>
 
                     </ModalCart>

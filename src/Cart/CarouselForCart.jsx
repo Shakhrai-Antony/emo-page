@@ -8,7 +8,7 @@ export const CarouselForCart = (props) => {
     }
     return (
         <div className={s.carousel_section}>
-            {props.data.value.map((item) => {
+            {props.data.images.map((item) => {
                 return (
                     <div onClick={ () =>  { handleClick(item.image); setImageStatus(item.id) } }
                          key={item.id}>
