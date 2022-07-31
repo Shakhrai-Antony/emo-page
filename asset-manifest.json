@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/emo-s-not-dead/static/css/main.9c40297f.css",
-    "main.js": "/emo-s-not-dead/static/js/main.4f581af4.js",
+    "main.js": "/emo-s-not-dead/static/js/main.99f7f2b7.js",
     "static/css/525.303b9927.chunk.css": "/emo-s-not-dead/static/css/525.303b9927.chunk.css",
     "static/js/525.b802ceb9.chunk.js": "/emo-s-not-dead/static/js/525.b802ceb9.chunk.js",
     "static/css/543.53918129.chunk.css": "/emo-s-not-dead/static/css/543.53918129.chunk.css",
@@ -131,7 +131,7 @@
     "static/media/instagram.png": "/emo-s-not-dead/static/media/instagram.838597ee09847c4ce512.png",
     "index.html": "/emo-s-not-dead/index.html",
     "main.9c40297f.css.map": "/emo-s-not-dead/static/css/main.9c40297f.css.map",
-    "main.4f581af4.js.map": "/emo-s-not-dead/static/js/main.4f581af4.js.map",
+    "main.99f7f2b7.js.map": "/emo-s-not-dead/static/js/main.99f7f2b7.js.map",
     "525.303b9927.chunk.css.map": "/emo-s-not-dead/static/css/525.303b9927.chunk.css.map",
     "525.b802ceb9.chunk.js.map": "/emo-s-not-dead/static/js/525.b802ceb9.chunk.js.map",
     "543.53918129.chunk.css.map": "/emo-s-not-dead/static/css/543.53918129.chunk.css.map",
@@ -144,6 +144,6 @@
   },
   "entrypoints": [
     "static/css/main.9c40297f.css",
-    "static/js/main.4f581af4.js"
+    "static/js/main.99f7f2b7.js"
   ]
 }
