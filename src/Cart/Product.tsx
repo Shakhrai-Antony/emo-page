@@ -86,8 +86,6 @@ export const Product = (props: any) => {
         const [count, setCount] = useState(1)
         const [countForCart, setCountForCart] = useState(1)
         const productData = useSelector(getGoods).filter((item: any) => item.to === `/products/${productName}`)[0]
-    console.log(useSelector(getGoods).filter((item: any) => item.to === `/products/${productName}`))
-    console.log(productData)
         return (
             <div className={s.goods_cart_section}>
                 <div>

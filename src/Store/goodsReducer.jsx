@@ -145,7 +145,7 @@ const initialState = {
                 },
                 {
                     image: alivecap_on,
-                    id: 2
+                    id: 3
                 }
             ]
         },
@@ -180,7 +180,7 @@ const initialState = {
                 },
                 {
                     image: mint_hoodie_2,
-                    id: 2
+                    id: 3
                 }
             ]
         },
@@ -201,7 +201,7 @@ const initialState = {
                 },
                 {
                     image: pink_hoodie_guy,
-                    id: 2
+                    id: 3
                 }
             ]
         },
