@@ -11,7 +11,7 @@ export const ModalCart = (props: any) => {
                 </div>
                 <div>
                     <div className={s.description_section}>
-                        <img src={props.data.value[0].image} alt="image"/>
+                        <img src={props.data.value} alt="image"/>
                         <h3>
                             {props.data.description}
                         </h3>

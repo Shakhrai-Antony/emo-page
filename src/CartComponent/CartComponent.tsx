@@ -30,7 +30,7 @@ export const CartComponent = (props: any) => {
                 return (
                     <div key={index} className={s.cart_content_section}>
                         <div>
-                            <img src={item.value[0].image} alt=""/>
+                            <img src={item.value} alt=""/>
                         </div>
                         <div>
                             <h3>{item.description}</h3>
